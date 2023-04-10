@@ -1,0 +1,5 @@
+PowerTrainScreenPresenter.hpp:28:13:PowerTrainScreenPresenter::~PowerTrainScreenPresenter()	1
+PowerTrainScreenPresenter.cpp:10:6:virtual void PowerTrainScreenPresenter::activate()	1
+PowerTrainScreenPresenter.hpp:28:13:virtual PowerTrainScreenPresenter::~PowerTrainScreenPresenter()	1
+PowerTrainScreenPresenter.hpp:28:13:virtual void* PowerTrainScreenPresenter::_ZThn4_N25PowerTrainScreenPresenterD1Ev()	1
+PowerTrainScreenPresenter.cpp:4:1:PowerTrainScreenPresenter::PowerTrainScreenPresenter(PowerTrainScreenView&)	1

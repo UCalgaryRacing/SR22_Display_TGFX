@@ -1,0 +1,336 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "DriverScreen",
+        "CanvasBufferSize": 7200,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "background",
+            "Width": 480,
+            "Height": 272,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbRightDataFieldData2",
+            "X": 420,
+            "Y": 95,
+            "Width": 50,
+            "Height": 30,
+            "TextId": "__SingleUse_SNGL",
+            "TextRotation": "0",
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbRightDataFieldTitle2",
+            "X": 370,
+            "Y": 80,
+            "Width": 100,
+            "Height": 15,
+            "TextId": "__SingleUse_C0Q3",
+            "TextRotation": "0",
+            "LineSpacing": 2,
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbRightDataFieldData1",
+            "X": 390,
+            "Y": 35,
+            "Width": 80,
+            "Height": 30,
+            "TextId": "__SingleUse_7UI3",
+            "TextRotation": "0",
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbRightDataFieldTitle1",
+            "X": 370,
+            "Y": 20,
+            "Width": 100,
+            "Height": 18,
+            "TextId": "__SingleUse_4UEX",
+            "TextRotation": "0",
+            "LineSpacing": 2,
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbLeftDataFieldData4",
+            "X": 10,
+            "Y": 215,
+            "Width": 32,
+            "Height": 36,
+            "TextId": "__SingleUse_6GAE",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbLeftDataFieldTitle4",
+            "X": 10,
+            "Y": 200,
+            "Width": 69,
+            "Height": 18,
+            "TextId": "__SingleUse_NV6C",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "LineSpacing": 2,
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbLeftDataFieldData3",
+            "X": 10,
+            "Y": 155,
+            "Width": 38,
+            "Height": 36,
+            "TextId": "__SingleUse_L7ZC",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbLeftDataFieldTitle3",
+            "X": 10,
+            "Y": 140,
+            "Width": 95,
+            "Height": 18,
+            "TextId": "__SingleUse_041P",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "LineSpacing": 2,
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbLeftDataFieldData2",
+            "X": 10,
+            "Y": 95,
+            "Width": 33,
+            "Height": 36,
+            "TextId": "__SingleUse_YSFT",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbLeftDataFieldTitle2",
+            "X": 10,
+            "Y": 80,
+            "Width": 57,
+            "Height": 18,
+            "TextId": "__SingleUse_JPBU",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "LineSpacing": 2,
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbLeftDataFieldData1",
+            "X": 10,
+            "Y": 35,
+            "Width": 17,
+            "Height": 36,
+            "TextId": "__SingleUse_2BPK",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbLeftDataFieldTitle1",
+            "X": 10,
+            "Y": 20,
+            "Width": 83,
+            "Height": 18,
+            "TextId": "__SingleUse_3UGH",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "LineSpacing": 2,
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbGear",
+            "X": 202,
+            "Y": 25,
+            "Width": 77,
+            "Height": 150,
+            "TextId": "__SingleUse_3P2N",
+            "TextRotation": "0",
+            "Wildcard1": {}
+          },
+          {
+            "Type": "SvgImage",
+            "Name": "iconBatteryLow",
+            "X": 160,
+            "Y": 191,
+            "Width": 53,
+            "Height": 31,
+            "Image": "BatteryLow.svg",
+            "FitImageToSize": true,
+            "ImageHorizontalScale": 0.08,
+            "ImageVerticalScale": 0.07,
+            "RotationCenterX": 23.0,
+            "RotationCenterY": 12.5
+          },
+          {
+            "Type": "SvgImage",
+            "Name": "iconCoolantHigh",
+            "X": 273,
+            "Y": 191,
+            "Width": 47,
+            "Height": 42,
+            "Image": "Coolant.svg",
+            "FitImageToSize": true,
+            "ImageHorizontalScale": 0.07,
+            "ImageVerticalScale": 0.08,
+            "RotationCenterX": 27.0,
+            "RotationCenterY": 30.0
+          },
+          {
+            "Type": "SvgImage",
+            "Name": "imageSRLogo",
+            "X": 160,
+            "Y": 7,
+            "Width": 160,
+            "Height": 40,
+            "Image": "Schulich Racing Logo.svg",
+            "FitImageToSize": true,
+            "ImageHorizontalScale": 0.33,
+            "ImageVerticalScale": 0.41,
+            "RotationCenterX": 80.0,
+            "RotationCenterY": 20.0
+          },
+          {
+            "Type": "SvgImage",
+            "Name": "iconFansOn",
+            "X": 378,
+            "Y": 149,
+            "Width": 52,
+            "Height": 55,
+            "Image": "Fans.svg",
+            "FitImageToSize": true,
+            "ImageHorizontalScale": 0.1,
+            "ImageVerticalScale": 0.11,
+            "RotationCenterX": 25.0,
+            "RotationCenterY": 25.0
+          },
+          {
+            "Type": "SvgImage",
+            "Name": "IconWaterPumpsOn",
+            "X": 441,
+            "Y": 149,
+            "Width": 35,
+            "Height": 55,
+            "Image": "Water Pump.svg",
+            "FitImageToSize": true,
+            "ImageHorizontalScale": 0.09,
+            "ImageVerticalScale": 0.09
+          },
+          {
+            "Type": "SvgImage",
+            "Name": "svgImage1",
+            "X": 441,
+            "Y": 212,
+            "Width": 35,
+            "Height": 55,
+            "Image": "Fuel Pump.svg",
+            "FitImageToSize": true,
+            "ImageHorizontalScale": 0.08,
+            "ImageVerticalScale": 0.09
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "PowerTrainScreen",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "background",
+            "Width": 480,
+            "Height": 272,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          }
+        ],
+        "Interactions": []
+      }
+    ],
+    "CustomContainerDefinitions": [],
+    "Name": "SR22_Display_TGFX",
+    "Resolution": {
+      "Width": 480,
+      "Height": 272
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "DriverScreen",
+    "SelectedStartupLanguage": "GB",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "16": "LCD16bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 480,
+        "Height": 272
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "CompileTargetCommand": "make -f ../gcc/Makefile -j8",
+    "FlashTargetCommand": "make -f ../gcc/Makefile flash -j8",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Landscape",
+    "Family": "STM32F7",
+    "SubFamily": "STM32F7x0 Value line",
+    "Toolchain": "STM32CubeIDE",
+    "Platform": "m7",
+    "ProjectFile": "../STM32F7508-DK.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": [],
+    "AdditionalFeatures": [
+      "Vector"
+    ]
+  },
+  "Version": "4.21.3",
+  "CreatedBy": "4.21.3"
+}

@@ -1,0 +1,5 @@
+../../TouchGFX/gui/include/gui/powertrainscreen_screen/PowerTrainScreenPresenter.hpp:28:13:PowerTrainScreenPresenter::~PowerTrainScreenPresenter()	0	static
+D:/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/powertrainscreen_screen/PowerTrainScreenPresenter.cpp:10:6:virtual void PowerTrainScreenPresenter::activate()	0	static
+../../TouchGFX/gui/include/gui/powertrainscreen_screen/PowerTrainScreenPresenter.hpp:28:13:virtual PowerTrainScreenPresenter::~PowerTrainScreenPresenter()	8	static
+../../TouchGFX/gui/include/gui/powertrainscreen_screen/PowerTrainScreenPresenter.hpp:28:13:virtual void* PowerTrainScreenPresenter::_ZThn4_N25PowerTrainScreenPresenterD1Ev()	0	static
+D:/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/powertrainscreen_screen/PowerTrainScreenPresenter.cpp:4:1:PowerTrainScreenPresenter::PowerTrainScreenPresenter(PowerTrainScreenView&)	8	static
