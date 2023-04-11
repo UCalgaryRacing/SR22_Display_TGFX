@@ -9,6 +9,31 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include build/debug/build/CMakeFiles/STM32F7508-DK.dir/D_/GitHub/SR22_Display_TGFX/TouchGFX/target/generated/subdir.mk
+-include build/debug/build/CMakeFiles/STM32F7508-DK.dir/D_/GitHub/SR22_Display_TGFX/TouchGFX/target/subdir.mk
+-include build/debug/build/CMakeFiles/STM32F7508-DK.dir/D_/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/powertrainscreen_screen/subdir.mk
+-include build/debug/build/CMakeFiles/STM32F7508-DK.dir/D_/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/model/subdir.mk
+-include build/debug/build/CMakeFiles/STM32F7508-DK.dir/D_/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/subdir.mk
+-include build/debug/build/CMakeFiles/STM32F7508-DK.dir/D_/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/common/subdir.mk
+-include build/debug/build/CMakeFiles/STM32F7508-DK.dir/D_/GitHub/SR22_Display_TGFX/TouchGFX/generated/texts/src/subdir.mk
+-include build/debug/build/CMakeFiles/STM32F7508-DK.dir/D_/GitHub/SR22_Display_TGFX/TouchGFX/generated/images/src/subdir.mk
+-include build/debug/build/CMakeFiles/STM32F7508-DK.dir/D_/GitHub/SR22_Display_TGFX/TouchGFX/generated/gui_generated/src/powertrainscreen_screen/subdir.mk
+-include build/debug/build/CMakeFiles/STM32F7508-DK.dir/D_/GitHub/SR22_Display_TGFX/TouchGFX/generated/gui_generated/src/driverscreen_screen/subdir.mk
+-include build/debug/build/CMakeFiles/STM32F7508-DK.dir/D_/GitHub/SR22_Display_TGFX/TouchGFX/generated/gui_generated/src/common/subdir.mk
+-include build/debug/build/CMakeFiles/STM32F7508-DK.dir/D_/GitHub/SR22_Display_TGFX/TouchGFX/generated/fonts/src/subdir.mk
+-include build/debug/build/CMakeFiles/STM32F7508-DK.dir/D_/GitHub/SR22_Display_TGFX/TouchGFX/App/subdir.mk
+-include build/debug/build/CMakeFiles/STM32F7508-DK.dir/D_/GitHub/SR22_Display_TGFX/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/subdir.mk
+-include build/debug/build/CMakeFiles/STM32F7508-DK.dir/D_/GitHub/SR22_Display_TGFX/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/subdir.mk
+-include build/debug/build/CMakeFiles/STM32F7508-DK.dir/D_/GitHub/SR22_Display_TGFX/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/subdir.mk
+-include build/debug/build/CMakeFiles/STM32F7508-DK.dir/D_/GitHub/SR22_Display_TGFX/Middlewares/Third_Party/FreeRTOS/Source/subdir.mk
+-include build/debug/build/CMakeFiles/STM32F7508-DK.dir/D_/GitHub/SR22_Display_TGFX/Drivers/STM32F7xx_HAL_Driver/Src/subdir.mk
+-include build/debug/build/CMakeFiles/STM32F7508-DK.dir/D_/GitHub/SR22_Display_TGFX/Drivers/BSP/STM32F7508-Discovery/subdir.mk
+-include build/debug/build/CMakeFiles/STM32F7508-DK.dir/D_/GitHub/SR22_Display_TGFX/Drivers/BSP/Components/ft5336/subdir.mk
+-include build/debug/build/CMakeFiles/STM32F7508-DK.dir/D_/GitHub/SR22_Display_TGFX/Core/Src/subdir.mk
+-include build/debug/build/CMakeFiles/STM32F7508-DK.dir/Application/User/subdir.mk
+-include build/debug/build/CMakeFiles/STM32F7508-DK.dir/Application/Startup/subdir.mk
+-include build/debug/build/CMakeFiles/3.20.0/CompilerIdCXX/subdir.mk
+-include build/debug/build/CMakeFiles/3.20.0/CompilerIdC/subdir.mk
 -include Middlewares/FreeRTOS/subdir.mk
 -include Drivers/STM32F7xx_HAL_Driver/subdir.mk
 -include Drivers/CMSIS/subdir.mk

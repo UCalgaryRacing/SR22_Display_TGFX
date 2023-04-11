@@ -37,25 +37,25 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
  16 ExtFlashSection 00000000  90102268  90102268  00062298  2**0
                   CONTENTS
- 17 .debug_line   0004ad2e  00000000  00000000  00062298  2**0
+ 17 .debug_line   0004a53c  00000000  00000000  00062298  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_info   0009cfea  00000000  00000000  000acfc6  2**0
+ 18 .debug_info   0009cfea  00000000  00000000  000ac7d4  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_abbrev 0001209d  00000000  00000000  00149fb0  2**0
+ 19 .debug_abbrev 0001209d  00000000  00000000  001497be  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_aranges 000028d8  00000000  00000000  0015c050  2**3
+ 20 .debug_aranges 000028d8  00000000  00000000  0015b860  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_str    00125bfb  00000000  00000000  0015e928  2**0
+ 21 .debug_str    00125bfb  00000000  00000000  0015e138  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_ranges 000046b8  00000000  00000000  00284528  2**3
+ 22 .debug_ranges 000046b8  00000000  00000000  00283d38  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 23 .debug_loc    00028d13  00000000  00000000  00288be0  2**0
+ 23 .debug_loc    00028d13  00000000  00000000  002883f0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 24 .debug_macro  00033af2  00000000  00000000  002b18f3  2**0
+ 24 .debug_macro  00033af2  00000000  00000000  002b1103  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 25 .comment      000000cf  00000000  00000000  002e53e5  2**0
+ 25 .comment      000000cf  00000000  00000000  002e4bf5  2**0
                   CONTENTS, READONLY
- 26 .debug_frame  00007e2c  00000000  00000000  002e54b4  2**2
+ 26 .debug_frame  00007e2c  00000000  00000000  002e4cc4  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
