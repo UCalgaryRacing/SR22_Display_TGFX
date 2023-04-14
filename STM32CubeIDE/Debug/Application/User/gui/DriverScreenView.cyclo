@@ -1,8 +1,20 @@
 Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	1
 Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	1
 Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
-DriverScreenView.cpp:13:6:virtual void DriverScreenView::tearDownScreen()	1
+DriverScreenView.cpp:14:6:virtual void DriverScreenView::tearDownScreen()	1
 DriverScreenView.hpp:11:13:DriverScreenView::~DriverScreenView()	1
 DriverScreenView.hpp:11:13:virtual DriverScreenView::~DriverScreenView()	1
-DriverScreenView.cpp:3:1:DriverScreenView::DriverScreenView()	1
-DriverScreenView.cpp:8:6:virtual void DriverScreenView::setupScreen()	1
+DriverScreenView.cpp:4:1:DriverScreenView::DriverScreenView()	1
+DriverScreenView.cpp:9:6:virtual void DriverScreenView::setupScreen()	1
+DriverScreenView.cpp:19:6:virtual void DriverScreenView::updateGear(uint8_t)	1
+DriverScreenView.cpp:24:6:virtual void DriverScreenView::updateLeftDataField1(float)	1
+DriverScreenView.cpp:29:6:virtual void DriverScreenView::updateLeftDataField2(uint8_t)	1
+DriverScreenView.cpp:34:6:virtual void DriverScreenView::updateLeftDataField3(float)	1
+DriverScreenView.cpp:39:6:virtual void DriverScreenView::updateLeftDataField4(uint8_t)	1
+DriverScreenView.cpp:44:6:virtual void DriverScreenView::updateRightDataField1(float)	1
+DriverScreenView.cpp:49:6:virtual void DriverScreenView::updateRightDataField2(uint8_t)	1
+DriverScreenView.cpp:54:6:virtual void DriverScreenView::updateBatteryLow(bool)	1
+DriverScreenView.cpp:59:6:virtual void DriverScreenView::updateCoolantHigh(bool)	1
+DriverScreenView.cpp:64:6:virtual void DriverScreenView::updateFansOn(bool)	1
+DriverScreenView.cpp:69:6:virtual void DriverScreenView::updateWaterPumpsOn(bool)	1
+DriverScreenView.cpp:74:6:virtual void DriverScreenView::updateFuelPumpOn(bool)	1

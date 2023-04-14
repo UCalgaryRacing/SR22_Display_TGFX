@@ -62,6 +62,25 @@ const osThreadAttr_t TouchGFXTask_attributes = {
   .stack_size = 8192 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
+/* Definitions for buttonTask */
+osThreadId_t buttonTaskHandle;
+const osThreadAttr_t buttonTask_attributes = {
+  .name = "buttonTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
+/* Definitions for rpmTask */
+osThreadId_t rpmTaskHandle;
+const osThreadAttr_t rpmTask_attributes = {
+  .name = "rpmTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
+/* Definitions for buttonQueue */
+osMessageQueueId_t buttonQueueHandle;
+const osMessageQueueAttr_t buttonQueue_attributes = {
+  .name = "buttonQueue"
+};
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -70,6 +89,8 @@ extern portBASE_TYPE IdleTaskHook(void* p);
 
 void StartDefaultTask(void *argument);
 extern void TouchGFX_Task(void *argument);
+void StartButtonTask(void *argument);
+void StartRPMTask(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -114,6 +135,10 @@ void MX_FREERTOS_Init(void) {
   /* start timers, add new ones, ... */
   /* USER CODE END RTOS_TIMERS */
 
+  /* Create the queue(s) */
+  /* creation of buttonQueue */
+  buttonQueueHandle = osMessageQueueNew (4, sizeof(uint8_t), &buttonQueue_attributes);
+
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
   /* USER CODE END RTOS_QUEUES */
@@ -124,6 +149,12 @@ void MX_FREERTOS_Init(void) {
 
   /* creation of TouchGFXTask */
   TouchGFXTaskHandle = osThreadNew(TouchGFX_Task, NULL, &TouchGFXTask_attributes);
+
+  /* creation of buttonTask */
+  buttonTaskHandle = osThreadNew(StartButtonTask, NULL, &buttonTask_attributes);
+
+  /* creation of rpmTask */
+  rpmTaskHandle = osThreadNew(StartRPMTask, NULL, &rpmTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -151,6 +182,56 @@ void StartDefaultTask(void *argument)
     osDelay(1);
   }
   /* USER CODE END StartDefaultTask */
+}
+
+/* USER CODE BEGIN Header_StartButtonTask */
+/**
+* @brief Function implementing the buttonTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartButtonTask */
+void StartButtonTask(void *argument)
+{
+  /* USER CODE BEGIN StartButtonTask */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(100);
+  }
+  /* USER CODE END StartButtonTask */
+}
+
+/* USER CODE BEGIN Header_StartRPMTask */
+/**
+* @brief Function implementing the rpmTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartRPMTask */
+void StartRPMTask(void *argument)
+{
+  /* USER CODE BEGIN StartRPMTask */
+	uint16_t rpm = 0;
+	SetLED(0,255,0,0);		// These LEDS are going to be set to green as they are going to represent idle
+	SetLED(1,255,0,0);
+	SetLED(2,255,0,0);
+	SetLED(3,255,0,0);
+	SetLED(4,255,0,0);
+	SetLED(5,255,0,0);
+	SetLED(6,255,0,0);
+	SetLED(7,255,0,0);
+
+  /* Infinite loop */
+	for(;;){
+		if(rpm > 10000){
+			rpm = 0;
+		}
+		rpm += 500;
+		SetRPMLights(rpm);
+		osDelay(250);
+	}
+  /* USER CODE END StartRPMTask */
 }
 
 /* Private application code --------------------------------------------------*/

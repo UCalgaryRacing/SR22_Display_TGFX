@@ -10,6 +10,7 @@
             "Name": "background",
             "Width": 480,
             "Height": 272,
+            "LockPosition": true,
             "Color": {
               "Red": 255,
               "Green": 255,
@@ -22,10 +23,15 @@
             "X": 420,
             "Y": 95,
             "Width": 50,
-            "Height": 30,
+            "Height": 37,
+            "LockPosition": true,
             "TextId": "__SingleUse_SNGL",
             "TextRotation": "0",
-            "Wildcard1": {}
+            "Wildcard1": {
+              "TextId": "__SingleUse_8X86",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "TextArea",
@@ -34,10 +40,15 @@
             "Y": 80,
             "Width": 100,
             "Height": 15,
+            "LockPosition": true,
             "TextId": "__SingleUse_C0Q3",
             "TextRotation": "0",
             "LineSpacing": 2,
-            "Wildcard1": {}
+            "Wildcard1": {
+              "TextId": "__SingleUse_D87B",
+              "UseBuffer": true,
+              "BufferSize": 20
+            }
           },
           {
             "Type": "TextArea",
@@ -46,9 +57,14 @@
             "Y": 35,
             "Width": 80,
             "Height": 30,
+            "LockPosition": true,
             "TextId": "__SingleUse_7UI3",
             "TextRotation": "0",
-            "Wildcard1": {}
+            "Wildcard1": {
+              "TextId": "__SingleUse_HHZ7",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "TextArea",
@@ -57,72 +73,97 @@
             "Y": 20,
             "Width": 100,
             "Height": 18,
+            "LockPosition": true,
             "TextId": "__SingleUse_4UEX",
             "TextRotation": "0",
             "LineSpacing": 2,
-            "Wildcard1": {}
+            "Wildcard1": {
+              "TextId": "__SingleUse_EHLI",
+              "UseBuffer": true,
+              "BufferSize": 20
+            }
           },
           {
             "Type": "TextArea",
             "Name": "tbLeftDataFieldData4",
-            "X": 10,
+            "X": 11,
             "Y": 215,
-            "Width": 32,
-            "Height": 36,
+            "Width": 85,
+            "Height": 37,
+            "LockPosition": true,
             "TextId": "__SingleUse_6GAE",
             "TextRotation": "0",
-            "AutoSize": true,
-            "Wildcard1": {}
+            "Wildcard1": {
+              "TextId": "__SingleUse_S3HT",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "TextArea",
             "Name": "tbLeftDataFieldTitle4",
             "X": 10,
-            "Y": 200,
-            "Width": 69,
-            "Height": 18,
+            "Y": 201,
+            "Width": 100,
+            "Height": 21,
+            "LockPosition": true,
             "TextId": "__SingleUse_NV6C",
             "TextRotation": "0",
-            "AutoSize": true,
             "LineSpacing": 2,
-            "Wildcard1": {}
+            "Wildcard1": {
+              "TextId": "__SingleUse_BBWH",
+              "UseBuffer": true,
+              "BufferSize": 20
+            }
           },
           {
             "Type": "TextArea",
             "Name": "tbLeftDataFieldData3",
             "X": 10,
             "Y": 155,
-            "Width": 38,
-            "Height": 36,
+            "Width": 85,
+            "Height": 37,
+            "LockPosition": true,
             "TextId": "__SingleUse_L7ZC",
             "TextRotation": "0",
-            "AutoSize": true,
-            "Wildcard1": {}
+            "Wildcard1": {
+              "TextId": "__SingleUse_N4ES",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "TextArea",
             "Name": "tbLeftDataFieldTitle3",
             "X": 10,
-            "Y": 140,
-            "Width": 95,
-            "Height": 18,
+            "Y": 139,
+            "Width": 100,
+            "Height": 21,
+            "LockPosition": true,
             "TextId": "__SingleUse_041P",
             "TextRotation": "0",
-            "AutoSize": true,
             "LineSpacing": 2,
-            "Wildcard1": {}
+            "Wildcard1": {
+              "TextId": "__SingleUse_LEAT",
+              "UseBuffer": true,
+              "BufferSize": 20
+            }
           },
           {
             "Type": "TextArea",
             "Name": "tbLeftDataFieldData2",
             "X": 10,
             "Y": 95,
-            "Width": 33,
-            "Height": 36,
+            "Width": 80,
+            "Height": 37,
+            "LockPosition": true,
             "TextId": "__SingleUse_YSFT",
             "TextRotation": "0",
-            "AutoSize": true,
-            "Wildcard1": {}
+            "Wildcard1": {
+              "TextId": "__SingleUse_1YET",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "TextArea",
@@ -130,48 +171,65 @@
             "X": 10,
             "Y": 80,
             "Width": 57,
-            "Height": 18,
+            "Height": 21,
+            "LockPosition": true,
             "TextId": "__SingleUse_JPBU",
             "TextRotation": "0",
             "AutoSize": true,
             "LineSpacing": 2,
-            "Wildcard1": {}
+            "Wildcard1": {
+              "TextId": "__SingleUse_E4NJ",
+              "UseBuffer": true,
+              "BufferSize": 20
+            }
           },
           {
             "Type": "TextArea",
             "Name": "tbLeftDataFieldData1",
             "X": 10,
             "Y": 35,
-            "Width": 17,
-            "Height": 36,
+            "Width": 80,
+            "Height": 37,
+            "LockPosition": true,
             "TextId": "__SingleUse_2BPK",
             "TextRotation": "0",
-            "AutoSize": true,
-            "Wildcard1": {}
+            "Wildcard1": {
+              "TextId": "__SingleUse_V86A",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "TextArea",
             "Name": "tbLeftDataFieldTitle1",
             "X": 10,
             "Y": 20,
-            "Width": 83,
-            "Height": 18,
+            "Width": 100,
+            "Height": 21,
+            "LockPosition": true,
             "TextId": "__SingleUse_3UGH",
             "TextRotation": "0",
-            "AutoSize": true,
             "LineSpacing": 2,
-            "Wildcard1": {}
+            "Wildcard1": {
+              "TextId": "__SingleUse_8NEG",
+              "UseBuffer": true,
+              "BufferSize": 20
+            }
           },
           {
             "Type": "TextArea",
             "Name": "tbGear",
             "X": 202,
-            "Y": 25,
+            "Y": 26,
             "Width": 77,
             "Height": 150,
             "TextId": "__SingleUse_3P2N",
             "TextRotation": "0",
-            "Wildcard1": {}
+            "Wildcard1": {
+              "TextId": "__SingleUse_ZWYE",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "SvgImage",
@@ -208,6 +266,7 @@
             "Y": 7,
             "Width": 160,
             "Height": 40,
+            "LockPosition": true,
             "Image": "Schulich Racing Logo.svg",
             "FitImageToSize": true,
             "ImageHorizontalScale": 0.33,
@@ -231,7 +290,7 @@
           },
           {
             "Type": "SvgImage",
-            "Name": "IconWaterPumpsOn",
+            "Name": "iconWaterPumpsOn",
             "X": 441,
             "Y": 149,
             "Width": 35,
@@ -243,7 +302,7 @@
           },
           {
             "Type": "SvgImage",
-            "Name": "svgImage1",
+            "Name": "iconFuelPumpOn",
             "X": 441,
             "Y": 212,
             "Width": 35,

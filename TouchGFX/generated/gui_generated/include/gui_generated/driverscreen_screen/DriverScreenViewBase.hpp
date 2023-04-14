@@ -45,8 +45,38 @@ protected:
     touchgfx::SVGImage iconCoolantHigh;
     touchgfx::SVGImage imageSRLogo;
     touchgfx::SVGImage iconFansOn;
-    touchgfx::SVGImage IconWaterPumpsOn;
-    touchgfx::SVGImage svgImage1;
+    touchgfx::SVGImage iconWaterPumpsOn;
+    touchgfx::SVGImage iconFuelPumpOn;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TBRIGHTDATAFIELDDATA2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbRightDataFieldData2Buffer[TBRIGHTDATAFIELDDATA2_SIZE];
+    static const uint16_t TBRIGHTDATAFIELDTITLE2_SIZE = 20;
+    touchgfx::Unicode::UnicodeChar tbRightDataFieldTitle2Buffer[TBRIGHTDATAFIELDTITLE2_SIZE];
+    static const uint16_t TBRIGHTDATAFIELDDATA1_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbRightDataFieldData1Buffer[TBRIGHTDATAFIELDDATA1_SIZE];
+    static const uint16_t TBRIGHTDATAFIELDTITLE1_SIZE = 20;
+    touchgfx::Unicode::UnicodeChar tbRightDataFieldTitle1Buffer[TBRIGHTDATAFIELDTITLE1_SIZE];
+    static const uint16_t TBLEFTDATAFIELDDATA4_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbLeftDataFieldData4Buffer[TBLEFTDATAFIELDDATA4_SIZE];
+    static const uint16_t TBLEFTDATAFIELDTITLE4_SIZE = 20;
+    touchgfx::Unicode::UnicodeChar tbLeftDataFieldTitle4Buffer[TBLEFTDATAFIELDTITLE4_SIZE];
+    static const uint16_t TBLEFTDATAFIELDDATA3_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbLeftDataFieldData3Buffer[TBLEFTDATAFIELDDATA3_SIZE];
+    static const uint16_t TBLEFTDATAFIELDTITLE3_SIZE = 20;
+    touchgfx::Unicode::UnicodeChar tbLeftDataFieldTitle3Buffer[TBLEFTDATAFIELDTITLE3_SIZE];
+    static const uint16_t TBLEFTDATAFIELDDATA2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbLeftDataFieldData2Buffer[TBLEFTDATAFIELDDATA2_SIZE];
+    static const uint16_t TBLEFTDATAFIELDTITLE2_SIZE = 20;
+    touchgfx::Unicode::UnicodeChar tbLeftDataFieldTitle2Buffer[TBLEFTDATAFIELDTITLE2_SIZE];
+    static const uint16_t TBLEFTDATAFIELDDATA1_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbLeftDataFieldData1Buffer[TBLEFTDATAFIELDDATA1_SIZE];
+    static const uint16_t TBLEFTDATAFIELDTITLE1_SIZE = 20;
+    touchgfx::Unicode::UnicodeChar tbLeftDataFieldTitle1Buffer[TBLEFTDATAFIELDTITLE1_SIZE];
+    static const uint16_t TBGEAR_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbGearBuffer[TBGEAR_SIZE];
 
 private:
 
