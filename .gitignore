@@ -18,7 +18,6 @@
 
 # Fortran module files
 *.mod
-*.smod
 
 # Compiled Static libraries
 *.lai
@@ -30,3 +29,14 @@
 *.exe
 *.out
 *.app
+
+# application specific
+generated
+*.sdf
+*.suo
+*.user
+*.opensdf
+
+# folders
+touchgfx
+app/tutorials/temperature_control_v*/build
