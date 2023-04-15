@@ -1,5 +1,5 @@
 Application/User/gui/PowerTrainScreenView.o: \
- D:/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/powertrainscreen_screen/PowerTrainScreenView.cpp \
+ C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/gui/src/powertrainscreen_screen/PowerTrainScreenView.cpp \
  ../../TouchGFX/gui/include/gui/powertrainscreen_screen/PowerTrainScreenView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/powertrainscreen_screen/PowerTrainScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
