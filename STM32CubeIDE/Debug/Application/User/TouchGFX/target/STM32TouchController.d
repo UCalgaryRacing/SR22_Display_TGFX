@@ -1,5 +1,5 @@
 Application/User/TouchGFX/target/STM32TouchController.o: \
- C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/target/STM32TouchController.cpp \
+ D:/GitHub/SR22_Display_TGFX/TouchGFX/target/STM32TouchController.cpp \
  ../../TouchGFX/target/STM32TouchController.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/platform/driver/touch/TouchController.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \
@@ -44,8 +44,8 @@ Application/User/TouchGFX/target/STM32TouchController.o: \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h \
- ../../Drivers/BSP/STM32F7508-Discovery/../Components/ft5336/ft5336.h \
- ../../Drivers/BSP/STM32F7508-Discovery/../Components/ft5336/../Common/ts.h
+ d:\github\sr22_display_tgfx\drivers\bsp\components\ft5336\ft5336.h \
+ d:\github\sr22_display_tgfx\drivers\bsp\components\common\ts.h
 ../../TouchGFX/target/STM32TouchController.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/platform/driver/touch/TouchController.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:
@@ -90,5 +90,5 @@ Application/User/TouchGFX/target/STM32TouchController.o: \
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h:
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h:
-../../Drivers/BSP/STM32F7508-Discovery/../Components/ft5336/ft5336.h:
-../../Drivers/BSP/STM32F7508-Discovery/../Components/ft5336/../Common/ts.h:
+d:\github\sr22_display_tgfx\drivers\bsp\components\ft5336\ft5336.h:
+d:\github\sr22_display_tgfx\drivers\bsp\components\common\ts.h:
