@@ -1,5 +1,5 @@
 Application/User/gui/DriverScreenView.o: \
- D:/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenView.cpp \
+ C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenView.cpp \
  ../../TouchGFX/gui/include/gui/driverscreen_screen/DriverScreenView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/driverscreen_screen/DriverScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \

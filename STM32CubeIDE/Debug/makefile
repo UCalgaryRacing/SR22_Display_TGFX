@@ -113,8 +113,8 @@ all: main-build
 main-build: STM32F7508-DK.elf secondary-outputs
 
 # Tool invocations
-STM32F7508-DK.elf STM32F7508-DK.map: $(OBJS) $(USER_OBJS) D:\GitHub\SR22_Display_TGFX\STM32CubeIDE\STM32F750N8HX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "STM32F7508-DK.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"D:\GitHub\SR22_Display_TGFX\STM32CubeIDE\STM32F750N8HX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F7508-DK.map" -Wl,--gc-sections -static -LC:/dev/pacman/at/stm32f750_disco/STM32F7508-DK/Middlewares/ST/touchgfx/lib/core/cortex_m7/gcc -LD:/GitHub/SR22_Display_TGFX/Middlewares/ST/touchgfx/lib/core/cortex_m7/gcc -LC:/Users/steve/Documents/SR22_Display_TGFX/Middlewares/ST/touchgfx/lib/core/cortex_m7/gcc --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+STM32F7508-DK.elf STM32F7508-DK.map: $(OBJS) $(USER_OBJS) C:\Users\steve\Documents\SR22_Display_TGFX\STM32CubeIDE\STM32F750N8HX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "STM32F7508-DK.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\steve\Documents\SR22_Display_TGFX\STM32CubeIDE\STM32F750N8HX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F7508-DK.map" -Wl,--gc-sections -static -LC:/dev/pacman/at/stm32f750_disco/STM32F7508-DK/Middlewares/ST/touchgfx/lib/core/cortex_m7/gcc -LD:/GitHub/SR22_Display_TGFX/Middlewares/ST/touchgfx/lib/core/cortex_m7/gcc -LC:/Users/steve/Documents/SR22_Display_TGFX/Middlewares/ST/touchgfx/lib/core/cortex_m7/gcc --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

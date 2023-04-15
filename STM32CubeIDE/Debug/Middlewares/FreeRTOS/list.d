@@ -1,5 +1,5 @@
 Middlewares/FreeRTOS/list.o: \
- D:/GitHub/SR22_Display_TGFX/Middlewares/Third_Party/FreeRTOS/Source/list.c \
+ C:/Users/steve/Documents/SR22_Display_TGFX/Middlewares/Third_Party/FreeRTOS/Source/list.c \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../Core/Inc/FreeRTOSConfig.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
