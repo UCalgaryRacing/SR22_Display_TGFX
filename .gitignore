@@ -38,5 +38,7 @@ generated
 *.opensdf
 
 # folders
-touchgfx
-app/tutorials/temperature_control_v*/build
+touchgfx/build/
+touchgfx/generated/
+EWARM/settings/
+EWARM/STM32F750/
