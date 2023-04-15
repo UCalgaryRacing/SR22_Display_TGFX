@@ -26,7 +26,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "can.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -46,6 +46,7 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
+
 
 /* USER CODE END Variables */
 /* Definitions for defaultTask */
@@ -76,10 +77,27 @@ const osThreadAttr_t rpmTask_attributes = {
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
+/* Definitions for canTask */
+osThreadId_t canTaskHandle;
+const osThreadAttr_t canTask_attributes = {
+  .name = "canTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
 /* Definitions for buttonQueue */
 osMessageQueueId_t buttonQueueHandle;
 const osMessageQueueAttr_t buttonQueue_attributes = {
   .name = "buttonQueue"
+};
+/* Definitions for canQueue */
+osMessageQueueId_t canQueueHandle;
+const osMessageQueueAttr_t canQueue_attributes = {
+  .name = "canQueue"
+};
+/* Definitions for driverDataQueue */
+osMessageQueueId_t driverDataQueueHandle;
+const osMessageQueueAttr_t driverDataQueue_attributes = {
+  .name = "driverDataQueue"
 };
 
 /* Private function prototypes -----------------------------------------------*/
@@ -91,6 +109,7 @@ void StartDefaultTask(void *argument);
 extern void TouchGFX_Task(void *argument);
 void StartButtonTask(void *argument);
 void StartRPMTask(void *argument);
+void StartCANTask(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -139,6 +158,12 @@ void MX_FREERTOS_Init(void) {
   /* creation of buttonQueue */
   buttonQueueHandle = osMessageQueueNew (4, sizeof(uint8_t), &buttonQueue_attributes);
 
+  /* creation of canQueue */
+  canQueueHandle = osMessageQueueNew (16, sizeof(canData_t), &canQueue_attributes);
+
+  /* creation of driverDataQueue */
+  driverDataQueueHandle = osMessageQueueNew (16, sizeof(driverScreenData_t), &driverDataQueue_attributes);
+
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
   /* USER CODE END RTOS_QUEUES */
@@ -155,6 +180,9 @@ void MX_FREERTOS_Init(void) {
 
   /* creation of rpmTask */
   rpmTaskHandle = osThreadNew(StartRPMTask, NULL, &rpmTask_attributes);
+
+  /* creation of canTask */
+  canTaskHandle = osThreadNew(StartCANTask, NULL, &canTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -232,6 +260,31 @@ void StartRPMTask(void *argument)
 		osDelay(250);
 	}
   /* USER CODE END StartRPMTask */
+}
+
+/* USER CODE BEGIN Header_StartCANTask */
+/**
+* @brief Function implementing the canTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartCANTask */
+void StartCANTask(void *argument)
+{
+  /* USER CODE BEGIN StartCANTask */
+	canData_t *canData_r;
+//	uint32_t canID = 0x000;
+//	uint8_t data[8];
+  /* Infinite loop */
+	for(;;){
+		if(osMessageQueueGetCount(canQueueHandle) > 0){
+			if(osMessageQueueGet(canQueueHandle, &canData_r, 0, 0) == osOK){
+				ParseCANData(canData_r);
+			}
+		}
+    osDelay(10);
+  }
+  /* USER CODE END StartCANTask */
 }
 
 /* Private application code --------------------------------------------------*/

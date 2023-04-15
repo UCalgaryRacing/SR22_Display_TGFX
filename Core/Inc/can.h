@@ -35,13 +35,35 @@ extern "C" {
 extern CAN_HandleTypeDef hcan1;
 
 /* USER CODE BEGIN Private defines */
+#define BATTERY_LOW_VOLTAGE 11.5
+#define COOLANT_HIGH_TEMPERATURE 95
+typedef struct{
+	uint32_t canID;
+	uint8_t data[8];
+}canData_t;
 
+typedef struct{
+	float leftDataField1;
+	uint8_t leftDataField2;
+	float leftDataField3;
+	uint8_t leftDataField4;
+	float rightDataField1;
+	uint8_t rightDataField2;
+	bool batteryLow;
+	bool coolantHigh;
+	bool fansOn;
+	bool waterPumpsOn;
+	bool fuelPumpOn;
+}driverScreenData_t;
 /* USER CODE END Private defines */
 
 void MX_CAN1_Init(void);
 
 /* USER CODE BEGIN Prototypes */
-
+void SendDriverScreenData(void);
+void ParseCANData(canData_t *canData);
+float CombineUnsigned(uint8_t data1, uint8_t data2, double scale);
+float CombineSigned(uint8_t data1, uint8_t data2, double scale);
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus

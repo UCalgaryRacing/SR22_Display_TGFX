@@ -43,7 +43,7 @@ Application/User/gui/Model.o: \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
  ../../STM32CubeIDE/Application/User/inc/rpm.h ../../Core/Inc/ltdc.h \
- ../../Core/Inc/main.h ../../Core/Inc/tim.h
+ ../../Core/Inc/main.h ../../Core/Inc/tim.h ../../Core/Inc/can.h
 ../../TouchGFX/gui/include/gui/model/Model.hpp:
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:
 ../../Core/Inc/main.h:
@@ -90,3 +90,4 @@ Application/User/gui/Model.o: \
 ../../Core/Inc/ltdc.h:
 ../../Core/Inc/main.h:
 ../../Core/Inc/tim.h:
+../../Core/Inc/can.h:

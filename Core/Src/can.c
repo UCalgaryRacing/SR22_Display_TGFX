@@ -26,6 +26,120 @@ CAN_RxHeaderTypeDef RxHeader;
 CAN_TxHeaderTypeDef TxHeader;
 uint8_t RxData[8];
 CAN_FilterTypeDef filterConfig;
+
+extern osMessageQueueId_t canQueueHandle;
+extern osMessageQueueId_t driverDataQueueHandle;
+canData_t *canData_q;
+driverScreenData_t *driverScreenData_q;
+
+double ecuAnalogScale = 0.004882813;
+
+uint8_t inputStateDiagnostics;
+uint8_t inputVoltage;
+uint8_t outputState;
+uint8_t outputVoltage;
+uint8_t outputCurrent;
+uint8_t outputLoad;
+uint8_t deviceInformation;
+
+uint8_t coolSwitch;
+uint8_t maxCoolSwitch;
+uint8_t fuelPump;
+uint8_t waterPump;
+uint8_t powerOutputVoltage;
+uint8_t powerOutputCurrent;
+uint8_t powerOutputLoad;
+
+
+double accelX;
+double accelY;
+double accelZ;
+double yaw;
+double pitch;
+double roll;
+double flPot;
+double frPot;
+double rlPot;
+double rrPot;
+double frontBreak;
+double rearBreak;
+double gpsLat;
+double gpsLong;
+double gpsSpeed;
+
+
+// EMU1 0x600
+uint16_t rpm;
+float tps;
+int8_t iat;
+int16_t map;
+float injpw;
+
+// EMU2 0x601
+double ai1;
+double ai2;
+double ai3;
+double ai4;
+
+// EMU3 0x602
+uint16_t vspd;
+uint8_t baro;
+uint8_t oilTemp;
+float oilPressure;
+float fuelPressure;
+int16_t coolantTemp;
+
+// EMU4 0x603
+double ignitionAngle;
+double dwell;
+double lambda;
+double lambcorr;
+uint16_t egt1;
+uint16_t egt2;
+
+// EMU5 0x604
+uint8_t gear;
+int8_t ecuTemp;
+uint16_t batteryVoltageECU;
+uint16_t errFlag;
+uint8_t flags1;
+uint8_t ethanolContent;
+
+uint16_t egt3;
+uint16_t egt4;
+
+int barometer;
+
+//int lambda;
+unsigned char pressureType;
+
+// // Analog 1
+// int EGT1;
+// // Analog 2
+// int EGT2;
+// // Analog 3
+// int EGT3;
+// // Analog 4
+// int EGT4;
+
+// Analog 5
+// int oilTemp;
+// Analog 6
+int o2Sensor;
+// Analog 7
+int fuelTemp;
+// Analog 8
+// int oilPressure;
+
+int frequency1;
+int frequency2;
+int frequency3;
+int frequency4;
+
+int batteryVoltage;
+int airTemp;
+
+
 /* USER CODE END 0 */
 
 CAN_HandleTypeDef hcan1;
@@ -147,5 +261,146 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan){
 	if(HAL_CAN_GetRxMessage(&hcan1, CAN_RX_FIFO0, &RxHeader, &RxData) != HAL_OK){
 		Error_Handler();
 	}
+	if(osMessageQueueGetSpace(canQueueHandle) > 0){
+		memcpy(canData_q->data, RxData, sizeof(RxData));
+		osMessageQueuePut(canQueueHandle, &canData_q, 0, 0);
+	}
+}
+
+void SendDriverScreenData(void){
+	driverScreenData_q->leftDataField1 = oilPressure;
+	driverScreenData_q->leftDataField2 = oilTemp;
+	driverScreenData_q->leftDataField3 = fuelPressure;
+	driverScreenData_q->leftDataField4 = vspd;
+	driverScreenData_q->rightDataField1 = batteryVoltage;
+	driverScreenData_q->rightDataField2 = coolantTemp;
+	driverScreenData_q->batteryLow = (batteryVoltage < BATTERY_LOW_VOLTAGE);
+	driverScreenData_q->coolantHigh = (coolantTemp > COOLANT_HIGH_TEMPERATURE);
+	driverScreenData_q->fansOn = maxCoolSwitch;
+	driverScreenData_q->waterPumpsOn = waterPump;
+	driverScreenData_q->fuelPumpOn = fuelPump;
+
+	if(osMessageQueueGetSpace(driverDataQueueHandle) > 0){
+		osMessageQueuePut(driverDataQueueHandle, &driverScreenData_q, 0, 0);
+	}
+}
+
+void ParseCANData(canData_t *canData){
+	switch(canData->canID){
+		case 0x500:
+			inputStateDiagnostics = RxData[0];
+			inputVoltage = RxData[1];
+			outputState = RxData[2];
+			outputVoltage = RxData[3];
+			outputCurrent = RxData[4];
+			outputLoad = RxData[5];
+			deviceInformation = RxData[6];
+			break;
+		case 0x420:
+			coolSwitch = RxData[0];
+			maxCoolSwitch = RxData[1];
+			fuelPump = RxData[2];
+			waterPump = RxData[3];
+			powerOutputVoltage = RxData[4];
+			powerOutputCurrent = RxData[5];
+			powerOutputLoad = RxData[6];
+			break;
+		case 0x250:
+			accelX = RxData[0];
+			break;
+		case 0x251:
+			accelY = RxData[0];
+			break;
+		case 0x252:
+			accelZ = RxData[0];
+			break;
+		case 0x253:
+			yaw = RxData[0];
+			break;
+		case 0x254:
+			pitch = RxData[0];
+			break;
+		case 0x255:
+			roll = RxData[0];
+			break;
+		case 0x260:
+			flPot = RxData[0];
+			break;
+		case 0x261:
+			frPot = RxData[0];
+			break;
+		case 0x262:
+			rlPot = RxData[0];
+			break;
+		case 0x263:
+			rrPot = RxData[0];
+			break;
+		case 0x264:
+			frontBreak= RxData[0];
+			break;
+		case 0x265:
+			rearBreak = RxData[0];
+			break;
+		case 0x280:
+			gpsLat = RxData[0];
+			break;
+		case 0x281:
+			gpsLong = RxData[0];
+			break;
+		case 0x282:
+			gpsSpeed = RxData[0];
+			break;
+		case 0x600:
+			rpm = CombineUnsigned(RxData[0], RxData[1], 1);
+			tps = RxData[2] * 0.5;
+			iat = RxData[3];
+			map = CombineSigned(RxData[4], RxData[5], 1);
+			injpw = CombineUnsigned(RxData[6], RxData[7], 0.016129);
+			break;
+		case 0x601:
+			ai1 = CombineUnsigned(RxData[0], RxData[1], ecuAnalogScale);
+			ai2 = CombineUnsigned(RxData[2], RxData[3], ecuAnalogScale);
+			ai3 = CombineUnsigned(RxData[4], RxData[5], ecuAnalogScale);
+			ai4 = CombineUnsigned(RxData[6], RxData[7], ecuAnalogScale);
+			break;
+		case 0x602:
+			vspd = CombineUnsigned(RxData[0], RxData[1], 1);
+			baro = RxData[2];
+			oilTemp = RxData[3];
+			oilPressure = RxData[4] * 0.0625;
+			fuelPressure = RxData[5] * 0.0625;
+			coolantTemp = CombineSigned(RxData[6], RxData[7], 1);
+			break;
+		case 0x603:
+			ignitionAngle = (int8_t)RxData[0] * 0.5;
+			dwell = RxData[1] * 0.05;
+			lambda = RxData[2] * 0.0078125;
+			lambcorr = RxData[3] * 0.5;
+			egt1 = CombineUnsigned(RxData[4], RxData[5], 1);
+			egt2 = CombineUnsigned(RxData[6], RxData[7], 1);
+			break;
+		case 0x604:
+			gear = RxData[0];
+			ecuTemp = (int8_t) RxData[1];
+			batteryVoltageECU = CombineUnsigned(RxData[2], RxData[3], 0.027);
+			errFlag = CombineUnsigned(RxData[4], RxData[5], 1);
+			flags1 = RxData[6];
+			ethanolContent = RxData[7];
+			break;
+		default:
+			break;
+	}
+}
+
+float CombineUnsigned(uint8_t data1, uint8_t data2, double scale){
+	uint16_t combinedData = (data1 << 8) | data2;
+	float finalData = combinedData * scale;
+	return finalData;
+}
+
+float CombineSigned(uint8_t data1, uint8_t data2, double scale){
+	int16_t combinedData = (data1 << 8) | data2;
+	float finalData = combinedData * scale;
+	return finalData;
 }
 /* USER CODE END 1 */
