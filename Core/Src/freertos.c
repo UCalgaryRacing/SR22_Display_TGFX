@@ -205,10 +205,10 @@ void StartDefaultTask(void *argument)
 {
   /* USER CODE BEGIN StartDefaultTask */
   /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
+	for(;;){
+		SendDriverScreenData();
+		osDelay(100);
+	}
   /* USER CODE END StartDefaultTask */
 }
 
@@ -255,7 +255,7 @@ void StartRPMTask(void *argument)
 		if(rpm > 10000){
 			rpm = 0;
 		}
-		rpm += 500;
+//		rpm += 500;
 		SetRPMLights(rpm);
 		osDelay(250);
 	}
