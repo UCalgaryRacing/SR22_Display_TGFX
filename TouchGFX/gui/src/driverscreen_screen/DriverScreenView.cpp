@@ -46,7 +46,7 @@ void DriverScreenView::updateRightDataField1(float value){
 	tbRightDataFieldData1.invalidate();
 }
 
-void DriverScreenView::updateRightDataField2(uint8_t value){
+void DriverScreenView::updateRightDataField2(int16_t value){
 	Unicode::snprintf(tbRightDataFieldData2Buffer, TBRIGHTDATAFIELDDATA2_SIZE, "%d", value);
 	tbRightDataFieldData2.invalidate();
 }

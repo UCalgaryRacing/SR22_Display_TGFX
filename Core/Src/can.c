@@ -352,10 +352,10 @@ void ParseCANData(canData_t *canData){
 			gpsSpeed = canData->data[0];
 			break;
 		case 0x600:
-			rpm = CombineUnsigned(canData->data[0], canData->data[1], 1);
+			rpm = (uint16_t)CombineUnsigned(canData->data[0], canData->data[1], 1);
 			tps = canData->data[2] * 0.5;
-			iat = canData->data[3];
-			map = CombineSigned(canData->data[4], canData->data[5], 1);
+			iat = (int8_t)canData->data[3];
+			map = (int16_t)CombineSigned(canData->data[4], canData->data[5], 1);
 			injpw = CombineUnsigned(canData->data[6], canData->data[7], 0.016129);
 			break;
 		case 0x601:
@@ -365,12 +365,12 @@ void ParseCANData(canData_t *canData){
 			ai4 = CombineUnsigned(canData->data[6], canData->data[7], ecuAnalogScale);
 			break;
 		case 0x602:
-			vspd = CombineUnsigned(canData->data[0], canData->data[1], 1);
+			vspd = (uint16_t)CombineUnsigned(canData->data[0], canData->data[1], 1);
 			baro = canData->data[2];
 			oilTemp = canData->data[3];
 			oilPressure = canData->data[4] * 0.0625;
 			fuelPressure = canData->data[5] * 0.0625;
-			coolantTemp = CombineSigned(canData->data[6], canData->data[7], 1);
+			coolantTemp = (int16_t)CombineSigned(canData->data[6], canData->data[7], 1);
 			break;
 		case 0x603:
 			ignitionAngle = (int8_t)RxData[0] * 0.5;

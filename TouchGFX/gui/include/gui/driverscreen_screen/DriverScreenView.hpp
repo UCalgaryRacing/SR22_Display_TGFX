@@ -18,7 +18,7 @@ public:
     virtual void updateLeftDataField3(float value);
     virtual void updateLeftDataField4(uint8_t value);
     virtual void updateRightDataField1(float value);
-    virtual void updateRightDataField2(uint8_t value); 
+    virtual void updateRightDataField2(int16_t value);
     virtual void updateBatteryLow(bool state);
     virtual void updateCoolantHigh(bool state);
     virtual void updateFansOn(bool state);

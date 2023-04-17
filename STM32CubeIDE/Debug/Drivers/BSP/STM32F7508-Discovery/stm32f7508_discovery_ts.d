@@ -1,7 +1,7 @@
 Drivers/BSP/STM32F7508-Discovery/stm32f7508_discovery_ts.o: \
- C:/Users/steve/Documents/SR22_Display_TGFX/Drivers/BSP/STM32F7508-Discovery/stm32f7508_discovery_ts.c \
- C:/Users/steve/Documents/SR22_Display_TGFX/Drivers/BSP/STM32F7508-Discovery/stm32f7508_discovery_ts.h \
- C:/Users/steve/Documents/SR22_Display_TGFX/Drivers/BSP/STM32F7508-Discovery/stm32f7508_discovery.h \
+ D:/GitHub/SR22_Display_TGFX/Drivers/BSP/STM32F7508-Discovery/stm32f7508_discovery_ts.c \
+ D:/GitHub/SR22_Display_TGFX/Drivers/BSP/STM32F7508-Discovery/stm32f7508_discovery_ts.h \
+ D:/GitHub/SR22_Display_TGFX/Drivers/BSP/STM32F7508-Discovery/stm32f7508_discovery.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h \
  ../../Core/Inc/stm32f7xx_hal_conf.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rcc.h \
@@ -40,10 +40,10 @@ Drivers/BSP/STM32F7508-Discovery/stm32f7508_discovery_ts.o: \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h \
- c:\users\steve\documents\sr22_display_tgfx\drivers\bsp\components\ft5336\ft5336.h \
- c:\users\steve\documents\sr22_display_tgfx\drivers\bsp\components\common\ts.h
-C:/Users/steve/Documents/SR22_Display_TGFX/Drivers/BSP/STM32F7508-Discovery/stm32f7508_discovery_ts.h:
-C:/Users/steve/Documents/SR22_Display_TGFX/Drivers/BSP/STM32F7508-Discovery/stm32f7508_discovery.h:
+ d:\github\sr22_display_tgfx\drivers\bsp\components\ft5336\ft5336.h \
+ d:\github\sr22_display_tgfx\drivers\bsp\components\common\ts.h
+D:/GitHub/SR22_Display_TGFX/Drivers/BSP/STM32F7508-Discovery/stm32f7508_discovery_ts.h:
+D:/GitHub/SR22_Display_TGFX/Drivers/BSP/STM32F7508-Discovery/stm32f7508_discovery.h:
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:
 ../../Core/Inc/stm32f7xx_hal_conf.h:
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rcc.h:
@@ -82,5 +82,5 @@ C:/Users/steve/Documents/SR22_Display_TGFX/Drivers/BSP/STM32F7508-Discovery/stm3
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h:
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h:
-c:\users\steve\documents\sr22_display_tgfx\drivers\bsp\components\ft5336\ft5336.h:
-c:\users\steve\documents\sr22_display_tgfx\drivers\bsp\components\common\ts.h:
+d:\github\sr22_display_tgfx\drivers\bsp\components\ft5336\ft5336.h:
+d:\github\sr22_display_tgfx\drivers\bsp\components\common\ts.h:

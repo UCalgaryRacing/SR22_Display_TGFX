@@ -41,11 +41,11 @@ void Model::tick()
 			modelListener->updateLeftDataField4(driverScreenData_r->leftDataField4);
 			modelListener->updateRightDataField1(driverScreenData_r->rightDataField1);
 			modelListener->updateRightDataField2(driverScreenData_r->rightDataField2);
-			modelListener->updateBatteryLow((x%2) != 0);
-			modelListener->updateCoolantHigh((x%2) != 0);
-			modelListener->updateFansOn((x%2) != 0);
-			modelListener->updateWaterPumpsOn((x%2) != 0);
-			modelListener->updateFuelPumpOn((x%2) != 0);
+			modelListener->updateBatteryLow(driverScreenData_r->batteryLow);
+			modelListener->updateCoolantHigh(driverScreenData_r->coolantHigh);
+			modelListener->updateFansOn(driverScreenData_r->fansOn);
+			modelListener->updateWaterPumpsOn(driverScreenData_r->waterPumpsOn);
+			modelListener->updateFuelPumpOn(driverScreenData_r->fuelPumpOn);
 		}
 	}
 #endif

@@ -6,7 +6,7 @@ DriverScreenPresenter.cpp:29:6:virtual void DriverScreenPresenter::updateLeftDat
 DriverScreenPresenter.cpp:33:6:virtual void DriverScreenPresenter::updateLeftDataField3(float)	1
 DriverScreenPresenter.cpp:37:6:virtual void DriverScreenPresenter::updateLeftDataField4(uint8_t)	1
 DriverScreenPresenter.cpp:41:6:virtual void DriverScreenPresenter::updateRightDataField1(float)	1
-DriverScreenPresenter.cpp:45:6:virtual void DriverScreenPresenter::updateRightDataField2(uint8_t)	1
+DriverScreenPresenter.cpp:45:6:virtual void DriverScreenPresenter::updateRightDataField2(int16_t)	1
 DriverScreenPresenter.cpp:49:6:virtual void DriverScreenPresenter::updateBatteryLow(bool)	1
 DriverScreenPresenter.cpp:53:6:virtual void DriverScreenPresenter::updateCoolantHigh(bool)	1
 DriverScreenPresenter.cpp:57:6:virtual void DriverScreenPresenter::updateFansOn(bool)	1

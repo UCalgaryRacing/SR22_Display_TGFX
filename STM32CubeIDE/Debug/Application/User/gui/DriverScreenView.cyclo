@@ -12,7 +12,7 @@ DriverScreenView.cpp:29:6:virtual void DriverScreenView::updateLeftDataField2(ui
 DriverScreenView.cpp:34:6:virtual void DriverScreenView::updateLeftDataField3(float)	1
 DriverScreenView.cpp:39:6:virtual void DriverScreenView::updateLeftDataField4(uint8_t)	1
 DriverScreenView.cpp:44:6:virtual void DriverScreenView::updateRightDataField1(float)	1
-DriverScreenView.cpp:49:6:virtual void DriverScreenView::updateRightDataField2(uint8_t)	1
+DriverScreenView.cpp:49:6:virtual void DriverScreenView::updateRightDataField2(int16_t)	1
 DriverScreenView.cpp:54:6:virtual void DriverScreenView::updateBatteryLow(bool)	1
 DriverScreenView.cpp:59:6:virtual void DriverScreenView::updateCoolantHigh(bool)	1
 DriverScreenView.cpp:64:6:virtual void DriverScreenView::updateFansOn(bool)	1

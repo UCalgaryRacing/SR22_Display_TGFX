@@ -1,5 +1,5 @@
 Application/User/gui/Model.o: \
- C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/gui/src/model/Model.cpp \
+ D:/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/model/Model.cpp \
  ../../TouchGFX/gui/include/gui/model/Model.hpp \
  ../../TouchGFX/gui/include/gui/model/ModelListener.hpp \
  ../../Core/Inc/main.h \

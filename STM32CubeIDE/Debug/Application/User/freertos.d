@@ -1,5 +1,5 @@
 Application/User/freertos.o: \
- C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/freertos.c \
+ D:/GitHub/SR22_Display_TGFX/Core/Src/freertos.c \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../Core/Inc/FreeRTOSConfig.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \

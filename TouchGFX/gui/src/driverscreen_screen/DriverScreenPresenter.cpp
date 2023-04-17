@@ -42,7 +42,7 @@ void DriverScreenPresenter::updateRightDataField1(float value){
 	view.updateRightDataField1(value);
 }
 
-void DriverScreenPresenter::updateRightDataField2(uint8_t value){
+void DriverScreenPresenter::updateRightDataField2(int16_t value){
 	view.updateRightDataField2(value);
 }
 
