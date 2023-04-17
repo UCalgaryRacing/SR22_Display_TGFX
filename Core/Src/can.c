@@ -35,7 +35,7 @@ driverScreenData_t *driverScreenData_q;
 double ecuAnalogScale = 0.004882813;
 
 uint8_t inputStateDiagnostics;
-uint8_t inputVoltage;
+float inputVoltage;
 uint8_t outputState;
 uint8_t outputVoltage;
 uint8_t outputCurrent;
@@ -46,7 +46,7 @@ uint8_t coolSwitch;
 uint8_t maxCoolSwitch;
 uint8_t fuelPump;
 uint8_t waterPump;
-uint8_t powerOutputVoltage;
+float powerOutputVoltage;
 uint8_t powerOutputCurrent;
 uint8_t powerOutputLoad;
 
@@ -262,6 +262,7 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan){
 		Error_Handler();
 	}
 	if(osMessageQueueGetSpace(canQueueHandle) > 0){
+		canData_q->canID = RxHeader.StdId;
 		memcpy(canData_q->data, RxData, sizeof(RxData));
 		osMessageQueuePut(canQueueHandle, &canData_q, 0, 0);
 	}
@@ -272,9 +273,9 @@ void SendDriverScreenData(void){
 	driverScreenData_q->leftDataField2 = oilTemp;
 	driverScreenData_q->leftDataField3 = fuelPressure;
 	driverScreenData_q->leftDataField4 = vspd;
-	driverScreenData_q->rightDataField1 = batteryVoltage;
+	driverScreenData_q->rightDataField1 = inputVoltage;
 	driverScreenData_q->rightDataField2 = coolantTemp;
-	driverScreenData_q->batteryLow = (batteryVoltage < BATTERY_LOW_VOLTAGE);
+	driverScreenData_q->batteryLow = (inputVoltage < BATTERY_LOW_VOLTAGE);
 	driverScreenData_q->coolantHigh = (coolantTemp > COOLANT_HIGH_TEMPERATURE);
 	driverScreenData_q->fansOn = maxCoolSwitch;
 	driverScreenData_q->waterPumpsOn = waterPump;
@@ -288,104 +289,104 @@ void SendDriverScreenData(void){
 void ParseCANData(canData_t *canData){
 	switch(canData->canID){
 		case 0x500:
-			inputStateDiagnostics = RxData[0];
-			inputVoltage = RxData[1];
-			outputState = RxData[2];
-			outputVoltage = RxData[3];
-			outputCurrent = RxData[4];
-			outputLoad = RxData[5];
-			deviceInformation = RxData[6];
+			inputStateDiagnostics = canData->data[0];
+			inputVoltage = canData->data[1] * 0.1216;
+			outputState = canData->data[2];
+			outputVoltage = canData->data[3];
+			outputCurrent = canData->data[4];
+			outputLoad = canData->data[5];
+			deviceInformation = canData->data[6];
 			break;
 		case 0x420:
-			coolSwitch = RxData[0];
-			maxCoolSwitch = RxData[1];
-			fuelPump = RxData[2];
-			waterPump = RxData[3];
-			powerOutputVoltage = RxData[4];
-			powerOutputCurrent = RxData[5];
-			powerOutputLoad = RxData[6];
+			coolSwitch = canData->data[0];
+			maxCoolSwitch = canData->data[1];
+			fuelPump = canData->data[2];
+			waterPump = canData->data[3];
+			powerOutputVoltage = canData->data[4]  * 0.1216;
+			powerOutputCurrent = canData->data[5];
+			powerOutputLoad = canData->data[6];
 			break;
 		case 0x250:
-			accelX = RxData[0];
+			accelX = canData->data[0];
 			break;
 		case 0x251:
-			accelY = RxData[0];
+			accelY = canData->data[0];
 			break;
 		case 0x252:
-			accelZ = RxData[0];
+			accelZ = canData->data[0];
 			break;
 		case 0x253:
-			yaw = RxData[0];
+			yaw = canData->data[0];
 			break;
 		case 0x254:
-			pitch = RxData[0];
+			pitch = canData->data[0];
 			break;
 		case 0x255:
-			roll = RxData[0];
+			roll = canData->data[0];
 			break;
 		case 0x260:
-			flPot = RxData[0];
+			flPot = canData->data[0];
 			break;
 		case 0x261:
-			frPot = RxData[0];
+			frPot = canData->data[0];
 			break;
 		case 0x262:
-			rlPot = RxData[0];
+			rlPot = canData->data[0];
 			break;
 		case 0x263:
-			rrPot = RxData[0];
+			rrPot = canData->data[0];
 			break;
 		case 0x264:
-			frontBreak= RxData[0];
+			frontBreak= canData->data[0];
 			break;
 		case 0x265:
-			rearBreak = RxData[0];
+			rearBreak = canData->data[0];
 			break;
 		case 0x280:
-			gpsLat = RxData[0];
+			gpsLat = canData->data[0];
 			break;
 		case 0x281:
-			gpsLong = RxData[0];
+			gpsLong = canData->data[0];
 			break;
 		case 0x282:
-			gpsSpeed = RxData[0];
+			gpsSpeed = canData->data[0];
 			break;
 		case 0x600:
-			rpm = CombineUnsigned(RxData[0], RxData[1], 1);
-			tps = RxData[2] * 0.5;
-			iat = RxData[3];
-			map = CombineSigned(RxData[4], RxData[5], 1);
-			injpw = CombineUnsigned(RxData[6], RxData[7], 0.016129);
+			rpm = CombineUnsigned(canData->data[0], canData->data[1], 1);
+			tps = canData->data[2] * 0.5;
+			iat = canData->data[3];
+			map = CombineSigned(canData->data[4], canData->data[5], 1);
+			injpw = CombineUnsigned(canData->data[6], canData->data[7], 0.016129);
 			break;
 		case 0x601:
-			ai1 = CombineUnsigned(RxData[0], RxData[1], ecuAnalogScale);
-			ai2 = CombineUnsigned(RxData[2], RxData[3], ecuAnalogScale);
-			ai3 = CombineUnsigned(RxData[4], RxData[5], ecuAnalogScale);
-			ai4 = CombineUnsigned(RxData[6], RxData[7], ecuAnalogScale);
+			ai1 = CombineUnsigned(canData->data[0], canData->data[1], ecuAnalogScale);
+			ai2 = CombineUnsigned(canData->data[2], canData->data[3], ecuAnalogScale);
+			ai3 = CombineUnsigned(canData->data[4], canData->data[5], ecuAnalogScale);
+			ai4 = CombineUnsigned(canData->data[6], canData->data[7], ecuAnalogScale);
 			break;
 		case 0x602:
-			vspd = CombineUnsigned(RxData[0], RxData[1], 1);
-			baro = RxData[2];
-			oilTemp = RxData[3];
-			oilPressure = RxData[4] * 0.0625;
-			fuelPressure = RxData[5] * 0.0625;
-			coolantTemp = CombineSigned(RxData[6], RxData[7], 1);
+			vspd = CombineUnsigned(canData->data[0], canData->data[1], 1);
+			baro = canData->data[2];
+			oilTemp = canData->data[3];
+			oilPressure = canData->data[4] * 0.0625;
+			fuelPressure = canData->data[5] * 0.0625;
+			coolantTemp = CombineSigned(canData->data[6], canData->data[7], 1);
 			break;
 		case 0x603:
 			ignitionAngle = (int8_t)RxData[0] * 0.5;
 			dwell = RxData[1] * 0.05;
 			lambda = RxData[2] * 0.0078125;
 			lambcorr = RxData[3] * 0.5;
-			egt1 = CombineUnsigned(RxData[4], RxData[5], 1);
-			egt2 = CombineUnsigned(RxData[6], RxData[7], 1);
+			egt1 = CombineUnsigned(canData->data[4], canData->data[5], 1);
+			egt2 = CombineUnsigned(canData->data[6], canData->data[7], 1);
 			break;
 		case 0x604:
-			gear = RxData[0];
-			ecuTemp = (int8_t) RxData[1];
-			batteryVoltageECU = CombineUnsigned(RxData[2], RxData[3], 0.027);
-			errFlag = CombineUnsigned(RxData[4], RxData[5], 1);
-			flags1 = RxData[6];
-			ethanolContent = RxData[7];
+			gear = canData->data[0];
+			ecuTemp = (int8_t) canData->data[1];
+			batteryVoltageECU = CombineUnsigned(canData->data[2], canData->data[3], 0.027);
+			errFlag = CombineUnsigned(canData->data[4], canData->data[5], 1);
+			flags1 = canData->data[6];
+			ethanolContent = canData->data[7];
 			break;
 		default:
 			break;

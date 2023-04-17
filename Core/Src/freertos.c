@@ -207,7 +207,7 @@ void StartDefaultTask(void *argument)
   /* Infinite loop */
 	for(;;){
 		SendDriverScreenData();
-		osDelay(100);
+		osDelay(20);
 	}
   /* USER CODE END StartDefaultTask */
 }
@@ -282,7 +282,7 @@ void StartCANTask(void *argument)
 				ParseCANData(canData_r);
 			}
 		}
-    osDelay(10);
+    osDelay(1);
   }
   /* USER CODE END StartCANTask */
 }
