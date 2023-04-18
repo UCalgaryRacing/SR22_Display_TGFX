@@ -313,7 +313,19 @@
             "ImageVerticalScale": 0.09
           }
         ],
-        "Interactions": []
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerPhysicalButtonClicked"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "PowerTrainScreen"
+            }
+          }
+        ]
       },
       {
         "Name": "PowerTrainScreen",
@@ -328,6 +340,15 @@
               "Green": 255,
               "Blue": 255
             }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "Width": 148,
+            "Height": 37,
+            "TextId": "__SingleUse_O2N1",
+            "TextRotation": "0",
+            "AutoSize": true
           }
         ],
         "Interactions": []

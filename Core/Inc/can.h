@@ -48,7 +48,7 @@ typedef struct{
 	float leftDataField3;
 	uint8_t leftDataField4;
 	float rightDataField1;
-	uint8_t rightDataField2;
+	int16_t rightDataField2;
 	bool batteryLow;
 	bool coolantHigh;
 	bool fansOn;

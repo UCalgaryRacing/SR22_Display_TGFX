@@ -17,10 +17,13 @@
 /* Defines*/
 #define PWM_HIGH 140
 #define PWM_LOW 70
-#define MAX_LED 8
+#define PWM_RESET 40
+#define LED_DATA_LENGTH 23
+#define MAX_LED 16
 #define USE_BRIGHTNESS 0
 #define PI 3.14159265
-#define REDLINE 6000
+#define REDLINE 9500
+
 
 /* Variables */
 uint8_t LED_Data[MAX_LED][4];
@@ -40,6 +43,8 @@ uint16_t rpmRanges[16] = {
     8000, 8500,
     9000
 };
+
+//extern rpm;
 
 
 /* Functions */
@@ -82,7 +87,7 @@ void WS2812Send (void){
 		color = ((LED_Data[i][1]<<16) | (LED_Data[i][2]<<8) | (LED_Data[i][3]));
 #endif
 
-		for (int i = 23; i >= 0; i--){
+		for (int i = LED_DATA_LENGTH; i >= 0; i--){
 			if (color & (1<<i)){
 				pwmData[index] = PWM_HIGH;
 			}else {
@@ -92,7 +97,7 @@ void WS2812Send (void){
 		}
 	}
 
-	for (int i = 0; i < 50; i++){
+	for (int i = 0; i < PWM_RESET; i++){
 		pwmData[index] = 0;
 		index++;
 	}
@@ -104,10 +109,9 @@ void WS2812Send (void){
 
 void SetRPMLights(uint16_t rpm){
 	if(rpm > REDLINE){
-		HAL_TIM_Base_Start_IT(&htim2);
+		BlinkAllLED();
     }
 	else{
-		HAL_TIM_Base_Stop_IT(&htim2);
 		for(int i = 0; i < MAX_LED; i++){
 			if(rpm > rpmRanges[i]){
 				SetLED(i, 0, 255, 0);

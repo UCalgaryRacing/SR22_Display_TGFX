@@ -108,28 +108,6 @@ uint8_t ethanolContent;
 uint16_t egt3;
 uint16_t egt4;
 
-int barometer;
-
-//int lambda;
-unsigned char pressureType;
-
-// // Analog 1
-// int EGT1;
-// // Analog 2
-// int EGT2;
-// // Analog 3
-// int EGT3;
-// // Analog 4
-// int EGT4;
-
-// Analog 5
-// int oilTemp;
-// Analog 6
-int o2Sensor;
-// Analog 7
-int fuelTemp;
-// Analog 8
-// int oilPressure;
 
 int frequency1;
 int frequency2;
@@ -261,11 +239,13 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan){
 	if(HAL_CAN_GetRxMessage(&hcan1, CAN_RX_FIFO0, &RxHeader, &RxData) != HAL_OK){
 		Error_Handler();
 	}
-	if(osMessageQueueGetSpace(canQueueHandle) > 0){
-		canData_q->canID = RxHeader.StdId;
-		memcpy(canData_q->data, RxData, sizeof(RxData));
-		osMessageQueuePut(canQueueHandle, &canData_q, 0, 0);
-	}
+
+//	if(osMessageQueueGetSpace(canQueueHandle) > 0){
+//		osMessageQueuePut(canQueueHandle, &canData_q, 0, 0);
+//	}
+	canData_q->canID = RxHeader.StdId;
+	memcpy(canData_q->data, RxData, sizeof(RxData));
+	ParseCANData(canData_q);
 }
 
 void SendDriverScreenData(void){
@@ -357,6 +337,9 @@ void ParseCANData(canData_t *canData){
 			iat = (int8_t)canData->data[3];
 			map = (int16_t)CombineSigned(canData->data[4], canData->data[5], 1);
 			injpw = CombineUnsigned(canData->data[6], canData->data[7], 0.016129);
+//			if(osMessageQueueGetSpace(rpmTaskHandle) > 0){
+//				osMessageQueuePut(rpmTaskHandle, &rpm, 0, 0);
+//			}
 			break;
 		case 0x601:
 			ai1 = CombineUnsigned(canData->data[0], canData->data[1], ecuAnalogScale);

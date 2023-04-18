@@ -46,8 +46,8 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
-
-
+extern uint16_t rpm;
+extern CAN_TxHeaderTypeDef TxHeader;
 /* USER CODE END Variables */
 /* Definitions for defaultTask */
 osThreadId_t defaultTaskHandle;
@@ -89,10 +89,10 @@ osMessageQueueId_t buttonQueueHandle;
 const osMessageQueueAttr_t buttonQueue_attributes = {
   .name = "buttonQueue"
 };
-/* Definitions for canQueue */
-osMessageQueueId_t canQueueHandle;
-const osMessageQueueAttr_t canQueue_attributes = {
-  .name = "canQueue"
+/* Definitions for rpmQueue */
+osMessageQueueId_t rpmQueueHandle;
+const osMessageQueueAttr_t rpmQueue_attributes = {
+  .name = "rpmQueue"
 };
 /* Definitions for driverDataQueue */
 osMessageQueueId_t driverDataQueueHandle;
@@ -158,8 +158,8 @@ void MX_FREERTOS_Init(void) {
   /* creation of buttonQueue */
   buttonQueueHandle = osMessageQueueNew (4, sizeof(uint8_t), &buttonQueue_attributes);
 
-  /* creation of canQueue */
-  canQueueHandle = osMessageQueueNew (16, sizeof(canData_t), &canQueue_attributes);
+  /* creation of rpmQueue */
+  rpmQueueHandle = osMessageQueueNew (8, sizeof(uint16_t), &rpmQueue_attributes);
 
   /* creation of driverDataQueue */
   driverDataQueueHandle = osMessageQueueNew (16, sizeof(driverScreenData_t), &driverDataQueue_attributes);
@@ -240,7 +240,7 @@ void StartButtonTask(void *argument)
 void StartRPMTask(void *argument)
 {
   /* USER CODE BEGIN StartRPMTask */
-	uint16_t rpm = 0;
+//	uint16_t rpm = 0;
 	SetLED(0,255,0,0);		// These LEDS are going to be set to green as they are going to represent idle
 	SetLED(1,255,0,0);
 	SetLED(2,255,0,0);
@@ -252,12 +252,9 @@ void StartRPMTask(void *argument)
 
   /* Infinite loop */
 	for(;;){
-		if(rpm > 10000){
-			rpm = 0;
-		}
-//		rpm += 500;
+
 		SetRPMLights(rpm);
-		osDelay(250);
+		osDelay(100);
 	}
   /* USER CODE END StartRPMTask */
 }
@@ -272,17 +269,19 @@ void StartRPMTask(void *argument)
 void StartCANTask(void *argument)
 {
   /* USER CODE BEGIN StartCANTask */
-	canData_t *canData_r;
+//	canData_t *canData_r;
 //	uint32_t canID = 0x000;
-//	uint8_t data[8];
+	uint32_t TxMailbox;
+	uint8_t data[8] = {10, 10, 10, 10, 10, 10, 10, 10};
   /* Infinite loop */
 	for(;;){
-		if(osMessageQueueGetCount(canQueueHandle) > 0){
-			if(osMessageQueueGet(canQueueHandle, &canData_r, 0, 0) == osOK){
-				ParseCANData(canData_r);
-			}
-		}
-    osDelay(1);
+//		if(osMessageQueueGetCount(canQueueHandle) > 0){
+//			if(osMessageQueueGet(canQueueHandle, &canData_r, 0, 0) == osOK){
+//				ParseCANData(canData_r);
+//			}
+//		}
+		HAL_CAN_AddTxMessage(&hcan1, &TxHeader, data, &TxMailbox);
+		osDelay(500);
   }
   /* USER CODE END StartCANTask */
 }
