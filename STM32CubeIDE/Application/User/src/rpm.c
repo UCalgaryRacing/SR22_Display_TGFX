@@ -44,6 +44,10 @@ uint16_t rpmRanges[16] = {
     9000
 };
 
+// 5 green, 6 red, five blue
+// all blues turn on at same time at redline
+//
+
 //extern rpm;
 
 
