@@ -8,6 +8,7 @@
 #include <mvp/View.hpp>
 #include <gui/powertrainscreen_screen/PowerTrainScreenPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
 
 class PowerTrainScreenViewBase : public touchgfx::View<PowerTrainScreenPresenter>
 {
@@ -26,6 +27,7 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Box background;
+    touchgfx::TextArea textArea1;
 
 private:
 

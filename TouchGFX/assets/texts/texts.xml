@@ -63,7 +63,7 @@
       <Text Id="__SingleUse_4UEX" Alignment="Right" TypographyId="Small">
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_6GAE" Alignment="Left" TypographyId="Default">
+      <Text Id="__SingleUse_6GAE" Alignment="Right" TypographyId="Default">
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_JPBU" Alignment="Left" TypographyId="Small">
@@ -72,7 +72,7 @@
       <Text Id="__SingleUse_041P" Alignment="Left" TypographyId="Small">
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_NV6C" Alignment="Left" TypographyId="Small">
+      <Text Id="__SingleUse_NV6C" Alignment="Right" TypographyId="Small">
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_L7ZC" Alignment="Left" TypographyId="Default">
@@ -86,6 +86,12 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_GPKS" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_O779" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
       <Text Id="__SingleUse_O2N1" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">Powertrain</Translation>
       </Text>

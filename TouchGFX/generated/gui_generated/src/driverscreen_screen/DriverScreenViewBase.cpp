@@ -19,6 +19,22 @@ DriverScreenViewBase::DriverScreenViewBase()
     background.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     add(background);
 
+    tbRightDataFieldData3.setPosition(385, 155, 85, 37);
+    tbRightDataFieldData3.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    tbRightDataFieldData3.setLinespacing(0);
+    Unicode::snprintf(tbRightDataFieldData3Buffer, TBRIGHTDATAFIELDDATA3_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_S3HT).getText());
+    tbRightDataFieldData3.setWildcard(tbRightDataFieldData3Buffer);
+    tbRightDataFieldData3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_6GAE));
+    add(tbRightDataFieldData3);
+
+    tbRightDataFieldTitle3.setPosition(370, 140, 100, 21);
+    tbRightDataFieldTitle3.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    tbRightDataFieldTitle3.setLinespacing(2);
+    Unicode::snprintf(tbRightDataFieldTitle3Buffer, TBRIGHTDATAFIELDTITLE3_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_BBWH).getText());
+    tbRightDataFieldTitle3.setWildcard(tbRightDataFieldTitle3Buffer);
+    tbRightDataFieldTitle3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_NV6C));
+    add(tbRightDataFieldTitle3);
+
     tbRightDataFieldData2.setPosition(420, 95, 50, 37);
     tbRightDataFieldData2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     tbRightDataFieldData2.setLinespacing(0);
@@ -51,22 +67,6 @@ DriverScreenViewBase::DriverScreenViewBase()
     tbRightDataFieldTitle1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_4UEX));
     add(tbRightDataFieldTitle1);
 
-    tbLeftDataFieldData4.setPosition(11, 215, 85, 37);
-    tbLeftDataFieldData4.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    tbLeftDataFieldData4.setLinespacing(0);
-    Unicode::snprintf(tbLeftDataFieldData4Buffer, TBLEFTDATAFIELDDATA4_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_S3HT).getText());
-    tbLeftDataFieldData4.setWildcard(tbLeftDataFieldData4Buffer);
-    tbLeftDataFieldData4.setTypedText(touchgfx::TypedText(T___SINGLEUSE_6GAE));
-    add(tbLeftDataFieldData4);
-
-    tbLeftDataFieldTitle4.setPosition(10, 201, 100, 21);
-    tbLeftDataFieldTitle4.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    tbLeftDataFieldTitle4.setLinespacing(2);
-    Unicode::snprintf(tbLeftDataFieldTitle4Buffer, TBLEFTDATAFIELDTITLE4_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_BBWH).getText());
-    tbLeftDataFieldTitle4.setWildcard(tbLeftDataFieldTitle4Buffer);
-    tbLeftDataFieldTitle4.setTypedText(touchgfx::TypedText(T___SINGLEUSE_NV6C));
-    add(tbLeftDataFieldTitle4);
-
     tbLeftDataFieldData3.setPosition(10, 155, 85, 37);
     tbLeftDataFieldData3.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     tbLeftDataFieldData3.setLinespacing(0);
@@ -75,7 +75,7 @@ DriverScreenViewBase::DriverScreenViewBase()
     tbLeftDataFieldData3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_L7ZC));
     add(tbLeftDataFieldData3);
 
-    tbLeftDataFieldTitle3.setPosition(10, 139, 100, 21);
+    tbLeftDataFieldTitle3.setPosition(10, 140, 100, 21);
     tbLeftDataFieldTitle3.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     tbLeftDataFieldTitle3.setLinespacing(2);
     Unicode::snprintf(tbLeftDataFieldTitle3Buffer, TBLEFTDATAFIELDTITLE3_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_LEAT).getText());
@@ -116,7 +116,7 @@ DriverScreenViewBase::DriverScreenViewBase()
     tbLeftDataFieldTitle1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_3UGH));
     add(tbLeftDataFieldTitle1);
 
-    tbGear.setPosition(202, 26, 77, 150);
+    tbGear.setPosition(200, 100, 80, 150);
     tbGear.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     tbGear.setLinespacing(0);
     Unicode::snprintf(tbGearBuffer, TBGEAR_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_ZWYE).getText());
@@ -125,7 +125,7 @@ DriverScreenViewBase::DriverScreenViewBase()
     add(tbGear);
 
     iconBatteryLow.setSVG(SVG_BATTERYLOW_ID);
-    iconBatteryLow.setPosition(160, 191, 53, 31);
+    iconBatteryLow.setPosition(14, 225, 53, 31);
     iconBatteryLow.setScale(0.08f, 0.07f);
     iconBatteryLow.setImagePosition(0, 0);
     iconBatteryLow.setRotationCenter(23.0f, 12.5f);
@@ -133,7 +133,7 @@ DriverScreenViewBase::DriverScreenViewBase()
     add(iconBatteryLow);
 
     iconCoolantHigh.setSVG(SVG_COOLANT_ID);
-    iconCoolantHigh.setPosition(273, 191, 47, 42);
+    iconCoolantHigh.setPosition(423, 219, 47, 42);
     iconCoolantHigh.setScale(0.07f, 0.08f);
     iconCoolantHigh.setImagePosition(0, 0);
     iconCoolantHigh.setRotationCenter(27, 30);
@@ -148,29 +148,13 @@ DriverScreenViewBase::DriverScreenViewBase()
     imageSRLogo.setRotation(0);
     add(imageSRLogo);
 
-    iconFansOn.setSVG(SVG_FANS_ID);
-    iconFansOn.setPosition(378, 149, 52, 55);
-    iconFansOn.setScale(0.1f, 0.11f);
-    iconFansOn.setImagePosition(0, 0);
-    iconFansOn.setRotationCenter(25, 25);
-    iconFansOn.setRotation(0);
-    add(iconFansOn);
-
-    iconWaterPumpsOn.setSVG(SVG_WATER_PUMP_ID);
-    iconWaterPumpsOn.setPosition(441, 149, 35, 55);
-    iconWaterPumpsOn.setScale(0.09f, 0.09f);
-    iconWaterPumpsOn.setImagePosition(0, 0);
-    iconWaterPumpsOn.setRotationCenter(0, 0);
-    iconWaterPumpsOn.setRotation(0);
-    add(iconWaterPumpsOn);
-
-    iconFuelPumpOn.setSVG(SVG_FUEL_PUMP_ID);
-    iconFuelPumpOn.setPosition(441, 212, 35, 55);
-    iconFuelPumpOn.setScale(0.08f, 0.09f);
-    iconFuelPumpOn.setImagePosition(0, 0);
-    iconFuelPumpOn.setRotationCenter(0, 0);
-    iconFuelPumpOn.setRotation(0);
-    add(iconFuelPumpOn);
+    tbR.setPosition(190, 60, 100, 37);
+    tbR.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    tbR.setLinespacing(0);
+    Unicode::snprintf(tbRBuffer, TBR_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_GPKS).getText());
+    tbR.setWildcard(tbRBuffer);
+    tbR.setTypedText(touchgfx::TypedText(T___SINGLEUSE_O779));
+    add(tbR);
 }
 
 DriverScreenViewBase::~DriverScreenViewBase()
@@ -181,4 +165,16 @@ DriverScreenViewBase::~DriverScreenViewBase()
 void DriverScreenViewBase::setupScreen()
 {
 
+}
+
+void DriverScreenViewBase::handleKeyEvent(uint8_t key)
+{
+    if(0 == key)
+    {
+        //SwitchToPowertrain
+        //When hardware button 0 clicked change screen to PowerTrainScreen
+        //Go to PowerTrainScreen with no screen transition
+        application().gotoPowerTrainScreenScreenNoTransition();
+    
+    }
 }

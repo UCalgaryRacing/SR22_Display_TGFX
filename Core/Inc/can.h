@@ -43,17 +43,16 @@ typedef struct{
 }canData_t;
 
 typedef struct{
+	uint8_t gear;
+	uint16_t rpm;
 	float leftDataField1;
 	uint8_t leftDataField2;
 	float leftDataField3;
-	uint8_t leftDataField4;
 	float rightDataField1;
 	int16_t rightDataField2;
+	uint16_t rightDataField3;
 	bool batteryLow;
 	bool coolantHigh;
-	bool fansOn;
-	bool waterPumpsOn;
-	bool fuelPumpOn;
 }driverScreenData_t;
 /* USER CODE END Private defines */
 

@@ -249,17 +249,16 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan){
 }
 
 void SendDriverScreenData(void){
+	driverScreenData_q->gear = gear;
+	driverScreenData_q->rpm = rpm;
 	driverScreenData_q->leftDataField1 = oilPressure;
 	driverScreenData_q->leftDataField2 = oilTemp;
 	driverScreenData_q->leftDataField3 = fuelPressure;
-	driverScreenData_q->leftDataField4 = vspd;
 	driverScreenData_q->rightDataField1 = inputVoltage;
 	driverScreenData_q->rightDataField2 = coolantTemp;
+	driverScreenData_q->rightDataField3 = vspd;
 	driverScreenData_q->batteryLow = (inputVoltage < BATTERY_LOW_VOLTAGE);
 	driverScreenData_q->coolantHigh = (coolantTemp > COOLANT_HIGH_TEMPERATURE);
-	driverScreenData_q->fansOn = maxCoolSwitch;
-	driverScreenData_q->waterPumpsOn = waterPump;
-	driverScreenData_q->fuelPumpOn = fuelPump;
 
 	if(osMessageQueueGetSpace(driverDataQueueHandle) > 0){
 		osMessageQueuePut(driverDataQueueHandle, &driverScreenData_q, 0, 0);

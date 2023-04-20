@@ -3,6 +3,7 @@
 /*********************************************************************************/
 #include <gui_generated/powertrainscreen_screen/PowerTrainScreenViewBase.hpp>
 #include <touchgfx/Color.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 PowerTrainScreenViewBase::PowerTrainScreenViewBase()
 {
@@ -13,6 +14,12 @@ PowerTrainScreenViewBase::PowerTrainScreenViewBase()
     background.setPosition(0, 0, 480, 272);
     background.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     add(background);
+
+    textArea1.setXY(0, 0);
+    textArea1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea1.setLinespacing(0);
+    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_O2N1));
+    add(textArea1);
 }
 
 PowerTrainScreenViewBase::~PowerTrainScreenViewBase()

@@ -27,6 +27,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "can.h"
+#include "gpio.h"
+#include "spi.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -48,6 +50,8 @@
 /* USER CODE BEGIN Variables */
 extern uint16_t rpm;
 extern CAN_TxHeaderTypeDef TxHeader;
+extern uint16_t egt3;
+extern uint16_t egt4;
 /* USER CODE END Variables */
 /* Definitions for defaultTask */
 osThreadId_t defaultTaskHandle;
@@ -77,10 +81,10 @@ const osThreadAttr_t rpmTask_attributes = {
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
-/* Definitions for canTask */
-osThreadId_t canTaskHandle;
-const osThreadAttr_t canTask_attributes = {
-  .name = "canTask",
+/* Definitions for egtTask */
+osThreadId_t egtTaskHandle;
+const osThreadAttr_t egtTask_attributes = {
+  .name = "egtTask",
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
@@ -109,7 +113,7 @@ void StartDefaultTask(void *argument);
 extern void TouchGFX_Task(void *argument);
 void StartButtonTask(void *argument);
 void StartRPMTask(void *argument);
-void StartCANTask(void *argument);
+void StartEGTTask(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -181,8 +185,8 @@ void MX_FREERTOS_Init(void) {
   /* creation of rpmTask */
   rpmTaskHandle = osThreadNew(StartRPMTask, NULL, &rpmTask_attributes);
 
-  /* creation of canTask */
-  canTaskHandle = osThreadNew(StartCANTask, NULL, &canTask_attributes);
+  /* creation of egtTask */
+  egtTaskHandle = osThreadNew(StartEGTTask, NULL, &egtTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -207,7 +211,7 @@ void StartDefaultTask(void *argument)
   /* Infinite loop */
 	for(;;){
 		SendDriverScreenData();
-		osDelay(20);
+		osDelay(100);
 	}
   /* USER CODE END StartDefaultTask */
 }
@@ -259,20 +263,18 @@ void StartRPMTask(void *argument)
   /* USER CODE END StartRPMTask */
 }
 
-/* USER CODE BEGIN Header_StartCANTask */
+/* USER CODE BEGIN Header_StartEGTTask */
 /**
-* @brief Function implementing the canTask thread.
+* @brief Function implementing the egtTask thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_StartCANTask */
-void StartCANTask(void *argument)
+/* USER CODE END Header_StartEGTTask */
+void StartEGTTask(void *argument)
 {
-  /* USER CODE BEGIN StartCANTask */
-//	canData_t *canData_r;
-//	uint32_t canID = 0x000;
+  /* USER CODE BEGIN StartEGTTask */
 	uint32_t TxMailbox;
-	uint8_t data[8] = {10, 10, 10, 10, 10, 10, 10, 10};
+	uint8_t data[8] = { 0, 0, 0, 0, 0, 0, 0, 0 };
   /* Infinite loop */
 	for(;;){
 //		if(osMessageQueueGetCount(canQueueHandle) > 0){
@@ -280,10 +282,16 @@ void StartCANTask(void *argument)
 //				ParseCANData(canData_r);
 //			}
 //		}
+		egt3 = ReadTemp(egt1Pin);
+		egt4 = ReadTemp(egt2Pin);
+		data[0] = egt3 >> 8;
+		data[1] = (uint8_t)egt3;
+		data[2] = egt4 >> 8;
+		data[3] = (uint8_t)egt4;
 		HAL_CAN_AddTxMessage(&hcan1, &TxHeader, data, &TxMailbox);
 		osDelay(500);
-  }
-  /* USER CODE END StartCANTask */
+	}
+  /* USER CODE END StartEGTTask */
 }
 
 /* Private application code --------------------------------------------------*/

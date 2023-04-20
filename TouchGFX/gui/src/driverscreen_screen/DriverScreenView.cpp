@@ -18,6 +18,11 @@ void DriverScreenView::tearDownScreen()
 
 void DriverScreenView::updateGear(uint8_t value){
 	Unicode::snprintf(tbGearBuffer, TBGEAR_SIZE, "%d", value);
+	tbRPM.invalidate();
+}
+
+void DriverScreenView::updateRPM(uint16_t value){
+	Unicode::snprintf(tbRPMBuffer, TBRPM_SIZE, "%d", value);
 	tbGear.invalidate();
 }
 
@@ -36,10 +41,6 @@ void DriverScreenView::updateLeftDataField3(float value){
 	tbLeftDataFieldData3.invalidate();
 }
 
-void DriverScreenView::updateLeftDataField4(uint8_t value){
-	Unicode::snprintf(tbLeftDataFieldData4Buffer, TBLEFTDATAFIELDDATA4_SIZE, "%d", value);
-	tbLeftDataFieldData4.invalidate();
-}
 
 void DriverScreenView::updateRightDataField1(float value){
 	Unicode::snprintfFloat(tbRightDataFieldData1Buffer, TBRIGHTDATAFIELDDATA1_SIZE, "%03.2f", value);
@@ -49,6 +50,11 @@ void DriverScreenView::updateRightDataField1(float value){
 void DriverScreenView::updateRightDataField2(int16_t value){
 	Unicode::snprintf(tbRightDataFieldData2Buffer, TBRIGHTDATAFIELDDATA2_SIZE, "%d", value);
 	tbRightDataFieldData2.invalidate();
+}
+
+void DriverScreenView::updateRightDataField3(uint16_t value){
+	Unicode::snprintf(tbRightDataFieldData3Buffer, TBRIGHTDATAFIELDDATA3_SIZE, "%d", value);
+	tbRightDataFieldData3.invalidate();
 }
 
 void DriverScreenView::updateBatteryLow(bool state){
@@ -61,17 +67,3 @@ void DriverScreenView::updateCoolantHigh(bool state){
 	iconCoolantHigh.invalidate();
 }
 
-void DriverScreenView::updateFansOn(bool state){
-	iconFansOn.setVisible(state);
-	iconFansOn.invalidate();
-}
-
-void DriverScreenView::updateWaterPumpsOn(bool state){
-	iconWaterPumpsOn.setVisible(state);
-	iconWaterPumpsOn.invalidate();
-}
-
-void DriverScreenView::updateFuelPumpOn(bool state){
-	iconFuelPumpOn.setVisible(state);
-	iconFuelPumpOn.invalidate();
-}

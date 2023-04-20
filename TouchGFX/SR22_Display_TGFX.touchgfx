@@ -19,6 +19,39 @@
           },
           {
             "Type": "TextArea",
+            "Name": "tbRightDataFieldData3",
+            "X": 385,
+            "Y": 155,
+            "Width": 85,
+            "Height": 37,
+            "LockPosition": true,
+            "TextId": "__SingleUse_6GAE",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_S3HT",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbRightDataFieldTitle3",
+            "X": 370,
+            "Y": 140,
+            "Width": 100,
+            "Height": 21,
+            "LockPosition": true,
+            "TextId": "__SingleUse_NV6C",
+            "TextRotation": "0",
+            "LineSpacing": 2,
+            "Wildcard1": {
+              "TextId": "__SingleUse_BBWH",
+              "UseBuffer": true,
+              "BufferSize": 20
+            }
+          },
+          {
+            "Type": "TextArea",
             "Name": "tbRightDataFieldData2",
             "X": 420,
             "Y": 95,
@@ -85,39 +118,6 @@
           },
           {
             "Type": "TextArea",
-            "Name": "tbLeftDataFieldData4",
-            "X": 11,
-            "Y": 215,
-            "Width": 85,
-            "Height": 37,
-            "LockPosition": true,
-            "TextId": "__SingleUse_6GAE",
-            "TextRotation": "0",
-            "Wildcard1": {
-              "TextId": "__SingleUse_S3HT",
-              "UseBuffer": true,
-              "BufferSize": 10
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "tbLeftDataFieldTitle4",
-            "X": 10,
-            "Y": 201,
-            "Width": 100,
-            "Height": 21,
-            "LockPosition": true,
-            "TextId": "__SingleUse_NV6C",
-            "TextRotation": "0",
-            "LineSpacing": 2,
-            "Wildcard1": {
-              "TextId": "__SingleUse_BBWH",
-              "UseBuffer": true,
-              "BufferSize": 20
-            }
-          },
-          {
-            "Type": "TextArea",
             "Name": "tbLeftDataFieldData3",
             "X": 10,
             "Y": 155,
@@ -136,7 +136,7 @@
             "Type": "TextArea",
             "Name": "tbLeftDataFieldTitle3",
             "X": 10,
-            "Y": 139,
+            "Y": 140,
             "Width": 100,
             "Height": 21,
             "LockPosition": true,
@@ -219,9 +219,9 @@
           {
             "Type": "TextArea",
             "Name": "tbGear",
-            "X": 202,
-            "Y": 26,
-            "Width": 77,
+            "X": 200,
+            "Y": 100,
+            "Width": 80,
             "Height": 150,
             "TextId": "__SingleUse_3P2N",
             "TextRotation": "0",
@@ -234,8 +234,8 @@
           {
             "Type": "SvgImage",
             "Name": "iconBatteryLow",
-            "X": 160,
-            "Y": 191,
+            "X": 14,
+            "Y": 225,
             "Width": 53,
             "Height": 31,
             "Image": "BatteryLow.svg",
@@ -248,8 +248,8 @@
           {
             "Type": "SvgImage",
             "Name": "iconCoolantHigh",
-            "X": 273,
-            "Y": 191,
+            "X": 423,
+            "Y": 219,
             "Width": 47,
             "Height": 42,
             "Image": "Coolant.svg",
@@ -275,47 +275,24 @@
             "RotationCenterY": 20.0
           },
           {
-            "Type": "SvgImage",
-            "Name": "iconFansOn",
-            "X": 378,
-            "Y": 149,
-            "Width": 52,
-            "Height": 55,
-            "Image": "Fans.svg",
-            "FitImageToSize": true,
-            "ImageHorizontalScale": 0.1,
-            "ImageVerticalScale": 0.11,
-            "RotationCenterX": 25.0,
-            "RotationCenterY": 25.0
-          },
-          {
-            "Type": "SvgImage",
-            "Name": "iconWaterPumpsOn",
-            "X": 441,
-            "Y": 149,
-            "Width": 35,
-            "Height": 55,
-            "Image": "Water Pump.svg",
-            "FitImageToSize": true,
-            "ImageHorizontalScale": 0.09,
-            "ImageVerticalScale": 0.09
-          },
-          {
-            "Type": "SvgImage",
-            "Name": "iconFuelPumpOn",
-            "X": 441,
-            "Y": 212,
-            "Width": 35,
-            "Height": 55,
-            "Image": "Fuel Pump.svg",
-            "FitImageToSize": true,
-            "ImageHorizontalScale": 0.08,
-            "ImageVerticalScale": 0.09
+            "Type": "TextArea",
+            "Name": "tbR",
+            "X": 190,
+            "Y": 60,
+            "Width": 100,
+            "Height": 37,
+            "TextId": "__SingleUse_O779",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_GPKS",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           }
         ],
         "Interactions": [
           {
-            "InteractionName": "Interaction1",
+            "InteractionName": "SwitchToPowertrain",
             "Trigger": {
               "Type": "TriggerPhysicalButtonClicked"
             },

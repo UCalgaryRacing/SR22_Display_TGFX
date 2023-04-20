@@ -34,6 +34,8 @@ Application/User/main.o: D:/GitHub/SR22_Display_TGFX/Core/Src/main.c \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_ltdc_ex.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr_ex.h \
+ ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_spi.h \
+ ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_spi_ex.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h \
@@ -53,8 +55,8 @@ Application/User/main.o: D:/GitHub/SR22_Display_TGFX/Core/Src/main.c \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
  ../../Core/Inc/can.h ../../Core/Inc/crc.h ../../Core/Inc/dma.h \
- ../../Core/Inc/dma2d.h ../../Core/Inc/usart.h ../../Core/Inc/gpio.h \
- ../../Core/Inc/fmc.h \
+ ../../Core/Inc/dma2d.h ../../Core/Inc/spi.h ../../Core/Inc/gpio.h \
+ ../../Core/Inc/usart.h ../../Core/Inc/gpio.h ../../Core/Inc/fmc.h \
  ../../Drivers/BSP/STM32F7508-Discovery/stm32f7508_discovery_sdram.h \
  ../../TouchGFX/App/app_touchgfx.h
 ../../Core/Inc/main.h:
@@ -92,6 +94,8 @@ Application/User/main.o: D:/GitHub/SR22_Display_TGFX/Core/Src/main.c \
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_ltdc_ex.h:
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr.h:
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr_ex.h:
+../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_spi.h:
+../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_spi_ex.h:
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h:
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:
@@ -116,6 +120,8 @@ Application/User/main.o: D:/GitHub/SR22_Display_TGFX/Core/Src/main.c \
 ../../Core/Inc/crc.h:
 ../../Core/Inc/dma.h:
 ../../Core/Inc/dma2d.h:
+../../Core/Inc/spi.h:
+../../Core/Inc/gpio.h:
 ../../Core/Inc/usart.h:
 ../../Core/Inc/gpio.h:
 ../../Core/Inc/fmc.h:

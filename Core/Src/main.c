@@ -25,6 +25,7 @@
 #include "dma.h"
 #include "dma2d.h"
 #include "ltdc.h"
+#include "spi.h"
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
@@ -115,6 +116,7 @@ int main(void)
   MX_TIM1_Init();
   MX_CRC_Init();
   MX_TIM2_Init();
+  MX_SPI2_Init();
   MX_TouchGFX_Init();
   /* Call PreOsInit function */
   MX_TouchGFX_PreOSInit();

@@ -17,6 +17,7 @@ public:
     DriverScreenViewBase();
     virtual ~DriverScreenViewBase();
     virtual void setupScreen();
+    virtual void handleKeyEvent(uint8_t key);
 
 protected:
     FrontendApplication& application() {
@@ -28,12 +29,12 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Box background;
+    touchgfx::TextAreaWithOneWildcard tbRightDataFieldData3;
+    touchgfx::TextAreaWithOneWildcard tbRightDataFieldTitle3;
     touchgfx::TextAreaWithOneWildcard tbRightDataFieldData2;
     touchgfx::TextAreaWithOneWildcard tbRightDataFieldTitle2;
     touchgfx::TextAreaWithOneWildcard tbRightDataFieldData1;
     touchgfx::TextAreaWithOneWildcard tbRightDataFieldTitle1;
-    touchgfx::TextAreaWithOneWildcard tbLeftDataFieldData4;
-    touchgfx::TextAreaWithOneWildcard tbLeftDataFieldTitle4;
     touchgfx::TextAreaWithOneWildcard tbLeftDataFieldData3;
     touchgfx::TextAreaWithOneWildcard tbLeftDataFieldTitle3;
     touchgfx::TextAreaWithOneWildcard tbLeftDataFieldData2;
@@ -44,13 +45,15 @@ protected:
     touchgfx::SVGImage iconBatteryLow;
     touchgfx::SVGImage iconCoolantHigh;
     touchgfx::SVGImage imageSRLogo;
-    touchgfx::SVGImage iconFansOn;
-    touchgfx::SVGImage iconWaterPumpsOn;
-    touchgfx::SVGImage iconFuelPumpOn;
+    touchgfx::TextAreaWithOneWildcard tbR;
 
     /*
      * Wildcard Buffers
      */
+    static const uint16_t TBRIGHTDATAFIELDDATA3_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbRightDataFieldData3Buffer[TBRIGHTDATAFIELDDATA3_SIZE];
+    static const uint16_t TBRIGHTDATAFIELDTITLE3_SIZE = 20;
+    touchgfx::Unicode::UnicodeChar tbRightDataFieldTitle3Buffer[TBRIGHTDATAFIELDTITLE3_SIZE];
     static const uint16_t TBRIGHTDATAFIELDDATA2_SIZE = 10;
     touchgfx::Unicode::UnicodeChar tbRightDataFieldData2Buffer[TBRIGHTDATAFIELDDATA2_SIZE];
     static const uint16_t TBRIGHTDATAFIELDTITLE2_SIZE = 20;
@@ -59,10 +62,6 @@ protected:
     touchgfx::Unicode::UnicodeChar tbRightDataFieldData1Buffer[TBRIGHTDATAFIELDDATA1_SIZE];
     static const uint16_t TBRIGHTDATAFIELDTITLE1_SIZE = 20;
     touchgfx::Unicode::UnicodeChar tbRightDataFieldTitle1Buffer[TBRIGHTDATAFIELDTITLE1_SIZE];
-    static const uint16_t TBLEFTDATAFIELDDATA4_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar tbLeftDataFieldData4Buffer[TBLEFTDATAFIELDDATA4_SIZE];
-    static const uint16_t TBLEFTDATAFIELDTITLE4_SIZE = 20;
-    touchgfx::Unicode::UnicodeChar tbLeftDataFieldTitle4Buffer[TBLEFTDATAFIELDTITLE4_SIZE];
     static const uint16_t TBLEFTDATAFIELDDATA3_SIZE = 10;
     touchgfx::Unicode::UnicodeChar tbLeftDataFieldData3Buffer[TBLEFTDATAFIELDDATA3_SIZE];
     static const uint16_t TBLEFTDATAFIELDTITLE3_SIZE = 20;
@@ -77,6 +76,8 @@ protected:
     touchgfx::Unicode::UnicodeChar tbLeftDataFieldTitle1Buffer[TBLEFTDATAFIELDTITLE1_SIZE];
     static const uint16_t TBGEAR_SIZE = 10;
     touchgfx::Unicode::UnicodeChar tbGearBuffer[TBGEAR_SIZE];
+    static const uint16_t TBR_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbRBuffer[TBR_SIZE];
 
 private:
 

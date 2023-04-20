@@ -34,18 +34,16 @@ void Model::tick()
 	}
 	if(osMessageQueueGetCount(driverDataQueueHandle) > 0){
 		if(osMessageQueueGet(driverDataQueueHandle, &driverScreenData_r, 0, 0) == osOK){
-			modelListener->updateGear(x);
+			modelListener->updateGear(driverScreenData_r->gear);
+			modelListener->updateRPM(driverScreenData_r->rpm);
 			modelListener->updateLeftDataField1(driverScreenData_r->leftDataField1);
 			modelListener->updateLeftDataField2(driverScreenData_r->leftDataField2);
 			modelListener->updateLeftDataField3(driverScreenData_r->leftDataField3);
-			modelListener->updateLeftDataField4(driverScreenData_r->leftDataField4);
 			modelListener->updateRightDataField1(driverScreenData_r->rightDataField1);
 			modelListener->updateRightDataField2(driverScreenData_r->rightDataField2);
+			modelListener->updateRightDataField3(driverScreenData_r->rightDataField3);
 			modelListener->updateBatteryLow(driverScreenData_r->batteryLow);
 			modelListener->updateCoolantHigh(driverScreenData_r->coolantHigh);
-			modelListener->updateFansOn(driverScreenData_r->fansOn);
-			modelListener->updateWaterPumpsOn(driverScreenData_r->waterPumpsOn);
-			modelListener->updateFuelPumpOn(driverScreenData_r->fuelPumpOn);
 		}
 	}
 #endif

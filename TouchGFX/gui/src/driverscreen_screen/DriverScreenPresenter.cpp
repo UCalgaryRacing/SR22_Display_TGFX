@@ -22,6 +22,10 @@ void DriverScreenPresenter::updateGear(uint8_t value){
 	view.updateGear(value);
 }
 
+void DriverScreenPresenter::updateRPM(uint16_t value){
+	view.updateRPM(value);
+}
+
 void DriverScreenPresenter::updateLeftDataField1(float value){
 	view.updateLeftDataField1(value);
 }
@@ -34,9 +38,6 @@ void DriverScreenPresenter::updateLeftDataField3(float value){
 	view.updateLeftDataField3(value);
 }
 
-void DriverScreenPresenter::updateLeftDataField4(uint8_t value){
-	view.updateLeftDataField4(value);
-}
 
 void DriverScreenPresenter::updateRightDataField1(float value){
 	view.updateRightDataField1(value);
@@ -44,6 +45,10 @@ void DriverScreenPresenter::updateRightDataField1(float value){
 
 void DriverScreenPresenter::updateRightDataField2(int16_t value){
 	view.updateRightDataField2(value);
+}
+
+void DriverScreenPresenter::updateRightDataField3(uint16_t value){
+	view.updateRightDataField3(value);
 }
 
 void DriverScreenPresenter::updateBatteryLow(bool state){
@@ -54,14 +59,3 @@ void DriverScreenPresenter::updateCoolantHigh(bool state){
 	view.updateCoolantHigh(state);
 }
 
-void DriverScreenPresenter::updateFansOn(bool state){
-	view.updateFansOn(state);
-}
-
-void DriverScreenPresenter::updateWaterPumpsOn(bool state){
-	view.updateWaterPumpsOn(state);
-}
-
-void DriverScreenPresenter::updateFuelPumpOn(bool state){
-	view.updateFuelPumpOn(state);
-}

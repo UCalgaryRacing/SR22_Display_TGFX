@@ -43,3 +43,16 @@ void FrontendApplicationBase::gotoDriverScreenScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<DriverScreenView, DriverScreenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
+
+// PowerTrainScreen
+
+void FrontendApplicationBase::gotoPowerTrainScreenScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoPowerTrainScreenScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoPowerTrainScreenScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<PowerTrainScreenView, PowerTrainScreenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}

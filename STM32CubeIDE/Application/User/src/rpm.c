@@ -23,15 +23,16 @@
 #define USE_BRIGHTNESS 0
 #define PI 3.14159265
 #define REDLINE 9500
-
+#define GREEN_LED 5
+#define RED_LED 11
+#define BLUE_LED 16
 
 /* Variables */
 uint8_t LED_Data[MAX_LED][4];
 uint8_t LED_Mod[MAX_LED][4];  // for brightness
-uint16_t pwmData[(24*MAX_LED) + 50];
-volatile int dataSentFlag = 0;
 uint8_t lightsOn = 0;
-int flash = 0b1;
+uint8_t flash = 0b1;
+uint16_t pwmData[(24*MAX_LED) + 50];
 uint16_t rpmRanges[16] = {
     1500,
     2000, 2500,
@@ -54,7 +55,6 @@ uint16_t rpmRanges[16] = {
 /* Functions */
 void HAL_TIM_PWM_PulseFinishedCallback(TIM_HandleTypeDef *htim){
 	HAL_TIM_PWM_Stop_DMA(&htim1, TIM_CHANNEL_1);
-	dataSentFlag = 1;
 }
 
 void SetLED (int ledNum, int red, int green, int blue){
@@ -107,8 +107,6 @@ void WS2812Send (void){
 	}
 
 	HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_1, (uint32_t *)pwmData, index);
-//	while (!dataSentFlag){};
-	dataSentFlag = 0;
 }
 
 void SetRPMLights(uint16_t rpm){
@@ -118,9 +116,14 @@ void SetRPMLights(uint16_t rpm){
 	else{
 		for(int i = 0; i < MAX_LED; i++){
 			if(rpm > rpmRanges[i]){
-				SetLED(i, 0, 255, 0);
-			}
-			else{
+				if(i < GREEN_LED){
+					SetLED(i, 0, 255, 0);
+				}else if(i < RED_LED){
+					SetLED(i, 255, 0, 0);
+				}else if(i < BLUE_LED){
+					SetLED(i, 0, 0, 255);
+				}
+			}else{
 				SetLED(i, 0, 0, 0);
 			}
 		}
@@ -129,8 +132,14 @@ void SetRPMLights(uint16_t rpm){
 }
 
 void BlinkAllLED(void){
-	for(int i = 0; i < MAX_LED; i++){
+	for(int i = 0; i < GREEN_LED; i++){
 		SetLED(i, 255*flash, 0, 0);
+	}
+	for(int i = GREEN_LED; i < RED_LED; i++){
+		SetLED(i, 0, 255*flash, 0);
+	}
+	for(int i = RED_LED; i < BLUE_LED; i++){
+		SetLED(i, 0, 0, 255*flash);
 	}
 	WS2812Send();
 	flash = flash^1;

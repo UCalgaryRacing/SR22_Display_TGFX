@@ -63,6 +63,8 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define VSYNC_FREQ_Pin GPIO_PIN_4
 #define VSYNC_FREQ_GPIO_Port GPIOB
+#define THERMOCOUPLE2_Pin GPIO_PIN_15
+#define THERMOCOUPLE2_GPIO_Port GPIOA
 #define LCD_BL_CTRL_Pin GPIO_PIN_3
 #define LCD_BL_CTRL_GPIO_Port GPIOK
 #define LCD_DISP_Pin GPIO_PIN_12
@@ -73,6 +75,8 @@ void Error_Handler(void);
 #define RENDER_TIME_GPIO_Port GPIOC
 #define MCU_ACTIVE_Pin GPIO_PIN_6
 #define MCU_ACTIVE_GPIO_Port GPIOG
+#define THERMOCOUPLE1_Pin GPIO_PIN_15
+#define THERMOCOUPLE1_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

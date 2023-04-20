@@ -33,13 +33,17 @@ extern "C" {
 /* USER CODE END Includes */
 
 /* USER CODE BEGIN Private defines */
-
+typedef struct{
+	GPIO_TypeDef *port;
+	uint16_t pin;
+}pin_t;
 /* USER CODE END Private defines */
 
 void MX_GPIO_Init(void);
 
 /* USER CODE BEGIN Prototypes */
-
+extern const pin_t egt1Pin;
+extern const pin_t egt2Pin;
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus
