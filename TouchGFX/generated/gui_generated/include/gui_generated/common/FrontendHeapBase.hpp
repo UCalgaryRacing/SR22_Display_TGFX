@@ -16,6 +16,8 @@
 #include <gui/driverscreen_screen/DriverScreenPresenter.hpp>
 #include <gui/powertrainscreen_screen/PowerTrainScreenView.hpp>
 #include <gui/powertrainscreen_screen/PowerTrainScreenPresenter.hpp>
+#include <gui/suspensionscreen_screen/SuspensionScreenView.hpp>
+#include <gui/suspensionscreen_screen/SuspensionScreenPresenter.hpp>
 
 
 /**
@@ -40,7 +42,8 @@ public:
      */
     typedef touchgfx::meta::TypeList< DriverScreenView,
             touchgfx::meta::TypeList< PowerTrainScreenView,
-            touchgfx::meta::Nil >
+            touchgfx::meta::TypeList< SuspensionScreenView,
+            touchgfx::meta::Nil > >
             > GeneratedViewTypes;
 
     /**
@@ -54,7 +57,8 @@ public:
      */
     typedef touchgfx::meta::TypeList< DriverScreenPresenter,
             touchgfx::meta::TypeList< PowerTrainScreenPresenter,
-            touchgfx::meta::Nil >
+            touchgfx::meta::TypeList< SuspensionScreenPresenter,
+            touchgfx::meta::Nil > >
             > GeneratedPresenterTypes;
 
     /**

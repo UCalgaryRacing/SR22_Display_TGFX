@@ -104,6 +104,9 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../TouchGFX/gui/include/gui/powertrainscreen_screen/PowerTrainScreenView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/powertrainscreen_screen/PowerTrainScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/powertrainscreen_screen/PowerTrainScreenPresenter.hpp \
+ ../../TouchGFX/gui/include/gui/suspensionscreen_screen/SuspensionScreenView.hpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/suspensionscreen_screen/SuspensionScreenViewBase.hpp \
+ ../../TouchGFX/gui/include/gui/suspensionscreen_screen/SuspensionScreenPresenter.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/GPIO.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRVectorRenderer.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorRenderer.hpp \
@@ -233,6 +236,9 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../../TouchGFX/gui/include/gui/powertrainscreen_screen/PowerTrainScreenView.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/powertrainscreen_screen/PowerTrainScreenViewBase.hpp:
 ../../TouchGFX/gui/include/gui/powertrainscreen_screen/PowerTrainScreenPresenter.hpp:
+../../TouchGFX/gui/include/gui/suspensionscreen_screen/SuspensionScreenView.hpp:
+../../TouchGFX/generated/gui_generated/include/gui_generated/suspensionscreen_screen/SuspensionScreenViewBase.hpp:
+../../TouchGFX/gui/include/gui/suspensionscreen_screen/SuspensionScreenPresenter.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/GPIO.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRVectorRenderer.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorRenderer.hpp:

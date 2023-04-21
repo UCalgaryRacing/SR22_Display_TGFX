@@ -12,6 +12,8 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
 
+    virtual void UpdateDriverScreen();
+
     virtual void updateGear(uint8_t value);
     virtual void updateRPM(uint16_t value);
     virtual void updateLeftDataField1(float value);

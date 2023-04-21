@@ -93,7 +93,8 @@ Application/User/gui/DriverScreenPresenter.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Matrix3x3.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VGData.hpp
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VGData.hpp \
+ ../../Core/Inc/can.h
 ../../TouchGFX/gui/include/gui/driverscreen_screen/DriverScreenView.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/driverscreen_screen/DriverScreenViewBase.hpp:
 ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
@@ -190,3 +191,4 @@ Application/User/gui/DriverScreenPresenter.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Matrix3x3.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VGData.hpp:
+../../Core/Inc/can.h:

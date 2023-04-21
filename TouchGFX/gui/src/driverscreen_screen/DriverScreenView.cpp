@@ -1,5 +1,13 @@
 #include <gui/driverscreen_screen/DriverScreenView.hpp>
+
 #include "main.h"
+#include "can.h"
+extern "C"{
+	extern osMessageQueueId_t buttonQueueHandle;
+	extern osMessageQueueId_t driverDataQueueHandle;
+	extern driverScreenData_t *driverScreenData_q;
+	uint8_t x = 0;
+}
 
 DriverScreenView::DriverScreenView()
 {
@@ -16,14 +24,34 @@ void DriverScreenView::tearDownScreen()
     DriverScreenViewBase::tearDownScreen();
 }
 
+void DriverScreenView::UpdateDriverScreen(){
+	if(osMessageQueueGetCount(buttonQueueHandle) > 0){
+		if(osMessageQueueGet(buttonQueueHandle, &x, 0, 0) == osOK){
+			handleKeyEvent(0);
+		}
+	}
+
+	updateGear(driverScreenData_q->gear);
+	updateRPM(driverScreenData_q->rpm);
+	updateLeftDataField1(driverScreenData_q->leftDataField1);
+	updateLeftDataField2(driverScreenData_q->leftDataField2);
+	updateLeftDataField3(driverScreenData_q->leftDataField3);
+	updateRightDataField1(driverScreenData_q->rightDataField1);
+	updateRightDataField2(driverScreenData_q->rightDataField2);
+	updateRightDataField3(driverScreenData_q->rightDataField3);
+	updateBatteryLow(driverScreenData_q->batteryLow);
+	updateCoolantHigh(driverScreenData_q->coolantHigh);
+}
+
+
 void DriverScreenView::updateGear(uint8_t value){
 	Unicode::snprintf(tbGearBuffer, TBGEAR_SIZE, "%d", value);
-	tbRPM.invalidate();
+	tbGear.invalidate();
 }
 
 void DriverScreenView::updateRPM(uint16_t value){
 	Unicode::snprintf(tbRPMBuffer, TBRPM_SIZE, "%d", value);
-	tbGear.invalidate();
+	tbRPM.invalidate();
 }
 
 void DriverScreenView::updateLeftDataField1(float value){

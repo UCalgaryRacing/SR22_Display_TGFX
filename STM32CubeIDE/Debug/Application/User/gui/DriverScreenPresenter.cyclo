@@ -1,15 +1,5 @@
-DriverScreenPresenter.hpp:28:13:DriverScreenPresenter::~DriverScreenPresenter()	1
-DriverScreenPresenter.cpp:11:6:virtual void DriverScreenPresenter::activate()	1
-DriverScreenPresenter.cpp:21:6:virtual void DriverScreenPresenter::updateGear(uint8_t)	1
-DriverScreenPresenter.cpp:25:6:virtual void DriverScreenPresenter::updateRPM(uint16_t)	1
-DriverScreenPresenter.cpp:29:6:virtual void DriverScreenPresenter::updateLeftDataField1(float)	1
-DriverScreenPresenter.cpp:33:6:virtual void DriverScreenPresenter::updateLeftDataField2(uint8_t)	1
-DriverScreenPresenter.cpp:37:6:virtual void DriverScreenPresenter::updateLeftDataField3(float)	1
-DriverScreenPresenter.cpp:42:6:virtual void DriverScreenPresenter::updateRightDataField1(float)	1
-DriverScreenPresenter.cpp:46:6:virtual void DriverScreenPresenter::updateRightDataField2(int16_t)	1
-DriverScreenPresenter.cpp:50:6:virtual void DriverScreenPresenter::updateRightDataField3(uint16_t)	1
-DriverScreenPresenter.cpp:54:6:virtual void DriverScreenPresenter::updateBatteryLow(bool)	1
-DriverScreenPresenter.cpp:58:6:virtual void DriverScreenPresenter::updateCoolantHigh(bool)	1
-DriverScreenPresenter.hpp:28:13:virtual DriverScreenPresenter::~DriverScreenPresenter()	1
-DriverScreenPresenter.hpp:28:13:virtual void* DriverScreenPresenter::_ZThn4_N21DriverScreenPresenterD1Ev()	1
-DriverScreenPresenter.cpp:5:1:DriverScreenPresenter::DriverScreenPresenter(DriverScreenView&)	1
+DriverScreenPresenter.hpp:29:13:DriverScreenPresenter::~DriverScreenPresenter()	1
+DriverScreenPresenter.cpp:18:6:virtual void DriverScreenPresenter::activate()	1
+DriverScreenPresenter.hpp:29:13:virtual DriverScreenPresenter::~DriverScreenPresenter()	1
+DriverScreenPresenter.hpp:29:13:virtual void* DriverScreenPresenter::_ZThn4_N21DriverScreenPresenterD1Ev()	1
+DriverScreenPresenter.cpp:12:1:DriverScreenPresenter::DriverScreenPresenter(DriverScreenView&)	1

@@ -410,6 +410,16 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/powertrainscreen_screen/PowerTrainScreenView.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/gui/SuspensionScreenPresenter.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/suspensionscreen_screen/SuspensionScreenPresenter.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/gui/SuspensionScreenView.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/suspensionscreen_screen/SuspensionScreenView.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/ApplicationFontProvider.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/ApplicationFontProvider.cpp</locationURI>
@@ -493,6 +503,11 @@
 			<name>Application/User/generated/PowerTrainScreenViewBase.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/powertrainscreen_screen/PowerTrainScreenViewBase.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/SuspensionScreenViewBase.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/suspensionscreen_screen/SuspensionScreenViewBase.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/BitmapDatabase.cpp</name>

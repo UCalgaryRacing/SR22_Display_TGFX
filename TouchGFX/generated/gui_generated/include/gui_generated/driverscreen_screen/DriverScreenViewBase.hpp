@@ -18,6 +18,15 @@ public:
     virtual ~DriverScreenViewBase();
     virtual void setupScreen();
     virtual void handleKeyEvent(uint8_t key);
+    virtual void handleTickEvent();
+
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void UpdateDriverScreen()
+    {
+        // Override and implement this function in DriverScreen
+    }
 
 protected:
     FrontendApplication& application() {
@@ -45,7 +54,7 @@ protected:
     touchgfx::SVGImage iconBatteryLow;
     touchgfx::SVGImage iconCoolantHigh;
     touchgfx::SVGImage imageSRLogo;
-    touchgfx::TextAreaWithOneWildcard tbR;
+    touchgfx::TextAreaWithOneWildcard tbRPM;
 
     /*
      * Wildcard Buffers
@@ -76,15 +85,15 @@ protected:
     touchgfx::Unicode::UnicodeChar tbLeftDataFieldTitle1Buffer[TBLEFTDATAFIELDTITLE1_SIZE];
     static const uint16_t TBGEAR_SIZE = 10;
     touchgfx::Unicode::UnicodeChar tbGearBuffer[TBGEAR_SIZE];
-    static const uint16_t TBR_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar tbRBuffer[TBR_SIZE];
+    static const uint16_t TBRPM_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbRPMBuffer[TBRPM_SIZE];
 
 private:
 
     /*
      * Canvas Buffer Size
      */
-    static const uint32_t CANVAS_BUFFER_SIZE = 7200;
+    static const uint32_t CANVAS_BUFFER_SIZE = 10000;
     uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
 };

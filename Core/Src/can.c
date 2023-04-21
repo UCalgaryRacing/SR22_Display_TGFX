@@ -246,6 +246,7 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan){
 	canData_q->canID = RxHeader.StdId;
 	memcpy(canData_q->data, RxData, sizeof(RxData));
 	ParseCANData(canData_q);
+	SendDriverScreenData();
 }
 
 void SendDriverScreenData(void){
@@ -259,10 +260,6 @@ void SendDriverScreenData(void){
 	driverScreenData_q->rightDataField3 = vspd;
 	driverScreenData_q->batteryLow = (inputVoltage < BATTERY_LOW_VOLTAGE);
 	driverScreenData_q->coolantHigh = (coolantTemp > COOLANT_HIGH_TEMPERATURE);
-
-	if(osMessageQueueGetSpace(driverDataQueueHandle) > 0){
-		osMessageQueuePut(driverDataQueueHandle, &driverScreenData_q, 0, 0);
-	}
 }
 
 void ParseCANData(canData_t *canData){

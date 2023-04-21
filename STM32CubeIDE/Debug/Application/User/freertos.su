@@ -1,6 +1,6 @@
 D:/GitHub/SR22_Display_TGFX/Core/Src/freertos.c:208:6:StartDefaultTask	8	static
-D:/GitHub/SR22_Display_TGFX/Core/Src/freertos.c:226:6:StartButtonTask	8	static
 D:/GitHub/SR22_Display_TGFX/Core/Src/freertos.c:244:6:StartRPMTask	8	static
-D:/GitHub/SR22_Display_TGFX/Core/Src/freertos.c:273:6:StartEGTTask	24	static
+D:/GitHub/SR22_Display_TGFX/Core/Src/freertos.c:263:6:StartEGTTask	24	static
+D:/GitHub/SR22_Display_TGFX/Core/Src/freertos.c:226:6:StartButtonTask	8	static
 D:/GitHub/SR22_Display_TGFX/Core/Src/freertos.c:124:6:vApplicationIdleHook	0	static
 D:/GitHub/SR22_Display_TGFX/Core/Src/freertos.c:144:6:MX_FREERTOS_Init	8	static

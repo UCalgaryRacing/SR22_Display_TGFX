@@ -1,0 +1,5 @@
+../../TouchGFX/gui/include/gui/suspensionscreen_screen/SuspensionScreenPresenter.hpp:28:13:SuspensionScreenPresenter::~SuspensionScreenPresenter()	0	static
+D:/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/suspensionscreen_screen/SuspensionScreenPresenter.cpp:10:6:virtual void SuspensionScreenPresenter::activate()	0	static
+../../TouchGFX/gui/include/gui/suspensionscreen_screen/SuspensionScreenPresenter.hpp:28:13:virtual SuspensionScreenPresenter::~SuspensionScreenPresenter()	8	static
+../../TouchGFX/gui/include/gui/suspensionscreen_screen/SuspensionScreenPresenter.hpp:28:13:virtual void* SuspensionScreenPresenter::_ZThn4_N25SuspensionScreenPresenterD1Ev()	0	static
+D:/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/suspensionscreen_screen/SuspensionScreenPresenter.cpp:4:1:SuspensionScreenPresenter::SuspensionScreenPresenter(SuspensionScreenView&)	8	static

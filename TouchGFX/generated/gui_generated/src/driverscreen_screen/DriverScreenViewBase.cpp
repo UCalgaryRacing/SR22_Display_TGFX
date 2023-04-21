@@ -148,13 +148,13 @@ DriverScreenViewBase::DriverScreenViewBase()
     imageSRLogo.setRotation(0);
     add(imageSRLogo);
 
-    tbR.setPosition(190, 60, 100, 37);
-    tbR.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    tbR.setLinespacing(0);
-    Unicode::snprintf(tbRBuffer, TBR_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_GPKS).getText());
-    tbR.setWildcard(tbRBuffer);
-    tbR.setTypedText(touchgfx::TypedText(T___SINGLEUSE_O779));
-    add(tbR);
+    tbRPM.setPosition(190, 60, 100, 37);
+    tbRPM.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    tbRPM.setLinespacing(0);
+    Unicode::snprintf(tbRPMBuffer, TBRPM_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_GPKS).getText());
+    tbRPM.setWildcard(tbRPMBuffer);
+    tbRPM.setTypedText(touchgfx::TypedText(T___SINGLEUSE_O779));
+    add(tbRPM);
 }
 
 DriverScreenViewBase::~DriverScreenViewBase()
@@ -171,10 +171,18 @@ void DriverScreenViewBase::handleKeyEvent(uint8_t key)
 {
     if(0 == key)
     {
-        //SwitchToPowertrain
+        //ChangeToPowerTrain
         //When hardware button 0 clicked change screen to PowerTrainScreen
         //Go to PowerTrainScreen with no screen transition
         application().gotoPowerTrainScreenScreenNoTransition();
     
     }
+}
+
+void DriverScreenViewBase::handleTickEvent()
+{
+    //UpdateDriverData
+    //When every N tick call virtual function
+    //Call UpdateDriverScreen
+    UpdateDriverScreen();
 }

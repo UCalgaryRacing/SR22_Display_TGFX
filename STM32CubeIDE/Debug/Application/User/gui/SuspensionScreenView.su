@@ -1,0 +1,7 @@
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
+D:/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/suspensionscreen_screen/SuspensionScreenView.cpp:25:6:virtual void SuspensionScreenView::tearDownScreen()	0	static
+../../TouchGFX/gui/include/gui/suspensionscreen_screen/SuspensionScreenView.hpp:11:13:SuspensionScreenView::~SuspensionScreenView()	8	static
+../../TouchGFX/gui/include/gui/suspensionscreen_screen/SuspensionScreenView.hpp:11:13:virtual SuspensionScreenView::~SuspensionScreenView()	8	static
+D:/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/suspensionscreen_screen/SuspensionScreenView.cpp:30:6:virtual void SuspensionScreenView::UpdateSuspensionScreen()	16	static
+D:/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/suspensionscreen_screen/SuspensionScreenView.cpp:15:1:SuspensionScreenView::SuspensionScreenView()	8	static
+D:/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/suspensionscreen_screen/SuspensionScreenView.cpp:20:6:virtual void SuspensionScreenView::setupScreen()	0	static

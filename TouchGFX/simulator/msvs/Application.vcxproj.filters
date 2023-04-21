@@ -196,6 +196,18 @@
     <Filter Include="Header Files\generated\simulator\include\simulator\video">
       <UniqueIdentifier>39F40A0F-02A4-883F-17CF-CD3552C6372F</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\gui\suspensionscreen_screen">
+      <UniqueIdentifier>18C69E88-13CF-D749-50C7-13E1208E59C1</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\suspensionscreen_screen">
+      <UniqueIdentifier>EE9322D8-2F73-A12F-47A6-B17185FF3B9C</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\suspensionscreen_screen">
+      <UniqueIdentifier>8936CD3B-A9E4-6289-E3E5-56FBA170D223</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\suspensionscreen_screen">
+      <UniqueIdentifier>84F5E169-37C2-9538-4069-B547EC059CC0</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -245,6 +257,15 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\simulator\src\video\SoftwareMJPEGDecoder.cpp">
       <Filter>Source Files\generated\simulator\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\suspensionscreen_screen\SuspensionScreenPresenter.cpp">
+      <Filter>Source Files\gui\suspensionscreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\suspensionscreen_screen\SuspensionScreenView.cpp">
+      <Filter>Source Files\gui\suspensionscreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\suspensionscreen_screen\SuspensionScreenViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\suspensionscreen_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -705,6 +726,15 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\simulator\include\simulator\video\SoftwareMJPEGDecoder.hpp">
       <Filter>Header Files\generated\simulator\include\simulator\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\suspensionscreen_screen\SuspensionScreenPresenter.hpp">
+      <Filter>Header Files\gui\suspensionscreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\suspensionscreen_screen\SuspensionScreenView.hpp">
+      <Filter>Header Files\gui\suspensionscreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\suspensionscreen_screen\SuspensionScreenViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\suspensionscreen_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

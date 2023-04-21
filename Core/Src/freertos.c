@@ -210,7 +210,7 @@ void StartDefaultTask(void *argument)
   /* USER CODE BEGIN StartDefaultTask */
   /* Infinite loop */
 	for(;;){
-		SendDriverScreenData();
+//		SendDriverScreenData();
 		osDelay(100);
 	}
   /* USER CODE END StartDefaultTask */
@@ -244,19 +244,9 @@ void StartButtonTask(void *argument)
 void StartRPMTask(void *argument)
 {
   /* USER CODE BEGIN StartRPMTask */
-//	uint16_t rpm = 0;
-	SetLED(0,255,0,0);		// These LEDS are going to be set to green as they are going to represent idle
-	SetLED(1,255,0,0);
-	SetLED(2,255,0,0);
-	SetLED(3,255,0,0);
-	SetLED(4,255,0,0);
-	SetLED(5,255,0,0);
-	SetLED(6,255,0,0);
-	SetLED(7,255,0,0);
 
   /* Infinite loop */
 	for(;;){
-
 		SetRPMLights(rpm);
 		osDelay(100);
 	}
@@ -277,11 +267,6 @@ void StartEGTTask(void *argument)
 	uint8_t data[8] = { 0, 0, 0, 0, 0, 0, 0, 0 };
   /* Infinite loop */
 	for(;;){
-//		if(osMessageQueueGetCount(canQueueHandle) > 0){
-//			if(osMessageQueueGet(canQueueHandle, &canData_r, 0, 0) == osOK){
-//				ParseCANData(canData_r);
-//			}
-//		}
 		egt3 = ReadTemp(egt1Pin);
 		egt4 = ReadTemp(egt2Pin);
 		data[0] = egt3 >> 8;

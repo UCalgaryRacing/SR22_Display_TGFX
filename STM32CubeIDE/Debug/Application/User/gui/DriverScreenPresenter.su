@@ -1,15 +1,5 @@
-../../TouchGFX/gui/include/gui/driverscreen_screen/DriverScreenPresenter.hpp:28:13:DriverScreenPresenter::~DriverScreenPresenter()	0	static
-D:/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenPresenter.cpp:11:6:virtual void DriverScreenPresenter::activate()	0	static
-D:/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenPresenter.cpp:21:6:virtual void DriverScreenPresenter::updateGear(uint8_t)	0	static
-D:/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenPresenter.cpp:25:6:virtual void DriverScreenPresenter::updateRPM(uint16_t)	0	static
-D:/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenPresenter.cpp:29:6:virtual void DriverScreenPresenter::updateLeftDataField1(float)	0	static
-D:/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenPresenter.cpp:33:6:virtual void DriverScreenPresenter::updateLeftDataField2(uint8_t)	0	static
-D:/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenPresenter.cpp:37:6:virtual void DriverScreenPresenter::updateLeftDataField3(float)	0	static
-D:/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenPresenter.cpp:42:6:virtual void DriverScreenPresenter::updateRightDataField1(float)	0	static
-D:/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenPresenter.cpp:46:6:virtual void DriverScreenPresenter::updateRightDataField2(int16_t)	0	static
-D:/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenPresenter.cpp:50:6:virtual void DriverScreenPresenter::updateRightDataField3(uint16_t)	0	static
-D:/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenPresenter.cpp:54:6:virtual void DriverScreenPresenter::updateBatteryLow(bool)	0	static
-D:/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenPresenter.cpp:58:6:virtual void DriverScreenPresenter::updateCoolantHigh(bool)	0	static
-../../TouchGFX/gui/include/gui/driverscreen_screen/DriverScreenPresenter.hpp:28:13:virtual DriverScreenPresenter::~DriverScreenPresenter()	8	static
-../../TouchGFX/gui/include/gui/driverscreen_screen/DriverScreenPresenter.hpp:28:13:virtual void* DriverScreenPresenter::_ZThn4_N21DriverScreenPresenterD1Ev()	0	static
-D:/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenPresenter.cpp:5:1:DriverScreenPresenter::DriverScreenPresenter(DriverScreenView&)	8	static
+../../TouchGFX/gui/include/gui/driverscreen_screen/DriverScreenPresenter.hpp:29:13:DriverScreenPresenter::~DriverScreenPresenter()	0	static
+D:/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenPresenter.cpp:18:6:virtual void DriverScreenPresenter::activate()	0	static
+../../TouchGFX/gui/include/gui/driverscreen_screen/DriverScreenPresenter.hpp:29:13:virtual DriverScreenPresenter::~DriverScreenPresenter()	8	static
+../../TouchGFX/gui/include/gui/driverscreen_screen/DriverScreenPresenter.hpp:29:13:virtual void* DriverScreenPresenter::_ZThn4_N21DriverScreenPresenterD1Ev()	0	static
+D:/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenPresenter.cpp:12:1:DriverScreenPresenter::DriverScreenPresenter(DriverScreenView&)	8	static

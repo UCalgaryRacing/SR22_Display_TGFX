@@ -102,6 +102,9 @@ Application/User/generated/FrontendApplicationBase.o: \
  ../../TouchGFX/gui/include/gui/powertrainscreen_screen/PowerTrainScreenView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/powertrainscreen_screen/PowerTrainScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/powertrainscreen_screen/PowerTrainScreenPresenter.hpp \
+ ../../TouchGFX/gui/include/gui/suspensionscreen_screen/SuspensionScreenView.hpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/suspensionscreen_screen/SuspensionScreenViewBase.hpp \
+ ../../TouchGFX/gui/include/gui/suspensionscreen_screen/SuspensionScreenPresenter.hpp \
  ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp
@@ -209,6 +212,9 @@ Application/User/generated/FrontendApplicationBase.o: \
 ../../TouchGFX/gui/include/gui/powertrainscreen_screen/PowerTrainScreenView.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/powertrainscreen_screen/PowerTrainScreenViewBase.hpp:
 ../../TouchGFX/gui/include/gui/powertrainscreen_screen/PowerTrainScreenPresenter.hpp:
+../../TouchGFX/gui/include/gui/suspensionscreen_screen/SuspensionScreenView.hpp:
+../../TouchGFX/generated/gui_generated/include/gui_generated/suspensionscreen_screen/SuspensionScreenViewBase.hpp:
+../../TouchGFX/gui/include/gui/suspensionscreen_screen/SuspensionScreenPresenter.hpp:
 ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp:

@@ -86,6 +86,7 @@ Application/User/generated/PowerTrainScreenViewBase.o: \
  ../../STM32CubeIDE/Application/User/inc/rpm.h ../../Core/Inc/ltdc.h \
  ../../Core/Inc/main.h ../../Core/Inc/tim.h \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
@@ -179,6 +180,7 @@ Application/User/generated/PowerTrainScreenViewBase.o: \
 ../../Core/Inc/main.h:
 ../../Core/Inc/tim.h:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
