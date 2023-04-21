@@ -8,6 +8,8 @@ extern "C"{
 	extern driverScreenData_t *driverScreenData_q;
 	uint8_t x = 0;
 }
+bool batteryState = false;
+bool coolantState = false;
 
 DriverScreenView::DriverScreenView()
 {
@@ -39,8 +41,14 @@ void DriverScreenView::UpdateDriverScreen(){
 	updateRightDataField1(driverScreenData_q->rightDataField1);
 	updateRightDataField2(driverScreenData_q->rightDataField2);
 	updateRightDataField3(driverScreenData_q->rightDataField3);
-	updateBatteryLow(driverScreenData_q->batteryLow);
-	updateCoolantHigh(driverScreenData_q->coolantHigh);
+	if(batteryState != driverScreenData_q->batteryLow){
+		updateBatteryLow(driverScreenData_q->batteryLow);
+		batteryState = driverScreenData_q->batteryLow;
+	}
+	if(coolantState != driverScreenData_q->coolantHigh){
+		updateCoolantHigh(driverScreenData_q->coolantHigh);
+		coolantState = driverScreenData_q->coolantHigh;
+	}
 }
 
 

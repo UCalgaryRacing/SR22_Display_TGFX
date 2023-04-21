@@ -725,7 +725,9 @@
             "TextId": "__SingleUse_0MFD",
             "TextRotation": "0",
             "Wildcard1": {
-              "TextId": "__SingleUse_V98E"
+              "TextId": "__SingleUse_V98E",
+              "UseBuffer": true,
+              "BufferSize": 10
             }
           },
           {
@@ -738,7 +740,9 @@
             "TextId": "__SingleUse_JTG5",
             "TextRotation": "0",
             "Wildcard1": {
-              "TextId": "__SingleUse_WOKV"
+              "TextId": "__SingleUse_WOKV",
+              "UseBuffer": true,
+              "BufferSize": 10
             }
           },
           {
@@ -751,7 +755,9 @@
             "TextId": "__SingleUse_W6BR",
             "TextRotation": "0",
             "Wildcard1": {
-              "TextId": "__SingleUse_8PMI"
+              "TextId": "__SingleUse_8PMI",
+              "UseBuffer": true,
+              "BufferSize": 10
             }
           },
           {
@@ -764,7 +770,9 @@
             "TextId": "__SingleUse_25DS",
             "TextRotation": "0",
             "Wildcard1": {
-              "TextId": "__SingleUse_9L25"
+              "TextId": "__SingleUse_9L25",
+              "UseBuffer": true,
+              "BufferSize": 10
             }
           },
           {
@@ -777,7 +785,9 @@
             "TextId": "__SingleUse_VRMK",
             "TextRotation": "0",
             "Wildcard1": {
-              "TextId": "__SingleUse_4UX5"
+              "TextId": "__SingleUse_4UX5",
+              "UseBuffer": true,
+              "BufferSize": 10
             }
           },
           {
@@ -790,7 +800,9 @@
             "TextId": "__SingleUse_ISS6",
             "TextRotation": "0",
             "Wildcard1": {
-              "TextId": "__SingleUse_RVY2"
+              "TextId": "__SingleUse_RVY2",
+              "UseBuffer": true,
+              "BufferSize": 10
             }
           }
         ],

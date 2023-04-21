@@ -75,16 +75,25 @@ void PowerTrainScreenView::UpdatePowerTrainScreen(){
 	Unicode::snprintf(tbIATBuffer, TBIAT_SIZE, "%d", iat);
 	Unicode::snprintf(tbMAPBuffer, TBMAP_SIZE, "%d", map);
 	Unicode::snprintfFloat(tbINJPWBuffer, TBINJPW_SIZE, "%03.2f", injpw);
-
-	Unicode::snprintf(tbVSPDBuffer, TBVSPD_SIZE, "%d", iat);
+	Unicode::snprintf(tbVSPDBuffer, TBVSPD_SIZE, "%d", vspd);
 	Unicode::snprintf(tbBaroBuffer, TBBARO_SIZE, "%d", baro);
 	Unicode::snprintfFloat(tbOilTempBuffer, TBOILTEMP_SIZE, "%03.2f", oilTemp);
 	Unicode::snprintfFloat(tbOilPresBuffer, TBOILPRES_SIZE, "%03.2f", oilPressure);
 	Unicode::snprintfFloat(tbFuelPresBuffer, TBFUELPRES_SIZE, "%03.2f", fuelPressure);
 	Unicode::snprintf(tbFuelTempBuffer, TBFUELTEMP_SIZE, "%d", coolantTemp);
 
+	Unicode::snprintfFloat(tbIGNANGBuffer, TBIGNANG_SIZE, "%03.2f", ignitionAngle);
+	Unicode::snprintfFloat(tbDwellBuffer, TBDWELL_SIZE, "%03.2f", dwell);
+	Unicode::snprintfFloat(tbLambdaBuffer, TBLAMBDA_SIZE, "%03.2f", lambda);
+	Unicode::snprintfFloat(tbLambCorrBuffer, TBLAMBCORR_SIZE, "%03.2f", lambcorr);
+	Unicode::snprintf(tbEGT1Buffer, TBEGT1_SIZE, "%d", egt1);
+	Unicode::snprintf(tbEGT2Buffer, TBEGT2_SIZE, "%d", egt2);
 	Unicode::snprintf(tbEGT3Buffer, TBEGT3_SIZE, "%d", egt3);
 	Unicode::snprintf(tbEGT4Buffer, TBEGT4_SIZE, "%d", egt4);
+	Unicode::snprintf(tbGearBuffer, TBGEAR_SIZE, "%d", gear);
+	Unicode::snprintf(tbECUTempBuffer, TBECUTEMP_SIZE, "%d", ecuTemp);
+	Unicode::snprintfFloat(tbBattBuffer, TBBATT_SIZE, "%03.3f", batteryVoltageECU);
+	Unicode::snprintf(tbCoolantTempBuffer, TBCOOLANTTEMP_SIZE, "%d", coolantTemp);
 
 	tbRPM.invalidate();
 	tbTPS.invalidate();

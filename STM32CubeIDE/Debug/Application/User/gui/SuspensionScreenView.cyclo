@@ -1,7 +1,7 @@
 Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	1
-SuspensionScreenView.cpp:25:6:virtual void SuspensionScreenView::tearDownScreen()	1
+SuspensionScreenView.cpp:32:6:virtual void SuspensionScreenView::tearDownScreen()	1
 SuspensionScreenView.hpp:11:13:SuspensionScreenView::~SuspensionScreenView()	1
 SuspensionScreenView.hpp:11:13:virtual SuspensionScreenView::~SuspensionScreenView()	1
-SuspensionScreenView.cpp:30:6:virtual void SuspensionScreenView::UpdateSuspensionScreen()	3
-SuspensionScreenView.cpp:15:1:SuspensionScreenView::SuspensionScreenView()	1
-SuspensionScreenView.cpp:20:6:virtual void SuspensionScreenView::setupScreen()	1
+SuspensionScreenView.cpp:22:1:SuspensionScreenView::SuspensionScreenView()	1
+SuspensionScreenView.cpp:27:6:virtual void SuspensionScreenView::setupScreen()	1
+SuspensionScreenView.cpp:37:6:virtual void SuspensionScreenView::UpdateSuspensionScreen()	3
