@@ -93,6 +93,7 @@ void PowerTrainScreenView::UpdatePowerTrainScreen(){
 	Unicode::snprintf(tbGearBuffer, TBGEAR_SIZE, "%d", gear);
 	Unicode::snprintf(tbECUTempBuffer, TBECUTEMP_SIZE, "%d", ecuTemp);
 	Unicode::snprintfFloat(tbBattBuffer, TBBATT_SIZE, "%03.3f", batteryVoltageECU);
+
 	Unicode::snprintf(tbCoolantTempBuffer, TBCOOLANTTEMP_SIZE, "%d", coolantTemp);
 
 	tbRPM.invalidate();
