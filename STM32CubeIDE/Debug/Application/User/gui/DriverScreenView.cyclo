@@ -1,17 +1,17 @@
 Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	1
-DriverScreenView.cpp:24:6:virtual void DriverScreenView::tearDownScreen()	1
-DriverScreenView.cpp:29:6:virtual void DriverScreenView::UpdateDriverScreen()	5
+DriverScreenView.cpp:25:6:virtual void DriverScreenView::tearDownScreen()	1
+DriverScreenView.cpp:30:6:virtual void DriverScreenView::UpdateDriverScreen()	7
 DriverScreenView.hpp:11:13:DriverScreenView::~DriverScreenView()	1
 DriverScreenView.hpp:11:13:virtual DriverScreenView::~DriverScreenView()	1
-DriverScreenView.cpp:14:1:DriverScreenView::DriverScreenView()	1
-DriverScreenView.cpp:19:6:virtual void DriverScreenView::setupScreen()	1
-DriverScreenView.cpp:55:6:virtual void DriverScreenView::updateGear(uint8_t)	1
-DriverScreenView.cpp:60:6:virtual void DriverScreenView::updateRPM(uint16_t)	1
-DriverScreenView.cpp:65:6:virtual void DriverScreenView::updateLeftDataField1(float)	1
-DriverScreenView.cpp:70:6:virtual void DriverScreenView::updateLeftDataField2(uint8_t)	1
-DriverScreenView.cpp:75:6:virtual void DriverScreenView::updateLeftDataField3(float)	1
-DriverScreenView.cpp:81:6:virtual void DriverScreenView::updateRightDataField1(float)	1
-DriverScreenView.cpp:86:6:virtual void DriverScreenView::updateRightDataField2(int16_t)	1
-DriverScreenView.cpp:91:6:virtual void DriverScreenView::updateRightDataField3(uint16_t)	1
-DriverScreenView.cpp:96:6:virtual void DriverScreenView::updateBatteryLow(bool)	1
-DriverScreenView.cpp:101:6:virtual void DriverScreenView::updateCoolantHigh(bool)	1
+DriverScreenView.cpp:15:1:DriverScreenView::DriverScreenView()	1
+DriverScreenView.cpp:20:6:virtual void DriverScreenView::setupScreen()	1
+DriverScreenView.cpp:60:6:virtual void DriverScreenView::updateGear(uint8_t)	1
+DriverScreenView.cpp:65:6:virtual void DriverScreenView::updateRPM(uint16_t)	1
+DriverScreenView.cpp:70:6:virtual void DriverScreenView::updateLeftDataField1(float)	1
+DriverScreenView.cpp:75:6:virtual void DriverScreenView::updateLeftDataField2(uint8_t)	1
+DriverScreenView.cpp:80:6:virtual void DriverScreenView::updateLeftDataField3(float)	1
+DriverScreenView.cpp:86:6:virtual void DriverScreenView::updateRightDataField1(float)	1
+DriverScreenView.cpp:91:6:virtual void DriverScreenView::updateRightDataField2(int16_t)	1
+DriverScreenView.cpp:96:6:virtual void DriverScreenView::updateRightDataField3(uint16_t)	1
+DriverScreenView.cpp:101:6:virtual void DriverScreenView::updateBatteryLow(bool)	1
+DriverScreenView.cpp:106:6:virtual void DriverScreenView::updateCoolantHigh(bool)	1

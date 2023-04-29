@@ -20,6 +20,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "cmsis_os.h"
+#include "adc.h"
 #include "can.h"
 #include "crc.h"
 #include "dma.h"
@@ -117,6 +118,7 @@ int main(void)
   MX_CRC_Init();
   MX_TIM2_Init();
   MX_SPI2_Init();
+  MX_ADC1_Init();
   MX_TouchGFX_Init();
   /* Call PreOsInit function */
   MX_TouchGFX_PreOSInit();

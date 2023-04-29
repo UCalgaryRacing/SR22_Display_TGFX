@@ -29,6 +29,7 @@
 #include "can.h"
 #include "gpio.h"
 #include "spi.h"
+#include "adc.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -88,20 +89,22 @@ const osThreadAttr_t egtTask_attributes = {
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
+/* Definitions for shifterTask */
+osThreadId_t shifterTaskHandle;
+const osThreadAttr_t shifterTask_attributes = {
+  .name = "shifterTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
 /* Definitions for buttonQueue */
 osMessageQueueId_t buttonQueueHandle;
 const osMessageQueueAttr_t buttonQueue_attributes = {
   .name = "buttonQueue"
 };
-/* Definitions for rpmQueue */
-osMessageQueueId_t rpmQueueHandle;
-const osMessageQueueAttr_t rpmQueue_attributes = {
-  .name = "rpmQueue"
-};
-/* Definitions for driverDataQueue */
-osMessageQueueId_t driverDataQueueHandle;
-const osMessageQueueAttr_t driverDataQueue_attributes = {
-  .name = "driverDataQueue"
+/* Definitions for shifterQueue */
+osMessageQueueId_t shifterQueueHandle;
+const osMessageQueueAttr_t shifterQueue_attributes = {
+  .name = "shifterQueue"
 };
 
 /* Private function prototypes -----------------------------------------------*/
@@ -114,6 +117,7 @@ extern void TouchGFX_Task(void *argument);
 void StartButtonTask(void *argument);
 void StartRPMTask(void *argument);
 void StartEGTTask(void *argument);
+void StartShifterTask(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -162,11 +166,8 @@ void MX_FREERTOS_Init(void) {
   /* creation of buttonQueue */
   buttonQueueHandle = osMessageQueueNew (4, sizeof(uint8_t), &buttonQueue_attributes);
 
-  /* creation of rpmQueue */
-  rpmQueueHandle = osMessageQueueNew (8, sizeof(uint16_t), &rpmQueue_attributes);
-
-  /* creation of driverDataQueue */
-  driverDataQueueHandle = osMessageQueueNew (16, sizeof(driverScreenData_t), &driverDataQueue_attributes);
+  /* creation of shifterQueue */
+  shifterQueueHandle = osMessageQueueNew (8, sizeof(uint8_t), &shifterQueue_attributes);
 
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
@@ -187,6 +188,9 @@ void MX_FREERTOS_Init(void) {
 
   /* creation of egtTask */
   egtTaskHandle = osThreadNew(StartEGTTask, NULL, &egtTask_attributes);
+
+  /* creation of shifterTask */
+  shifterTaskHandle = osThreadNew(StartShifterTask, NULL, &shifterTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -277,6 +281,45 @@ void StartEGTTask(void *argument)
 		osDelay(500);
 	}
   /* USER CODE END StartEGTTask */
+}
+
+/* USER CODE BEGIN Header_StartShifterTask */
+/**
+* @brief Function implementing the shifterTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartShifterTask */
+void StartShifterTask(void *argument)
+{
+  /* USER CODE BEGIN StartShifterTask */
+	uint16_t rawADCData = 0;
+	uint8_t adcGear = 0;
+	uint8_t shiftPosition = 0;
+  /* Infinite loop */
+	for(;;){
+		HAL_ADC_Start(&hadc1);
+		HAL_ADC_PollForConversion(&hadc1, 200);
+		rawADCData = HAL_ADC_GetValue(&hadc1);
+		HAL_ADC_Stop(&hadc1);
+		if(rawADCData > 3000){
+			if(shiftPosition != 1 && adcGear != 6){
+				shiftPosition = 1;
+				adcGear ++;
+				osMessageQueuePut(shifterQueueHandle, &adcGear, 0, 0);
+			}
+		}else if(rawADCData < 1500){
+			if(shiftPosition != 1 && adcGear != 0){
+				shiftPosition = 1;
+				adcGear --;
+				osMessageQueuePut(shifterQueueHandle, &adcGear, 0, 0);
+			}
+		}else{
+			shiftPosition = 0;
+		}
+		osDelay(100);
+	}
+  /* USER CODE END StartShifterTask */
 }
 
 /* Private application code --------------------------------------------------*/

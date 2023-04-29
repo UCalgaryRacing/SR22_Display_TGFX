@@ -4,9 +4,10 @@
 #include "can.h"
 extern "C"{
 	extern osMessageQueueId_t buttonQueueHandle;
-	extern osMessageQueueId_t driverDataQueueHandle;
+	extern osMessageQueueId_t shifterQueueHandle;
 	extern driverScreenData_t *driverScreenData_q;
 	uint8_t x = 0;
+	uint8_t adcGear_q = 0;
 }
 bool batteryState = false;
 bool coolantState = false;
@@ -32,8 +33,12 @@ void DriverScreenView::UpdateDriverScreen(){
 			handleKeyEvent(0);
 		}
 	}
-
-	updateGear(driverScreenData_q->gear);
+	if(osMessageQueueGetCount(shifterQueueHandle) > 0){
+		if(osMessageQueueGet(shifterQueueHandle, &adcGear_q, 0, 0) == osOK){
+			updateGear(adcGear_q);
+		}
+	}
+//	updateGear(driverScreenData_q->gear);
 	updateRPM(driverScreenData_q->rpm);
 	updateLeftDataField1(driverScreenData_q->leftDataField1);
 	updateLeftDataField2(driverScreenData_q->leftDataField2);
