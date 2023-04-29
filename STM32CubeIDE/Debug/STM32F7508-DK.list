@@ -14858,6 +14858,7 @@ void PowerTrainScreenView::UpdatePowerTrainScreen(){
 9000642e:	ee00 3a10 	vmov	s0, r3
 90006432:	eeb8 0a40 	vcvt.f32.u32	s0, s0
 90006436:	f7ff ff04 	bl	90006242 <_ZN8touchgfx7Unicode13snprintfFloatEPttPKcf>
+
 	Unicode::snprintf(tbCoolantTempBuffer, TBCOOLANTTEMP_SIZE, "%d", coolantTemp);
 9000643a:	f9b5 3000 	ldrsh.w	r3, [r5]
 9000643e:	4a35      	ldr	r2, [pc, #212]	; (90006514 <_ZN20PowerTrainScreenView22UpdatePowerTrainScreenEv+0x2a8>)
