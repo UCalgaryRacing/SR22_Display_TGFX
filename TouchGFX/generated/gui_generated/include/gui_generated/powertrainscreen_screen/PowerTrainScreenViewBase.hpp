@@ -8,6 +8,7 @@
 #include <mvp/View.hpp>
 #include <gui/powertrainscreen_screen/PowerTrainScreenPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
 class PowerTrainScreenViewBase : public touchgfx::View<PowerTrainScreenPresenter>
 {
@@ -15,6 +16,16 @@ public:
     PowerTrainScreenViewBase();
     virtual ~PowerTrainScreenViewBase();
     virtual void setupScreen();
+    virtual void handleKeyEvent(uint8_t key);
+    virtual void handleTickEvent();
+
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void UpdatePowerTrainScreen()
+    {
+        // Override and implement this function in PowerTrainScreen
+    }
 
 protected:
     FrontendApplication& application() {
@@ -26,6 +37,79 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Box background;
+    touchgfx::TextAreaWithOneWildcard tbRPM;
+    touchgfx::TextAreaWithOneWildcard tbTPS;
+    touchgfx::TextAreaWithOneWildcard tbIAT;
+    touchgfx::TextAreaWithOneWildcard tbMAP;
+    touchgfx::TextAreaWithOneWildcard tbINJPW;
+    touchgfx::TextAreaWithOneWildcard tbVSPD;
+    touchgfx::TextAreaWithOneWildcard tbBaro;
+    touchgfx::TextAreaWithOneWildcard tbOilTemp;
+    touchgfx::TextAreaWithOneWildcard tbOilPres;
+    touchgfx::TextAreaWithOneWildcard tbFuelPres;
+    touchgfx::TextAreaWithOneWildcard tbFuelTemp;
+    touchgfx::TextAreaWithOneWildcard tbIGNANG;
+    touchgfx::TextAreaWithOneWildcard tbDwell;
+    touchgfx::TextAreaWithOneWildcard tbLambda;
+    touchgfx::TextAreaWithOneWildcard tbLambCorr;
+    touchgfx::TextAreaWithOneWildcard tbEGT1;
+    touchgfx::TextAreaWithOneWildcard tbEGT2;
+    touchgfx::TextAreaWithOneWildcard tbEGT3;
+    touchgfx::TextAreaWithOneWildcard tbEGT4;
+    touchgfx::TextAreaWithOneWildcard tbGear;
+    touchgfx::TextAreaWithOneWildcard tbECUTemp;
+    touchgfx::TextAreaWithOneWildcard tbBatt;
+    touchgfx::TextAreaWithOneWildcard tbCoolantTemp;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TBRPM_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbRPMBuffer[TBRPM_SIZE];
+    static const uint16_t TBTPS_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbTPSBuffer[TBTPS_SIZE];
+    static const uint16_t TBIAT_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbIATBuffer[TBIAT_SIZE];
+    static const uint16_t TBMAP_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbMAPBuffer[TBMAP_SIZE];
+    static const uint16_t TBINJPW_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbINJPWBuffer[TBINJPW_SIZE];
+    static const uint16_t TBVSPD_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbVSPDBuffer[TBVSPD_SIZE];
+    static const uint16_t TBBARO_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbBaroBuffer[TBBARO_SIZE];
+    static const uint16_t TBOILTEMP_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbOilTempBuffer[TBOILTEMP_SIZE];
+    static const uint16_t TBOILPRES_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbOilPresBuffer[TBOILPRES_SIZE];
+    static const uint16_t TBFUELPRES_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbFuelPresBuffer[TBFUELPRES_SIZE];
+    static const uint16_t TBFUELTEMP_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbFuelTempBuffer[TBFUELTEMP_SIZE];
+    static const uint16_t TBIGNANG_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbIGNANGBuffer[TBIGNANG_SIZE];
+    static const uint16_t TBDWELL_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbDwellBuffer[TBDWELL_SIZE];
+    static const uint16_t TBLAMBDA_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbLambdaBuffer[TBLAMBDA_SIZE];
+    static const uint16_t TBLAMBCORR_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbLambCorrBuffer[TBLAMBCORR_SIZE];
+    static const uint16_t TBEGT1_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbEGT1Buffer[TBEGT1_SIZE];
+    static const uint16_t TBEGT2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbEGT2Buffer[TBEGT2_SIZE];
+    static const uint16_t TBEGT3_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbEGT3Buffer[TBEGT3_SIZE];
+    static const uint16_t TBEGT4_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbEGT4Buffer[TBEGT4_SIZE];
+    static const uint16_t TBGEAR_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbGearBuffer[TBGEAR_SIZE];
+    static const uint16_t TBECUTEMP_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbECUTempBuffer[TBECUTEMP_SIZE];
+    static const uint16_t TBBATT_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbBattBuffer[TBBATT_SIZE];
+    static const uint16_t TBCOOLANTTEMP_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbCoolantTempBuffer[TBCOOLANTTEMP_SIZE];
 
 private:
 

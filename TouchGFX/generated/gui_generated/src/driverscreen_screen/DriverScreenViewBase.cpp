@@ -19,86 +19,113 @@ DriverScreenViewBase::DriverScreenViewBase()
     background.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     add(background);
 
-    tbRightDataFieldData2.setPosition(420, 95, 50, 30);
+    tbRightDataFieldData3.setPosition(385, 155, 85, 37);
+    tbRightDataFieldData3.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    tbRightDataFieldData3.setLinespacing(0);
+    Unicode::snprintf(tbRightDataFieldData3Buffer, TBRIGHTDATAFIELDDATA3_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_S3HT).getText());
+    tbRightDataFieldData3.setWildcard(tbRightDataFieldData3Buffer);
+    tbRightDataFieldData3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_6GAE));
+    add(tbRightDataFieldData3);
+
+    tbRightDataFieldTitle3.setPosition(370, 140, 100, 21);
+    tbRightDataFieldTitle3.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    tbRightDataFieldTitle3.setLinespacing(2);
+    Unicode::snprintf(tbRightDataFieldTitle3Buffer, TBRIGHTDATAFIELDTITLE3_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_BBWH).getText());
+    tbRightDataFieldTitle3.setWildcard(tbRightDataFieldTitle3Buffer);
+    tbRightDataFieldTitle3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_NV6C));
+    add(tbRightDataFieldTitle3);
+
+    tbRightDataFieldData2.setPosition(420, 95, 50, 37);
     tbRightDataFieldData2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     tbRightDataFieldData2.setLinespacing(0);
+    Unicode::snprintf(tbRightDataFieldData2Buffer, TBRIGHTDATAFIELDDATA2_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_8X86).getText());
+    tbRightDataFieldData2.setWildcard(tbRightDataFieldData2Buffer);
     tbRightDataFieldData2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_SNGL));
     add(tbRightDataFieldData2);
 
     tbRightDataFieldTitle2.setPosition(370, 80, 100, 15);
     tbRightDataFieldTitle2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     tbRightDataFieldTitle2.setLinespacing(2);
+    Unicode::snprintf(tbRightDataFieldTitle2Buffer, TBRIGHTDATAFIELDTITLE2_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_D87B).getText());
+    tbRightDataFieldTitle2.setWildcard(tbRightDataFieldTitle2Buffer);
     tbRightDataFieldTitle2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_C0Q3));
     add(tbRightDataFieldTitle2);
 
     tbRightDataFieldData1.setPosition(390, 35, 80, 30);
     tbRightDataFieldData1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     tbRightDataFieldData1.setLinespacing(0);
+    Unicode::snprintf(tbRightDataFieldData1Buffer, TBRIGHTDATAFIELDDATA1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_HHZ7).getText());
+    tbRightDataFieldData1.setWildcard(tbRightDataFieldData1Buffer);
     tbRightDataFieldData1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_7UI3));
     add(tbRightDataFieldData1);
 
     tbRightDataFieldTitle1.setPosition(370, 20, 100, 18);
     tbRightDataFieldTitle1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     tbRightDataFieldTitle1.setLinespacing(2);
+    Unicode::snprintf(tbRightDataFieldTitle1Buffer, TBRIGHTDATAFIELDTITLE1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_EHLI).getText());
+    tbRightDataFieldTitle1.setWildcard(tbRightDataFieldTitle1Buffer);
     tbRightDataFieldTitle1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_4UEX));
     add(tbRightDataFieldTitle1);
 
-    tbLeftDataFieldData4.setXY(10, 215);
-    tbLeftDataFieldData4.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    tbLeftDataFieldData4.setLinespacing(0);
-    tbLeftDataFieldData4.setTypedText(touchgfx::TypedText(T___SINGLEUSE_6GAE));
-    add(tbLeftDataFieldData4);
-
-    tbLeftDataFieldTitle4.setXY(10, 200);
-    tbLeftDataFieldTitle4.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    tbLeftDataFieldTitle4.setLinespacing(2);
-    tbLeftDataFieldTitle4.setTypedText(touchgfx::TypedText(T___SINGLEUSE_NV6C));
-    add(tbLeftDataFieldTitle4);
-
-    tbLeftDataFieldData3.setXY(10, 155);
+    tbLeftDataFieldData3.setPosition(10, 155, 85, 37);
     tbLeftDataFieldData3.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     tbLeftDataFieldData3.setLinespacing(0);
+    Unicode::snprintf(tbLeftDataFieldData3Buffer, TBLEFTDATAFIELDDATA3_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_N4ES).getText());
+    tbLeftDataFieldData3.setWildcard(tbLeftDataFieldData3Buffer);
     tbLeftDataFieldData3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_L7ZC));
     add(tbLeftDataFieldData3);
 
-    tbLeftDataFieldTitle3.setXY(10, 140);
+    tbLeftDataFieldTitle3.setPosition(10, 140, 100, 21);
     tbLeftDataFieldTitle3.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     tbLeftDataFieldTitle3.setLinespacing(2);
+    Unicode::snprintf(tbLeftDataFieldTitle3Buffer, TBLEFTDATAFIELDTITLE3_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_LEAT).getText());
+    tbLeftDataFieldTitle3.setWildcard(tbLeftDataFieldTitle3Buffer);
     tbLeftDataFieldTitle3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_041P));
     add(tbLeftDataFieldTitle3);
 
-    tbLeftDataFieldData2.setXY(10, 95);
+    tbLeftDataFieldData2.setPosition(10, 95, 80, 37);
     tbLeftDataFieldData2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     tbLeftDataFieldData2.setLinespacing(0);
+    Unicode::snprintf(tbLeftDataFieldData2Buffer, TBLEFTDATAFIELDDATA2_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_1YET).getText());
+    tbLeftDataFieldData2.setWildcard(tbLeftDataFieldData2Buffer);
     tbLeftDataFieldData2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_YSFT));
     add(tbLeftDataFieldData2);
 
     tbLeftDataFieldTitle2.setXY(10, 80);
     tbLeftDataFieldTitle2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     tbLeftDataFieldTitle2.setLinespacing(2);
+    Unicode::snprintf(tbLeftDataFieldTitle2Buffer, TBLEFTDATAFIELDTITLE2_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_E4NJ).getText());
+    tbLeftDataFieldTitle2.setWildcard(tbLeftDataFieldTitle2Buffer);
+    tbLeftDataFieldTitle2.resizeToCurrentText();
     tbLeftDataFieldTitle2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_JPBU));
     add(tbLeftDataFieldTitle2);
 
-    tbLeftDataFieldData1.setXY(10, 35);
+    tbLeftDataFieldData1.setPosition(10, 35, 80, 37);
     tbLeftDataFieldData1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     tbLeftDataFieldData1.setLinespacing(0);
+    Unicode::snprintf(tbLeftDataFieldData1Buffer, TBLEFTDATAFIELDDATA1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_V86A).getText());
+    tbLeftDataFieldData1.setWildcard(tbLeftDataFieldData1Buffer);
     tbLeftDataFieldData1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_2BPK));
     add(tbLeftDataFieldData1);
 
-    tbLeftDataFieldTitle1.setXY(10, 20);
+    tbLeftDataFieldTitle1.setPosition(10, 20, 100, 21);
     tbLeftDataFieldTitle1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     tbLeftDataFieldTitle1.setLinespacing(2);
+    Unicode::snprintf(tbLeftDataFieldTitle1Buffer, TBLEFTDATAFIELDTITLE1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_8NEG).getText());
+    tbLeftDataFieldTitle1.setWildcard(tbLeftDataFieldTitle1Buffer);
     tbLeftDataFieldTitle1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_3UGH));
     add(tbLeftDataFieldTitle1);
 
-    tbGear.setPosition(202, 25, 77, 150);
+    tbGear.setPosition(200, 100, 80, 150);
     tbGear.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     tbGear.setLinespacing(0);
+    Unicode::snprintf(tbGearBuffer, TBGEAR_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_ZWYE).getText());
+    tbGear.setWildcard(tbGearBuffer);
     tbGear.setTypedText(touchgfx::TypedText(T___SINGLEUSE_3P2N));
     add(tbGear);
 
     iconBatteryLow.setSVG(SVG_BATTERYLOW_ID);
-    iconBatteryLow.setPosition(160, 191, 53, 31);
+    iconBatteryLow.setPosition(14, 225, 53, 31);
     iconBatteryLow.setScale(0.08f, 0.07f);
     iconBatteryLow.setImagePosition(0, 0);
     iconBatteryLow.setRotationCenter(23.0f, 12.5f);
@@ -106,7 +133,7 @@ DriverScreenViewBase::DriverScreenViewBase()
     add(iconBatteryLow);
 
     iconCoolantHigh.setSVG(SVG_COOLANT_ID);
-    iconCoolantHigh.setPosition(273, 191, 47, 42);
+    iconCoolantHigh.setPosition(423, 219, 47, 42);
     iconCoolantHigh.setScale(0.07f, 0.08f);
     iconCoolantHigh.setImagePosition(0, 0);
     iconCoolantHigh.setRotationCenter(27, 30);
@@ -121,29 +148,13 @@ DriverScreenViewBase::DriverScreenViewBase()
     imageSRLogo.setRotation(0);
     add(imageSRLogo);
 
-    iconFansOn.setSVG(SVG_FANS_ID);
-    iconFansOn.setPosition(378, 149, 52, 55);
-    iconFansOn.setScale(0.1f, 0.11f);
-    iconFansOn.setImagePosition(0, 0);
-    iconFansOn.setRotationCenter(25, 25);
-    iconFansOn.setRotation(0);
-    add(iconFansOn);
-
-    IconWaterPumpsOn.setSVG(SVG_WATER_PUMP_ID);
-    IconWaterPumpsOn.setPosition(441, 149, 35, 55);
-    IconWaterPumpsOn.setScale(0.09f, 0.09f);
-    IconWaterPumpsOn.setImagePosition(0, 0);
-    IconWaterPumpsOn.setRotationCenter(0, 0);
-    IconWaterPumpsOn.setRotation(0);
-    add(IconWaterPumpsOn);
-
-    svgImage1.setSVG(SVG_FUEL_PUMP_ID);
-    svgImage1.setPosition(441, 212, 35, 55);
-    svgImage1.setScale(0.08f, 0.09f);
-    svgImage1.setImagePosition(0, 0);
-    svgImage1.setRotationCenter(0, 0);
-    svgImage1.setRotation(0);
-    add(svgImage1);
+    tbRPM.setPosition(190, 60, 100, 37);
+    tbRPM.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    tbRPM.setLinespacing(0);
+    Unicode::snprintf(tbRPMBuffer, TBRPM_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_GPKS).getText());
+    tbRPM.setWildcard(tbRPMBuffer);
+    tbRPM.setTypedText(touchgfx::TypedText(T___SINGLEUSE_O779));
+    add(tbRPM);
 }
 
 DriverScreenViewBase::~DriverScreenViewBase()
@@ -154,4 +165,24 @@ DriverScreenViewBase::~DriverScreenViewBase()
 void DriverScreenViewBase::setupScreen()
 {
 
+}
+
+void DriverScreenViewBase::handleKeyEvent(uint8_t key)
+{
+    if(0 == key)
+    {
+        //ChangeToPowerTrain
+        //When hardware button 0 clicked change screen to PowerTrainScreen
+        //Go to PowerTrainScreen with no screen transition
+        application().gotoPowerTrainScreenScreenNoTransition();
+    
+    }
+}
+
+void DriverScreenViewBase::handleTickEvent()
+{
+    //UpdateDriverData
+    //When every N tick call virtual function
+    //Call UpdateDriverScreen
+    UpdateDriverScreen();
 }

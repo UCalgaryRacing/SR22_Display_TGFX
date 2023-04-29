@@ -23,6 +23,12 @@ public:
     // DriverScreen
     void gotoDriverScreenScreenNoTransition();
 
+    // PowerTrainScreen
+    void gotoPowerTrainScreenScreenNoTransition();
+
+    // SuspensionScreen
+    void gotoSuspensionScreenScreenNoTransition();
+
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -30,6 +36,12 @@ protected:
 
     // DriverScreen
     void gotoDriverScreenScreenNoTransitionImpl();
+
+    // PowerTrainScreen
+    void gotoPowerTrainScreenScreenNoTransitionImpl();
+
+    // SuspensionScreen
+    void gotoSuspensionScreenScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

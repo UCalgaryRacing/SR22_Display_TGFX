@@ -11,6 +11,7 @@ public:
     virtual ~PowerTrainScreenView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+    virtual void UpdatePowerTrainScreen();
 protected:
 };
 

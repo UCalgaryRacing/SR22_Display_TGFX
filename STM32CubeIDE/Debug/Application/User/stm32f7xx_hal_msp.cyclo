@@ -1,11 +1,1 @@
 stm32f7xx_hal_msp.c:64:6:HAL_MspInit	1
-stm32f7xx_hal_msp.c:88:6:HAL_CRC_MspInit	2
-stm32f7xx_hal_msp.c:110:6:HAL_CRC_MspDeInit	2
-stm32f7xx_hal_msp.c:132:6:HAL_DMA2D_MspInit	2
-stm32f7xx_hal_msp.c:157:6:HAL_DMA2D_MspDeInit	2
-stm32f7xx_hal_msp.c:182:6:HAL_LTDC_MspInit	3
-stm32f7xx_hal_msp.c:299:6:HAL_LTDC_MspDeInit	2
-stm32f7xx_hal_msp.c:368:6:HAL_UART_MspInit	3
-stm32f7xx_hal_msp.c:423:6:HAL_UART_MspDeInit	2
-stm32f7xx_hal_msp.c:556:6:HAL_SDRAM_MspInit	2
-stm32f7xx_hal_msp.c:642:6:HAL_SDRAM_MspDeInit	2

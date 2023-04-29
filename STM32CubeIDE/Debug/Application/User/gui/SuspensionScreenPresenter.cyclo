@@ -1,0 +1,5 @@
+SuspensionScreenPresenter.hpp:28:13:SuspensionScreenPresenter::~SuspensionScreenPresenter()	1
+SuspensionScreenPresenter.cpp:10:6:virtual void SuspensionScreenPresenter::activate()	1
+SuspensionScreenPresenter.hpp:28:13:virtual SuspensionScreenPresenter::~SuspensionScreenPresenter()	1
+SuspensionScreenPresenter.hpp:28:13:virtual void* SuspensionScreenPresenter::_ZThn4_N25SuspensionScreenPresenterD1Ev()	1
+SuspensionScreenPresenter.cpp:4:1:SuspensionScreenPresenter::SuspensionScreenPresenter(SuspensionScreenView&)	1

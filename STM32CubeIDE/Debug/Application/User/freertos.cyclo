@@ -1,1 +1,6 @@
-freertos.c:60:6:vApplicationIdleHook	1
+freertos.c:208:6:StartDefaultTask	1
+freertos.c:244:6:StartRPMTask	1
+freertos.c:263:6:StartEGTTask	1
+freertos.c:226:6:StartButtonTask	1
+freertos.c:124:6:vApplicationIdleHook	1
+freertos.c:144:6:MX_FREERTOS_Init	1

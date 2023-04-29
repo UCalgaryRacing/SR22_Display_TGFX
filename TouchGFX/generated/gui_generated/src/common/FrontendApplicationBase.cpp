@@ -13,6 +13,8 @@
 #include <gui/driverscreen_screen/DriverScreenPresenter.hpp>
 #include <gui/powertrainscreen_screen/PowerTrainScreenView.hpp>
 #include <gui/powertrainscreen_screen/PowerTrainScreenPresenter.hpp>
+#include <gui/suspensionscreen_screen/SuspensionScreenView.hpp>
+#include <gui/suspensionscreen_screen/SuspensionScreenPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -42,4 +44,30 @@ void FrontendApplicationBase::gotoDriverScreenScreenNoTransition()
 void FrontendApplicationBase::gotoDriverScreenScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<DriverScreenView, DriverScreenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// PowerTrainScreen
+
+void FrontendApplicationBase::gotoPowerTrainScreenScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoPowerTrainScreenScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoPowerTrainScreenScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<PowerTrainScreenView, PowerTrainScreenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// SuspensionScreen
+
+void FrontendApplicationBase::gotoSuspensionScreenScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoSuspensionScreenScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoSuspensionScreenScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<SuspensionScreenView, SuspensionScreenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

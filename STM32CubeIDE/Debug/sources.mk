@@ -40,6 +40,7 @@ Application/User/TouchGFX/target/generated \
 Application/User \
 Application/User/generated \
 Application/User/gui \
+Application/User/src \
 Drivers/BSP/Components \
 Drivers/BSP/STM32F7508-Discovery \
 Drivers/CMSIS \

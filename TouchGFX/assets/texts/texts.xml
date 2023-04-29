@@ -5,51 +5,272 @@
   </Languages>
   <Texts>
     <TextGroup Id="Group1" />
-    <TextGroup Id="Unsorted">
+    <TextGroup Id="DriverDataFields">
+      <Text Id="__SingleUse_ZWYE" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_8X86" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_D87B" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Coolant Temp</Translation>
+      </Text>
+      <Text Id="__SingleUse_S3HT" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_HHZ7" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_EHLI" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Battery</Translation>
+      </Text>
+      <Text Id="__SingleUse_BBWH" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Speed</Translation>
+      </Text>
+      <Text Id="__SingleUse_N4ES" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_LEAT" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Fuel Pressure</Translation>
+      </Text>
+      <Text Id="__SingleUse_1YET" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_E4NJ" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Oil Temp</Translation>
+      </Text>
+      <Text Id="__SingleUse_V86A" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_8NEG" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Oil Pressure</Translation>
+      </Text>
       <Text Id="__SingleUse_3P2N" Alignment="Center" TypographyId="Large">
-        <Translation Language="GB">2&lt;value&gt;</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_2BPK" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">0&lt;value&gt;</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_SNGL" Alignment="Right" TypographyId="Default">
-        <Translation Language="GB">80&lt;value&gt;</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_7UI3" Alignment="Right" TypographyId="Default">
-        <Translation Language="GB">13.5&lt;value&gt;</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_C0Q3" Alignment="Right" TypographyId="Small">
-        <Translation Language="GB">Coolant Temp&lt;value&gt;</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_4UEX" Alignment="Right" TypographyId="Small">
-        <Translation Language="GB">Battery&lt;value&gt;</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_6GAE" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">30&lt;value&gt;</Translation>
+      <Text Id="__SingleUse_6GAE" Alignment="Right" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_JPBU" Alignment="Left" TypographyId="Small">
-        <Translation Language="GB">Oil Temp&lt;value&gt;</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_041P" Alignment="Left" TypographyId="Small">
-        <Translation Language="GB">Fuel Pressure&lt;value&gt;</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_NV6C" Alignment="Left" TypographyId="Small">
-        <Translation Language="GB">Fuel Temp&lt;value&gt;</Translation>
+      <Text Id="__SingleUse_NV6C" Alignment="Right" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_L7ZC" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">2.0&lt;value&gt;</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_YSFT" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">50&lt;value&gt;</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_3UGH" Alignment="Left" TypographyId="Small">
-        <Translation Language="GB">Oil Pressure&lt;value&gt;</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+    </TextGroup>
+    <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_RVY2" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0.00</Translation>
+      </Text>
+      <Text Id="__SingleUse_ISS6" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Rear Break: &lt;value&gt;V</Translation>
+      </Text>
+      <Text Id="__SingleUse_4UX5" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0.00</Translation>
+      </Text>
+      <Text Id="__SingleUse_VRMK" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Front Break: &lt;value&gt;V</Translation>
+      </Text>
+      <Text Id="__SingleUse_9L25" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0.00</Translation>
+      </Text>
+      <Text Id="__SingleUse_25DS" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">RL Pot: &lt;value&gt;V</Translation>
+      </Text>
+      <Text Id="__SingleUse_8PMI" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0.00</Translation>
+      </Text>
+      <Text Id="__SingleUse_W6BR" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">RR Pot: &lt;value&gt;V</Translation>
+      </Text>
+      <Text Id="__SingleUse_WOKV" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0.00</Translation>
+      </Text>
+      <Text Id="__SingleUse_JTG5" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">FL Pot: &lt;value&gt;V</Translation>
+      </Text>
+      <Text Id="__SingleUse_V98E" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0.00</Translation>
+      </Text>
+      <Text Id="__SingleUse_0MFD" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">FR Pot: &lt;value&gt;V</Translation>
+      </Text>
+      <Text Id="__SingleUse_U1C7" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">000</Translation>
+      </Text>
+      <Text Id="__SingleUse_H324" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Coolant: &lt;value&gt;C</Translation>
+      </Text>
+      <Text Id="__SingleUse_PXRL" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0000</Translation>
+      </Text>
+      <Text Id="__SingleUse_4HX2" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">EGT4: &lt;value&gt;C</Translation>
+      </Text>
+      <Text Id="__SingleUse_XAXJ" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0000</Translation>
+      </Text>
+      <Text Id="__SingleUse_XYPD" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">EGT3: &lt;value&gt;C</Translation>
+      </Text>
+      <Text Id="__SingleUse_M2FN" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0000</Translation>
+      </Text>
+      <Text Id="__SingleUse_6JGL" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">EGT2: &lt;value&gt;C</Translation>
+      </Text>
+      <Text Id="__SingleUse_HMSA" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">00.000</Translation>
+      </Text>
+      <Text Id="__SingleUse_BFSU" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Battery: &lt;value&gt;V</Translation>
+      </Text>
+      <Text Id="__SingleUse_A1CB" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">000</Translation>
+      </Text>
+      <Text Id="__SingleUse_DKP8" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">ECU Temp: &lt;value&gt;C</Translation>
+      </Text>
+      <Text Id="__SingleUse_ADHJ" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_EOKT" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Gear: &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_BHGP" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0000</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZYKH" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">EGT1: &lt;value&gt;C</Translation>
+      </Text>
+      <Text Id="__SingleUse_E9AS" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">000.0</Translation>
+      </Text>
+      <Text Id="__SingleUse_OEZA" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Lambda Corr: &lt;value&gt;%</Translation>
+      </Text>
+      <Text Id="__SingleUse_QXLL" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0.0000000</Translation>
+      </Text>
+      <Text Id="__SingleUse_90MI" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Lambda: &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_CO7Y" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">00.00</Translation>
+      </Text>
+      <Text Id="__SingleUse_ANIQ" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Dwell: &lt;value&gt;ms</Translation>
+      </Text>
+      <Text Id="__SingleUse_Z7MX" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">00.0</Translation>
+      </Text>
+      <Text Id="__SingleUse_YNQ7" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Ign Angle: &lt;value&gt;deg</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZNAS" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">000</Translation>
+      </Text>
+      <Text Id="__SingleUse_YB8O" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Fuel Temp: &lt;value&gt;C</Translation>
+      </Text>
+      <Text Id="__SingleUse_6JUK" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0.0000</Translation>
+      </Text>
+      <Text Id="__SingleUse_MRBL" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Fuel Pres: &lt;value&gt;bar</Translation>
+      </Text>
+      <Text Id="__SingleUse_USE6" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0.0000</Translation>
+      </Text>
+      <Text Id="__SingleUse_60H9" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Oil Pres: &lt;value&gt;bar</Translation>
+      </Text>
+      <Text Id="__SingleUse_BDOZ" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">000</Translation>
+      </Text>
+      <Text Id="__SingleUse_V8PO" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Oil Temp: &lt;value&gt;C&#10;</Translation>
+      </Text>
+      <Text Id="__SingleUse_0S8I" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">000</Translation>
+      </Text>
+      <Text Id="__SingleUse_GDWZ" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Baro: &lt;value&gt;kPa</Translation>
+      </Text>
+      <Text Id="__SingleUse_GKOR" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">000</Translation>
+      </Text>
+      <Text Id="__SingleUse_0OCE" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Speed: &lt;value&gt;km/h</Translation>
+      </Text>
+      <Text Id="__SingleUse_5ELO" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0.000000</Translation>
+      </Text>
+      <Text Id="__SingleUse_BXVC" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">INJPW: &lt;value&gt;ms</Translation>
+      </Text>
+      <Text Id="__SingleUse_SMC0" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">000</Translation>
+      </Text>
+      <Text Id="__SingleUse_UDSF" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">MAP: &lt;value&gt;kPa</Translation>
+      </Text>
+      <Text Id="__SingleUse_Z9O1" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">000</Translation>
+      </Text>
+      <Text Id="__SingleUse_BY52" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">IAT: &lt;value&gt;C</Translation>
+      </Text>
+      <Text Id="__SingleUse_XFUA" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">000.0</Translation>
+      </Text>
+      <Text Id="__SingleUse_B9QI" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">TPS: &lt;value&gt;%</Translation>
+      </Text>
+      <Text Id="__SingleUse_RUJ6" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">00000</Translation>
+      </Text>
+      <Text Id="__SingleUse_GPKS" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_O779" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_O2N1" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">RPM: &lt;value&gt;</Translation>
       </Text>
     </TextGroup>
   </Texts>
   <Typographies>
-    <Typography Id="Default" Font="bahnschrift.ttf" Size="30" Bpp="4" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Large" Font="bahnschrift.ttf" Size="150" Bpp="4" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Small" Font="bahnschrift.ttf" Size="15" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Default" Font="bahnschrift.ttf" Size="30" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20-0x7E" />
+    <Typography Id="Large" Font="bahnschrift.ttf" Size="150" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20-0x7E" />
+    <Typography Id="Small" Font="bahnschrift.ttf" Size="15" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20-0x7E" />
   </Typographies>
 </TextDatabase>

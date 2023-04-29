@@ -17,6 +17,16 @@ public:
     DriverScreenViewBase();
     virtual ~DriverScreenViewBase();
     virtual void setupScreen();
+    virtual void handleKeyEvent(uint8_t key);
+    virtual void handleTickEvent();
+
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void UpdateDriverScreen()
+    {
+        // Override and implement this function in DriverScreen
+    }
 
 protected:
     FrontendApplication& application() {
@@ -28,12 +38,12 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Box background;
+    touchgfx::TextAreaWithOneWildcard tbRightDataFieldData3;
+    touchgfx::TextAreaWithOneWildcard tbRightDataFieldTitle3;
     touchgfx::TextAreaWithOneWildcard tbRightDataFieldData2;
     touchgfx::TextAreaWithOneWildcard tbRightDataFieldTitle2;
     touchgfx::TextAreaWithOneWildcard tbRightDataFieldData1;
     touchgfx::TextAreaWithOneWildcard tbRightDataFieldTitle1;
-    touchgfx::TextAreaWithOneWildcard tbLeftDataFieldData4;
-    touchgfx::TextAreaWithOneWildcard tbLeftDataFieldTitle4;
     touchgfx::TextAreaWithOneWildcard tbLeftDataFieldData3;
     touchgfx::TextAreaWithOneWildcard tbLeftDataFieldTitle3;
     touchgfx::TextAreaWithOneWildcard tbLeftDataFieldData2;
@@ -44,16 +54,46 @@ protected:
     touchgfx::SVGImage iconBatteryLow;
     touchgfx::SVGImage iconCoolantHigh;
     touchgfx::SVGImage imageSRLogo;
-    touchgfx::SVGImage iconFansOn;
-    touchgfx::SVGImage IconWaterPumpsOn;
-    touchgfx::SVGImage svgImage1;
+    touchgfx::TextAreaWithOneWildcard tbRPM;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TBRIGHTDATAFIELDDATA3_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbRightDataFieldData3Buffer[TBRIGHTDATAFIELDDATA3_SIZE];
+    static const uint16_t TBRIGHTDATAFIELDTITLE3_SIZE = 20;
+    touchgfx::Unicode::UnicodeChar tbRightDataFieldTitle3Buffer[TBRIGHTDATAFIELDTITLE3_SIZE];
+    static const uint16_t TBRIGHTDATAFIELDDATA2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbRightDataFieldData2Buffer[TBRIGHTDATAFIELDDATA2_SIZE];
+    static const uint16_t TBRIGHTDATAFIELDTITLE2_SIZE = 20;
+    touchgfx::Unicode::UnicodeChar tbRightDataFieldTitle2Buffer[TBRIGHTDATAFIELDTITLE2_SIZE];
+    static const uint16_t TBRIGHTDATAFIELDDATA1_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbRightDataFieldData1Buffer[TBRIGHTDATAFIELDDATA1_SIZE];
+    static const uint16_t TBRIGHTDATAFIELDTITLE1_SIZE = 20;
+    touchgfx::Unicode::UnicodeChar tbRightDataFieldTitle1Buffer[TBRIGHTDATAFIELDTITLE1_SIZE];
+    static const uint16_t TBLEFTDATAFIELDDATA3_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbLeftDataFieldData3Buffer[TBLEFTDATAFIELDDATA3_SIZE];
+    static const uint16_t TBLEFTDATAFIELDTITLE3_SIZE = 20;
+    touchgfx::Unicode::UnicodeChar tbLeftDataFieldTitle3Buffer[TBLEFTDATAFIELDTITLE3_SIZE];
+    static const uint16_t TBLEFTDATAFIELDDATA2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbLeftDataFieldData2Buffer[TBLEFTDATAFIELDDATA2_SIZE];
+    static const uint16_t TBLEFTDATAFIELDTITLE2_SIZE = 20;
+    touchgfx::Unicode::UnicodeChar tbLeftDataFieldTitle2Buffer[TBLEFTDATAFIELDTITLE2_SIZE];
+    static const uint16_t TBLEFTDATAFIELDDATA1_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbLeftDataFieldData1Buffer[TBLEFTDATAFIELDDATA1_SIZE];
+    static const uint16_t TBLEFTDATAFIELDTITLE1_SIZE = 20;
+    touchgfx::Unicode::UnicodeChar tbLeftDataFieldTitle1Buffer[TBLEFTDATAFIELDTITLE1_SIZE];
+    static const uint16_t TBGEAR_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbGearBuffer[TBGEAR_SIZE];
+    static const uint16_t TBRPM_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbRPMBuffer[TBRPM_SIZE];
 
 private:
 
     /*
      * Canvas Buffer Size
      */
-    static const uint32_t CANVAS_BUFFER_SIZE = 7200;
+    static const uint32_t CANVAS_BUFFER_SIZE = 10000;
     uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
 };
