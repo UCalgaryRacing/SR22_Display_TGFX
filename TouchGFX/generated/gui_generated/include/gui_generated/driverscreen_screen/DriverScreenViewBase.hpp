@@ -96,6 +96,12 @@ private:
     static const uint32_t CANVAS_BUFFER_SIZE = 10000;
     uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
+    /*
+     * Tick Counter Declarations
+     */
+    static const uint32_t TICK_UPDATEDRIVERDATA_INTERVAL = 2;
+    uint32_t frameCountUpdateDriverDataInterval;
+
 };
 
 #endif // DRIVERSCREENVIEWBASE_HPP

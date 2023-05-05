@@ -5,7 +5,8 @@
 #include <touchgfx/Color.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
 
-PowerTrainScreenViewBase::PowerTrainScreenViewBase()
+PowerTrainScreenViewBase::PowerTrainScreenViewBase() :
+    frameCountUpdatePowerTrainDataInterval(0)
 {
     __background.setPosition(0, 0, 480, 272);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
@@ -224,8 +225,13 @@ void PowerTrainScreenViewBase::handleKeyEvent(uint8_t key)
 
 void PowerTrainScreenViewBase::handleTickEvent()
 {
-    //UpdatePowerTrainData
-    //When every N tick call virtual function
-    //Call UpdatePowerTrainScreen
-    UpdatePowerTrainScreen();
+    frameCountUpdatePowerTrainDataInterval++;
+    if(frameCountUpdatePowerTrainDataInterval == TICK_UPDATEPOWERTRAINDATA_INTERVAL)
+    {
+        //UpdatePowerTrainData
+        //When every N tick call virtual function
+        //Call UpdatePowerTrainScreen
+        UpdatePowerTrainScreen();
+        frameCountUpdatePowerTrainDataInterval = 0;
+    }
 }

@@ -1,6 +1,6 @@
 Drivers/BSP/STM32F7508-Discovery/stm32f7508_discovery.o: \
- D:/GitHub/SR22_Display_TGFX/Drivers/BSP/STM32F7508-Discovery/stm32f7508_discovery.c \
- D:/GitHub/SR22_Display_TGFX/Drivers/BSP/STM32F7508-Discovery/stm32f7508_discovery.h \
+ C:/Users/steve/Documents/SR22_Display_TGFX/Drivers/BSP/STM32F7508-Discovery/stm32f7508_discovery.c \
+ C:/Users/steve/Documents/SR22_Display_TGFX/Drivers/BSP/STM32F7508-Discovery/stm32f7508_discovery.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h \
  ../../Core/Inc/stm32f7xx_hal_conf.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rcc.h \
@@ -43,7 +43,7 @@ Drivers/BSP/STM32F7508-Discovery/stm32f7508_discovery.o: \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h
-D:/GitHub/SR22_Display_TGFX/Drivers/BSP/STM32F7508-Discovery/stm32f7508_discovery.h:
+C:/Users/steve/Documents/SR22_Display_TGFX/Drivers/BSP/STM32F7508-Discovery/stm32f7508_discovery.h:
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:
 ../../Core/Inc/stm32f7xx_hal_conf.h:
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rcc.h:

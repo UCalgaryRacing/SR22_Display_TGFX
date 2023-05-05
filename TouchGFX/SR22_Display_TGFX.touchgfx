@@ -307,7 +307,7 @@
             "InteractionName": "UpdateDriverData",
             "Trigger": {
               "Type": "TriggerOnEveryTick",
-              "TickCount": 1
+              "TickCount": 2
             },
             "Action": {
               "Type": "ActionCustom",
@@ -692,7 +692,7 @@
             "InteractionName": "UpdatePowerTrainData",
             "Trigger": {
               "Type": "TriggerOnEveryTick",
-              "TickCount": 1
+              "TickCount": 2
             },
             "Action": {
               "Type": "ActionCustom",
@@ -822,7 +822,7 @@
             "InteractionName": "UpdateSuspensionData",
             "Trigger": {
               "Type": "TriggerOnEveryTick",
-              "TickCount": 1
+              "TickCount": 2
             },
             "Action": {
               "Type": "ActionCustom",

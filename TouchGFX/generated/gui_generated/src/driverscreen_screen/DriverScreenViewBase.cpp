@@ -7,7 +7,8 @@
 #include <texts/TextKeysAndLanguages.hpp>
 #include<images/SVGDatabase.hpp>
 
-DriverScreenViewBase::DriverScreenViewBase()
+DriverScreenViewBase::DriverScreenViewBase() :
+    frameCountUpdateDriverDataInterval(0)
 {
     touchgfx::CanvasWidgetRenderer::setupBuffer(canvasBuffer, CANVAS_BUFFER_SIZE);
     
@@ -181,8 +182,13 @@ void DriverScreenViewBase::handleKeyEvent(uint8_t key)
 
 void DriverScreenViewBase::handleTickEvent()
 {
-    //UpdateDriverData
-    //When every N tick call virtual function
-    //Call UpdateDriverScreen
-    UpdateDriverScreen();
+    frameCountUpdateDriverDataInterval++;
+    if(frameCountUpdateDriverDataInterval == TICK_UPDATEDRIVERDATA_INTERVAL)
+    {
+        //UpdateDriverData
+        //When every N tick call virtual function
+        //Call UpdateDriverScreen
+        UpdateDriverScreen();
+        frameCountUpdateDriverDataInterval = 0;
+    }
 }

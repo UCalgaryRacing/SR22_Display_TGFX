@@ -113,6 +113,12 @@ protected:
 
 private:
 
+    /*
+     * Tick Counter Declarations
+     */
+    static const uint32_t TICK_UPDATEPOWERTRAINDATA_INTERVAL = 2;
+    uint32_t frameCountUpdatePowerTrainDataInterval;
+
 };
 
 #endif // POWERTRAINSCREENVIEWBASE_HPP

@@ -255,7 +255,7 @@ void SendDriverScreenData(void){
 	driverScreenData_q->leftDataField1 = oilPressure;
 	driverScreenData_q->leftDataField2 = oilTemp;
 	driverScreenData_q->leftDataField3 = fuelPressure;
-	driverScreenData_q->rightDataField1 = inputVoltage;
+	driverScreenData_q->rightDataField1 = batteryVoltageECU;
 	driverScreenData_q->rightDataField2 = coolantTemp;
 	driverScreenData_q->rightDataField3 = vspd;
 	driverScreenData_q->batteryLow = (inputVoltage < BATTERY_LOW_VOLTAGE);
@@ -373,13 +373,13 @@ void ParseCANData(canData_t *canData){
 }
 
 float CombineUnsigned(uint8_t data1, uint8_t data2, double scale){
-	uint16_t combinedData = (data1 << 8) | data2;
+	uint16_t combinedData = (data2 << 8) | data1;
 	float finalData = combinedData * scale;
 	return finalData;
 }
 
 float CombineSigned(uint8_t data1, uint8_t data2, double scale){
-	int16_t combinedData = (data1 << 8) | data2;
+	int16_t combinedData = (data2 << 8) | data1;
 	float finalData = combinedData * scale;
 	return finalData;
 }
