@@ -39,7 +39,8 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define ADCSHIFTUP 3000
+#define ADCSHIFTDOWN 1500
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -302,13 +303,13 @@ void StartShifterTask(void *argument)
 		HAL_ADC_PollForConversion(&hadc1, 200);
 		rawADCData = HAL_ADC_GetValue(&hadc1);
 		HAL_ADC_Stop(&hadc1);
-		if(rawADCData > 3000){
+		if(rawADCData > ADCSHIFTUP){
 			if(shiftPosition != 1 && adcGear != 6){
 				shiftPosition = 1;
 				adcGear ++;
 				osMessageQueuePut(shifterQueueHandle, &adcGear, 0, 0);
 			}
-		}else if(rawADCData < 1500){
+		}else if(rawADCData < ADCSHIFTDOWN){
 			if(shiftPosition != 1 && adcGear != 0){
 				shiftPosition = 1;
 				adcGear --;

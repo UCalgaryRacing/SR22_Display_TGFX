@@ -58,7 +58,11 @@ void DriverScreenView::UpdateDriverScreen(){
 
 
 void DriverScreenView::updateGear(uint8_t value){
-	Unicode::snprintf(tbGearBuffer, TBGEAR_SIZE, "%d", value);
+	if(value == 0){
+		Unicode::snprintf(tbGearBuffer, TBGEAR_SIZE, "%c", 'N');
+	}else{
+		Unicode::snprintf(tbGearBuffer, TBGEAR_SIZE, "%d", value);
+	}
 	tbGear.invalidate();
 }
 
