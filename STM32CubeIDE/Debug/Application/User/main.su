@@ -1,4 +1,4 @@
 C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/main.c:154:6:SystemClock_Config	88	static
 C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/main.c:78:5:main	24	static,ignoring_inline_asm
-C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/main.c:293:6:HAL_TIM_PeriodElapsedCallback	8	static
-C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/main.c:312:6:Error_Handler	0	static
+C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/main.c:293:6:HAL_TIM_PeriodElapsedCallback	0	static
+C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/main.c:310:6:Error_Handler	0	static

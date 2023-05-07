@@ -73,8 +73,6 @@ void Error_Handler(void);
 #define FRAME_RATE_GPIO_Port GPIOC
 #define RENDER_TIME_Pin GPIO_PIN_6
 #define RENDER_TIME_GPIO_Port GPIOC
-#define MCU_ACTIVE_Pin GPIO_PIN_6
-#define MCU_ACTIVE_GPIO_Port GPIOG
 #define THERMOCOUPLE1_Pin GPIO_PIN_15
 #define THERMOCOUPLE1_GPIO_Port GPIOB
 
