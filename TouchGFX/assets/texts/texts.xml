@@ -24,15 +24,6 @@
       <Text Id="__SingleUse_EHLI" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">Battery</Translation>
       </Text>
-      <Text Id="__SingleUse_BBWH" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">Speed</Translation>
-      </Text>
-      <Text Id="__SingleUse_N4ES" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">0</Translation>
-      </Text>
-      <Text Id="__SingleUse_LEAT" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">Fuel Pressure</Translation>
-      </Text>
       <Text Id="__SingleUse_1YET" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">0</Translation>
       </Text>
@@ -63,19 +54,10 @@
       <Text Id="__SingleUse_4UEX" Alignment="Right" TypographyId="Small">
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_6GAE" Alignment="Right" TypographyId="Default">
+      <Text Id="__SingleUse_6GAE" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_JPBU" Alignment="Left" TypographyId="Small">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_041P" Alignment="Left" TypographyId="Small">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_NV6C" Alignment="Right" TypographyId="Small">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_L7ZC" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_YSFT" Alignment="Left" TypographyId="Default">

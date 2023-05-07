@@ -40,7 +40,7 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 #define ADCSHIFTUP 3000
-#define ADCSHIFTDOWN 1500
+#define ADCSHIFTDOWN 1700
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -318,6 +318,8 @@ void StartShifterTask(void *argument)
 		}else{
 			shiftPosition = 0;
 		}
+
+
 		osDelay(100);
 	}
   /* USER CODE END StartShifterTask */

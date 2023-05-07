@@ -39,13 +39,10 @@ protected:
     touchgfx::Box __background;
     touchgfx::Box background;
     touchgfx::TextAreaWithOneWildcard tbRightDataFieldData3;
-    touchgfx::TextAreaWithOneWildcard tbRightDataFieldTitle3;
     touchgfx::TextAreaWithOneWildcard tbRightDataFieldData2;
     touchgfx::TextAreaWithOneWildcard tbRightDataFieldTitle2;
     touchgfx::TextAreaWithOneWildcard tbRightDataFieldData1;
     touchgfx::TextAreaWithOneWildcard tbRightDataFieldTitle1;
-    touchgfx::TextAreaWithOneWildcard tbLeftDataFieldData3;
-    touchgfx::TextAreaWithOneWildcard tbLeftDataFieldTitle3;
     touchgfx::TextAreaWithOneWildcard tbLeftDataFieldData2;
     touchgfx::TextAreaWithOneWildcard tbLeftDataFieldTitle2;
     touchgfx::TextAreaWithOneWildcard tbLeftDataFieldData1;
@@ -61,8 +58,6 @@ protected:
      */
     static const uint16_t TBRIGHTDATAFIELDDATA3_SIZE = 10;
     touchgfx::Unicode::UnicodeChar tbRightDataFieldData3Buffer[TBRIGHTDATAFIELDDATA3_SIZE];
-    static const uint16_t TBRIGHTDATAFIELDTITLE3_SIZE = 20;
-    touchgfx::Unicode::UnicodeChar tbRightDataFieldTitle3Buffer[TBRIGHTDATAFIELDTITLE3_SIZE];
     static const uint16_t TBRIGHTDATAFIELDDATA2_SIZE = 10;
     touchgfx::Unicode::UnicodeChar tbRightDataFieldData2Buffer[TBRIGHTDATAFIELDDATA2_SIZE];
     static const uint16_t TBRIGHTDATAFIELDTITLE2_SIZE = 20;
@@ -71,10 +66,6 @@ protected:
     touchgfx::Unicode::UnicodeChar tbRightDataFieldData1Buffer[TBRIGHTDATAFIELDDATA1_SIZE];
     static const uint16_t TBRIGHTDATAFIELDTITLE1_SIZE = 20;
     touchgfx::Unicode::UnicodeChar tbRightDataFieldTitle1Buffer[TBRIGHTDATAFIELDTITLE1_SIZE];
-    static const uint16_t TBLEFTDATAFIELDDATA3_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar tbLeftDataFieldData3Buffer[TBLEFTDATAFIELDDATA3_SIZE];
-    static const uint16_t TBLEFTDATAFIELDTITLE3_SIZE = 20;
-    touchgfx::Unicode::UnicodeChar tbLeftDataFieldTitle3Buffer[TBLEFTDATAFIELDTITLE3_SIZE];
     static const uint16_t TBLEFTDATAFIELDDATA2_SIZE = 10;
     touchgfx::Unicode::UnicodeChar tbLeftDataFieldData2Buffer[TBLEFTDATAFIELDDATA2_SIZE];
     static const uint16_t TBLEFTDATAFIELDTITLE2_SIZE = 20;

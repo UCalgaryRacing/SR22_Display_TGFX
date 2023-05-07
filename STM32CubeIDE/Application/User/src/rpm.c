@@ -22,7 +22,7 @@
 #define MAX_LED 16
 #define USE_BRIGHTNESS 0
 #define PI 3.14159265
-#define REDLINE 9500
+#define REDLINE 13000
 #define GREEN_LED 5
 #define RED_LED 11
 #define BLUE_LED 16
@@ -34,15 +34,14 @@ uint8_t lightsOn = 0;
 uint8_t flash = 0b1;
 uint16_t pwmData[(24*MAX_LED) + 50];
 uint16_t rpmRanges[16] = {
-    1500,
-    2000, 2500,
-    3000, 3500,
-    4000, 4500,
-    5000, 5500,
-    6000, 6500,
-    7000, 7500,
-    8000, 8500,
-    9000
+    4000, 4625,
+	5250, 5875,
+	6500, 7125,
+	7750, 8375,
+	9000, 9625,
+	10250, 10875,
+	11500, 12125,
+	12750, 13375
 };
 
 // 5 green, 6 red, five blue
