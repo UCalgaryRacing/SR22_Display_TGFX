@@ -26,18 +26,18 @@ TextArea.hpp:403:41:virtual const UnicodeChar* touchgfx::TextArea::getWildcard2(
 TextAreaWithWildcard.hpp:84:41:virtual const UnicodeChar* touchgfx::TextAreaWithOneWildcard::getWildcard1() const	1
 PowerTrainScreenViewBase.hpp:25:18:virtual void PowerTrainScreenViewBase::UpdatePowerTrainScreen()	1
 View.hpp:36:7:touchgfx::View<PowerTrainScreenPresenter>::~View()	1
-PowerTrainScreenViewBase.cpp:203:1:PowerTrainScreenViewBase::~PowerTrainScreenViewBase()	1
-PowerTrainScreenViewBase.cpp:208:6:virtual void PowerTrainScreenViewBase::setupScreen()	1
-PowerTrainScreenViewBase.cpp:225:6:virtual void PowerTrainScreenViewBase::handleTickEvent()	1
+PowerTrainScreenViewBase.cpp:204:1:PowerTrainScreenViewBase::~PowerTrainScreenViewBase()	1
+PowerTrainScreenViewBase.cpp:209:6:virtual void PowerTrainScreenViewBase::setupScreen()	1
 TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	1
 TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	1
 TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	1
 View.hpp:36:7:virtual touchgfx::View<PowerTrainScreenPresenter>::~View()	1
-PowerTrainScreenViewBase.cpp:203:1:virtual PowerTrainScreenViewBase::~PowerTrainScreenViewBase()	1
+PowerTrainScreenViewBase.cpp:204:1:virtual PowerTrainScreenViewBase::~PowerTrainScreenViewBase()	1
 Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
 TextAreaWithWildcard.hpp:43:18:virtual void touchgfx::TextAreaWithWildcardBase::invalidateContent() const	1
+PowerTrainScreenViewBase.cpp:226:6:virtual void PowerTrainScreenViewBase::handleTickEvent()	2
 TextArea.hpp:111:18:virtual void touchgfx::TextArea::setBaselineY(int16_t)	1
-PowerTrainScreenViewBase.cpp:213:6:virtual void PowerTrainScreenViewBase::handleKeyEvent(uint8_t)	2
+PowerTrainScreenViewBase.cpp:214:6:virtual void PowerTrainScreenViewBase::handleKeyEvent(uint8_t)	2
 Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	1
 Box.hpp:33:5:touchgfx::Box::Box()	1
 TextArea.hpp:429:9:touchgfx::TextArea::BoundingArea::BoundingArea()	1

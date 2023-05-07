@@ -4,9 +4,10 @@
 #include "can.h"
 extern "C"{
 	extern osMessageQueueId_t buttonQueueHandle;
-	extern osMessageQueueId_t driverDataQueueHandle;
+	extern osMessageQueueId_t shifterQueueHandle;
 	extern driverScreenData_t *driverScreenData_q;
 	uint8_t x = 0;
+	uint8_t adcGear_q = 0;
 }
 bool batteryState = false;
 bool coolantState = false;
@@ -32,15 +33,16 @@ void DriverScreenView::UpdateDriverScreen(){
 			handleKeyEvent(0);
 		}
 	}
-
-	updateGear(driverScreenData_q->gear);
+	if(osMessageQueueGetCount(shifterQueueHandle) > 0){
+		if(osMessageQueueGet(shifterQueueHandle, &adcGear_q, 0, 0) == osOK){
+			updateGear(adcGear_q);
+		}
+	}
 	updateRPM(driverScreenData_q->rpm);
 	updateLeftDataField1(driverScreenData_q->leftDataField1);
 	updateLeftDataField2(driverScreenData_q->leftDataField2);
-	updateLeftDataField3(driverScreenData_q->leftDataField3);
 	updateRightDataField1(driverScreenData_q->rightDataField1);
 	updateRightDataField2(driverScreenData_q->rightDataField2);
-	updateRightDataField3(driverScreenData_q->rightDataField3);
 	if(batteryState != driverScreenData_q->batteryLow){
 		updateBatteryLow(driverScreenData_q->batteryLow);
 		batteryState = driverScreenData_q->batteryLow;
@@ -53,7 +55,11 @@ void DriverScreenView::UpdateDriverScreen(){
 
 
 void DriverScreenView::updateGear(uint8_t value){
-	Unicode::snprintf(tbGearBuffer, TBGEAR_SIZE, "%d", value);
+	if(value == 0){
+		Unicode::snprintf(tbGearBuffer, TBGEAR_SIZE, "%c", 'N');
+	}else{
+		Unicode::snprintf(tbGearBuffer, TBGEAR_SIZE, "%d", value);
+	}
 	tbGear.invalidate();
 }
 
@@ -72,12 +78,6 @@ void DriverScreenView::updateLeftDataField2(uint8_t value){
 	tbLeftDataFieldData2.invalidate();
 }
 
-void DriverScreenView::updateLeftDataField3(float value){
-	Unicode::snprintfFloat(tbLeftDataFieldData3Buffer, TBLEFTDATAFIELDDATA3_SIZE, "%03.2f", value);
-	tbLeftDataFieldData3.invalidate();
-}
-
-
 void DriverScreenView::updateRightDataField1(float value){
 	Unicode::snprintfFloat(tbRightDataFieldData1Buffer, TBRIGHTDATAFIELDDATA1_SIZE, "%03.2f", value);
 	tbRightDataFieldData1.invalidate();
@@ -86,11 +86,6 @@ void DriverScreenView::updateRightDataField1(float value){
 void DriverScreenView::updateRightDataField2(int16_t value){
 	Unicode::snprintf(tbRightDataFieldData2Buffer, TBRIGHTDATAFIELDDATA2_SIZE, "%d", value);
 	tbRightDataFieldData2.invalidate();
-}
-
-void DriverScreenView::updateRightDataField3(uint16_t value){
-	Unicode::snprintf(tbRightDataFieldData3Buffer, TBRIGHTDATAFIELDDATA3_SIZE, "%d", value);
-	tbRightDataFieldData3.invalidate();
 }
 
 void DriverScreenView::updateBatteryLow(bool state){

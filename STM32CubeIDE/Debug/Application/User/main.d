@@ -1,4 +1,5 @@
-Application/User/main.o: D:/GitHub/SR22_Display_TGFX/Core/Src/main.c \
+Application/User/main.o: \
+ C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/main.c \
  ../../Core/Inc/main.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h \
  ../../Core/Inc/stm32f7xx_hal_conf.h \
@@ -20,6 +21,8 @@ Application/User/main.o: D:/GitHub/SR22_Display_TGFX/Core/Src/main.c \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma_ex.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_cortex.h \
+ ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_adc.h \
+ ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_adc_ex.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_can.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_crc.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_crc_ex.h \
@@ -54,9 +57,10 @@ Application/User/main.o: D:/GitHub/SR22_Display_TGFX/Core/Src/main.c \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
- ../../Core/Inc/can.h ../../Core/Inc/crc.h ../../Core/Inc/dma.h \
- ../../Core/Inc/dma2d.h ../../Core/Inc/spi.h ../../Core/Inc/gpio.h \
- ../../Core/Inc/usart.h ../../Core/Inc/gpio.h ../../Core/Inc/fmc.h \
+ ../../Core/Inc/adc.h ../../Core/Inc/can.h ../../Core/Inc/crc.h \
+ ../../Core/Inc/dma.h ../../Core/Inc/dma2d.h ../../Core/Inc/spi.h \
+ ../../Core/Inc/gpio.h ../../Core/Inc/usart.h ../../Core/Inc/gpio.h \
+ ../../Core/Inc/fmc.h \
  ../../Drivers/BSP/STM32F7508-Discovery/stm32f7508_discovery_sdram.h \
  ../../TouchGFX/App/app_touchgfx.h
 ../../Core/Inc/main.h:
@@ -80,6 +84,8 @@ Application/User/main.o: D:/GitHub/SR22_Display_TGFX/Core/Src/main.c \
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma.h:
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma_ex.h:
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_cortex.h:
+../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_adc.h:
+../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_adc_ex.h:
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_can.h:
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_crc.h:
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_crc_ex.h:
@@ -116,6 +122,7 @@ Application/User/main.o: D:/GitHub/SR22_Display_TGFX/Core/Src/main.c \
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
 ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
+../../Core/Inc/adc.h:
 ../../Core/Inc/can.h:
 ../../Core/Inc/crc.h:
 ../../Core/Inc/dma.h:

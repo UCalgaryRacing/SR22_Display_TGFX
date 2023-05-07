@@ -5,7 +5,6 @@
 #include "can.h"
 extern "C"{
 	extern osMessageQueueId_t buttonQueueHandle;
-	extern osMessageQueueId_t driverDataQueueHandle;
 	extern uint16_t rpm;
 }
 

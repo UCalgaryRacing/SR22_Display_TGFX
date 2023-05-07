@@ -3,9 +3,9 @@
 #include "can.h"
 extern "C"{
 		extern osMessageQueueId_t buttonQueueHandle;
-		extern osMessageQueueId_t driverDataQueueHandle;
+//		extern osMessageQueueId_t driverDataQueueHandle;
 		extern uint16_t rpm;
-		extern driverScreenData_t *driverScreenData_q;
+//		extern driverScreenData_t *driverScreenData_q;
 		extern double flPot;
 		extern double frPot;
 		extern double rlPot;
