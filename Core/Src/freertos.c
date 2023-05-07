@@ -97,6 +97,13 @@ const osThreadAttr_t shifterTask_attributes = {
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
+/* Definitions for gpsTask */
+osThreadId_t gpsTaskHandle;
+const osThreadAttr_t gpsTask_attributes = {
+  .name = "gpsTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
 /* Definitions for buttonQueue */
 osMessageQueueId_t buttonQueueHandle;
 const osMessageQueueAttr_t buttonQueue_attributes = {
@@ -119,6 +126,7 @@ void StartButtonTask(void *argument);
 void StartRPMTask(void *argument);
 void StartEGTTask(void *argument);
 void StartShifterTask(void *argument);
+void StartGPSTask(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -192,6 +200,9 @@ void MX_FREERTOS_Init(void) {
 
   /* creation of shifterTask */
   shifterTaskHandle = osThreadNew(StartShifterTask, NULL, &shifterTask_attributes);
+
+  /* creation of gpsTask */
+  gpsTaskHandle = osThreadNew(StartGPSTask, NULL, &gpsTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -323,6 +334,25 @@ void StartShifterTask(void *argument)
 		osDelay(100);
 	}
   /* USER CODE END StartShifterTask */
+}
+
+/* USER CODE BEGIN Header_StartGPSTask */
+/**
+* @brief Function implementing the gpsTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartGPSTask */
+void StartGPSTask(void *argument)
+{
+  /* USER CODE BEGIN StartGPSTask */
+
+  /* Infinite loop */
+	for(;;){
+
+		osDelay(1);
+	}
+  /* USER CODE END StartGPSTask */
 }
 
 /* Private application code --------------------------------------------------*/
