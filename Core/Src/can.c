@@ -43,7 +43,8 @@ uint8_t outputLoad;
 uint8_t deviceInformation;
 
 uint8_t coolSwitch;
-uint8_t maxCoolSwitch;
+uint8_t neutralSwitch;
+//uint8_t maxCoolSwitch;
 uint8_t fuelPump;
 uint8_t waterPump;
 float powerOutputVoltage;
@@ -250,7 +251,12 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan){
 }
 
 void SendDriverScreenData(void){
-	driverScreenData_q->gear = gear;
+	if(neutralSwitch){
+		driverScreenData_q->gear = gear;
+	}else{
+		driverScreenData_q->gear = 0;
+	}
+//	driverScreenData_q->gear = gear;
 	driverScreenData_q->rpm = rpm;
 	driverScreenData_q->leftDataField1 = oilPressure;
 	driverScreenData_q->leftDataField2 = oilTemp;
@@ -258,7 +264,7 @@ void SendDriverScreenData(void){
 	driverScreenData_q->rightDataField1 = batteryVoltageECU;
 	driverScreenData_q->rightDataField2 = coolantTemp;
 	driverScreenData_q->rightDataField3 = vspd;
-	driverScreenData_q->batteryLow = (inputVoltage < BATTERY_LOW_VOLTAGE);
+	driverScreenData_q->batteryLow = (batteryVoltageECU < BATTERY_LOW_VOLTAGE);
 	driverScreenData_q->coolantHigh = (coolantTemp > COOLANT_HIGH_TEMPERATURE);
 }
 
@@ -275,7 +281,7 @@ void ParseCANData(canData_t *canData){
 			break;
 		case 0x420:
 			coolSwitch = canData->data[0];
-			maxCoolSwitch = canData->data[1];
+			neutralSwitch = canData->data[1];
 			fuelPump = canData->data[2];
 			waterPump = canData->data[3];
 			powerOutputVoltage = canData->data[4]  * 0.1216;
