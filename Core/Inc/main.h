@@ -36,6 +36,7 @@ extern "C" {
 #include <rpm.h>
 #include <string.h>
 #include <stdbool.h>
+#include <stdio.h>
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

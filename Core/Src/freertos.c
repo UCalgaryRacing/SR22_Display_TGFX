@@ -30,6 +30,7 @@
 #include "gpio.h"
 #include "spi.h"
 #include "adc.h"
+#include "usart.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -54,6 +55,7 @@ extern uint16_t rpm;
 extern CAN_TxHeaderTypeDef TxHeader;
 extern uint16_t egt3;
 extern uint16_t egt4;
+extern uint8_t gpsData[30];
 /* USER CODE END Variables */
 /* Definitions for defaultTask */
 osThreadId_t defaultTaskHandle;
@@ -68,13 +70,6 @@ const osThreadAttr_t TouchGFXTask_attributes = {
   .name = "TouchGFXTask",
   .stack_size = 8192 * 4,
   .priority = (osPriority_t) osPriorityNormal,
-};
-/* Definitions for buttonTask */
-osThreadId_t buttonTaskHandle;
-const osThreadAttr_t buttonTask_attributes = {
-  .name = "buttonTask",
-  .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityLow,
 };
 /* Definitions for rpmTask */
 osThreadId_t rpmTaskHandle;
@@ -122,7 +117,6 @@ extern portBASE_TYPE IdleTaskHook(void* p);
 
 void StartDefaultTask(void *argument);
 extern void TouchGFX_Task(void *argument);
-void StartButtonTask(void *argument);
 void StartRPMTask(void *argument);
 void StartEGTTask(void *argument);
 void StartShifterTask(void *argument);
@@ -189,9 +183,6 @@ void MX_FREERTOS_Init(void) {
   /* creation of TouchGFXTask */
   TouchGFXTaskHandle = osThreadNew(TouchGFX_Task, NULL, &TouchGFXTask_attributes);
 
-  /* creation of buttonTask */
-  buttonTaskHandle = osThreadNew(StartButtonTask, NULL, &buttonTask_attributes);
-
   /* creation of rpmTask */
   rpmTaskHandle = osThreadNew(StartRPMTask, NULL, &rpmTask_attributes);
 
@@ -230,24 +221,6 @@ void StartDefaultTask(void *argument)
 		osDelay(100);
 	}
   /* USER CODE END StartDefaultTask */
-}
-
-/* USER CODE BEGIN Header_StartButtonTask */
-/**
-* @brief Function implementing the buttonTask thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_StartButtonTask */
-void StartButtonTask(void *argument)
-{
-  /* USER CODE BEGIN StartButtonTask */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(100);
-  }
-  /* USER CODE END StartButtonTask */
 }
 
 /* USER CODE BEGIN Header_StartRPMTask */
@@ -346,7 +319,8 @@ void StartShifterTask(void *argument)
 void StartGPSTask(void *argument)
 {
   /* USER CODE BEGIN StartGPSTask */
-
+//	char start[] = "log bestpos ontime 1";
+	HAL_UART_Receive_DMA(&huart6, gpsData, UARTBUFFERLENGTH);
   /* Infinite loop */
 	for(;;){
 

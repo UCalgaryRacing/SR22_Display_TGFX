@@ -21,11 +21,15 @@
 #include "usart.h"
 
 /* USER CODE BEGIN 0 */
-uint8_t gpsData[30];
+uint8_t gpsData[UARTBUFFERLENGTH];
+int8_t latitude[20];
+int8_t longitude[20];
+int8_t altitude[20];
 /* USER CODE END 0 */
 
 UART_HandleTypeDef huart1;
 UART_HandleTypeDef huart6;
+DMA_HandleTypeDef hdma_usart6_rx;
 
 /* USART1 init function */
 
@@ -167,6 +171,25 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
     GPIO_InitStruct.Alternate = GPIO_AF8_USART6;
     HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
+    /* USART6 DMA Init */
+    /* USART6_RX Init */
+    hdma_usart6_rx.Instance = DMA2_Stream2;
+    hdma_usart6_rx.Init.Channel = DMA_CHANNEL_5;
+    hdma_usart6_rx.Init.Direction = DMA_PERIPH_TO_MEMORY;
+    hdma_usart6_rx.Init.PeriphInc = DMA_PINC_DISABLE;
+    hdma_usart6_rx.Init.MemInc = DMA_MINC_ENABLE;
+    hdma_usart6_rx.Init.PeriphDataAlignment = DMA_PDATAALIGN_BYTE;
+    hdma_usart6_rx.Init.MemDataAlignment = DMA_MDATAALIGN_BYTE;
+    hdma_usart6_rx.Init.Mode = DMA_NORMAL;
+    hdma_usart6_rx.Init.Priority = DMA_PRIORITY_LOW;
+    hdma_usart6_rx.Init.FIFOMode = DMA_FIFOMODE_DISABLE;
+    if (HAL_DMA_Init(&hdma_usart6_rx) != HAL_OK)
+    {
+      Error_Handler();
+    }
+
+    __HAL_LINKDMA(uartHandle,hdmarx,hdma_usart6_rx);
+
     /* USART6 interrupt Init */
     HAL_NVIC_SetPriority(USART6_IRQn, 5, 0);
     HAL_NVIC_EnableIRQ(USART6_IRQn);
@@ -213,6 +236,9 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
     */
     HAL_GPIO_DeInit(GPIOC, GPIO_PIN_7|GPIO_PIN_6);
 
+    /* USART6 DMA DeInit */
+    HAL_DMA_DeInit(uartHandle->hdmarx);
+
     /* USART6 interrupt Deinit */
     HAL_NVIC_DisableIRQ(USART6_IRQn);
   /* USER CODE BEGIN USART6_MspDeInit 1 */
@@ -224,7 +250,29 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 /* USER CODE BEGIN 1 */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
 	if(huart->Instance == USART6){
-		HAL_UART_Receive_IT(&huart6, gpsData, 10);
+		char tempMsg[UARTBUFFERLENGTH];
+		sprintf(tempMsg, strtok((char)gpsData, "#"));
+		if(memcmp("BESTPOSA", tempMsg, 8) == 0){
+			sprintf(gpsData, tempMsg);
+			char *token = strtok(gpsData, ",");
+			int index = 0;
+			while(token != NULL){
+				token = strtok(NULL, ",");
+				if(index == 10){
+					strncpy(latitude, token, 20);
+				}
+				if(index == 11){
+					strncpy(longitude, token, 20);
+				}
+				if(index == 12){
+					strncpy(altitude, token, 20);
+					break;
+				}
+				index ++;
+			}
+			gpsData[0] = '\0';
+		}
+		HAL_UART_Receive_DMA(&huart6, gpsData, UARTBUFFERLENGTH);
 	}
 }
 /* USER CODE END 1 */

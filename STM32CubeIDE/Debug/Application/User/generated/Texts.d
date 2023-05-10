@@ -1,5 +1,5 @@
 Application/User/generated/Texts.o: \
- C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/generated/texts/src/Texts.cpp \
+ D:/GitHub/SR22_Display_TGFX/TouchGFX/generated/texts/src/Texts.cpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextProvider.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Unicode.hpp \

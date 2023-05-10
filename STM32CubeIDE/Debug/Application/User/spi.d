@@ -1,5 +1,4 @@
-Application/User/spi.o: \
- C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/spi.c \
+Application/User/spi.o: D:/GitHub/SR22_Display_TGFX/Core/Src/spi.c \
  ../../Core/Inc/spi.h ../../Core/Inc/main.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h \
  ../../Core/Inc/stm32f7xx_hal_conf.h \
