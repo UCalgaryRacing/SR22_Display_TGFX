@@ -1,8 +1,8 @@
 can.c:127:6:MX_CAN1_Init	3
 can.c:177:6:HAL_CAN_MspInit	2
 can.c:212:6:HAL_CAN_MspDeInit	2
-can.c:253:6:SendDriverScreenData	1
-can.c:266:6:ParseCANData	27
+can.c:253:6:SendDriverScreenData	2
+can.c:271:6:ParseCANData	27
 can.c:239:6:HAL_CAN_RxFifo0MsgPendingCallback	2
-can.c:376:7:CombineUnsigned	1
-can.c:382:7:CombineSigned	1
+can.c:381:7:CombineUnsigned	1
+can.c:387:7:CombineSigned	1

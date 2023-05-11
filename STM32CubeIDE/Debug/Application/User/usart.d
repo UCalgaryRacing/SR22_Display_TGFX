@@ -1,4 +1,5 @@
-Application/User/usart.o: D:/GitHub/SR22_Display_TGFX/Core/Src/usart.c \
+Application/User/usart.o: \
+ C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/usart.c \
  ../../Core/Inc/usart.h ../../Core/Inc/main.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h \
  ../../Core/Inc/stm32f7xx_hal_conf.h \

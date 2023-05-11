@@ -1,7 +1,7 @@
-D:/GitHub/SR22_Display_TGFX/Core/Src/freertos.c:215:6:StartDefaultTask	8	static
-D:/GitHub/SR22_Display_TGFX/Core/Src/freertos.c:233:6:StartRPMTask	8	static
-D:/GitHub/SR22_Display_TGFX/Core/Src/freertos.c:252:6:StartEGTTask	24	static
-D:/GitHub/SR22_Display_TGFX/Core/Src/freertos.c:278:6:StartShifterTask	32	static
-D:/GitHub/SR22_Display_TGFX/Core/Src/freertos.c:319:6:StartGPSTask	8	static
-D:/GitHub/SR22_Display_TGFX/Core/Src/freertos.c:131:6:vApplicationIdleHook	0	static
-D:/GitHub/SR22_Display_TGFX/Core/Src/freertos.c:151:6:MX_FREERTOS_Init	8	static
+C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/freertos.c:215:6:StartDefaultTask	8	static
+C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/freertos.c:233:6:StartRPMTask	8	static
+C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/freertos.c:252:6:StartEGTTask	24	static
+C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/freertos.c:278:6:StartShifterTask	32	static
+C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/freertos.c:319:6:StartGPSTask	8	static
+C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/freertos.c:131:6:vApplicationIdleHook	0	static
+C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/freertos.c:151:6:MX_FREERTOS_Init	8	static
