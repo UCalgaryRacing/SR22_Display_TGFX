@@ -22,9 +22,12 @@
 
 /* USER CODE BEGIN 0 */
 uint8_t gpsData[UARTBUFFERLENGTH];
-int8_t latitude[20];
-int8_t longitude[20];
-int8_t altitude[20];
+char latitude[20];
+char longitude[20];
+char altitude[20];
+double lat;
+double longi;
+double alt;
 /* USER CODE END 0 */
 
 UART_HandleTypeDef huart1;
@@ -75,7 +78,7 @@ void MX_USART6_UART_Init(void)
 
   /* USER CODE END USART6_Init 1 */
   huart6.Instance = USART6;
-  huart6.Init.BaudRate = 115200;
+  huart6.Init.BaudRate = 460800;
   huart6.Init.WordLength = UART_WORDLENGTH_8B;
   huart6.Init.StopBits = UART_STOPBITS_1;
   huart6.Init.Parity = UART_PARITY_NONE;
@@ -270,6 +273,9 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
 				}
 				index ++;
 			}
+			lat = atof(latitude);
+			longi = atof(longitude);
+			alt = atof(altitude);
 			gpsData[0] = '\0';
 		}
 		HAL_UART_Receive_DMA(&huart6, gpsData, UARTBUFFERLENGTH);

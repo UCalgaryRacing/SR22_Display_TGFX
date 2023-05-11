@@ -2,10 +2,12 @@
 
 #include "main.h"
 #include "can.h"
+#include "usart.h"
 extern "C"{
 	extern osMessageQueueId_t buttonQueueHandle;
 	extern osMessageQueueId_t shifterQueueHandle;
 	extern driverScreenData_t *driverScreenData_q;
+	extern uint8_t gpsData[UARTBUFFERLENGTH];
 	uint8_t x = 0;
 	uint8_t adcGear_q = 0;
 }
