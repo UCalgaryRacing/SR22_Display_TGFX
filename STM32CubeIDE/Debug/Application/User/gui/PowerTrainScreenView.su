@@ -5,4 +5,4 @@ C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/gui/src/powertrainscreen_scr
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Unicode.hpp:404:25:static touchgfx::Unicode::UnicodeChar* touchgfx::Unicode::snprintfFloat(touchgfx::Unicode::UnicodeChar*, uint16_t, const char*, float)	16	static
 C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/gui/src/powertrainscreen_screen/PowerTrainScreenView.cpp:51:1:PowerTrainScreenView::PowerTrainScreenView()	8	static
 C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/gui/src/powertrainscreen_screen/PowerTrainScreenView.cpp:56:6:virtual void PowerTrainScreenView::setupScreen()	0	static
-C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/gui/src/powertrainscreen_screen/PowerTrainScreenView.cpp:66:6:virtual void PowerTrainScreenView::UpdatePowerTrainScreen()	16	static
+C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/gui/src/powertrainscreen_screen/PowerTrainScreenView.cpp:66:6:virtual void PowerTrainScreenView::UpdatePowerTrainScreen()	24	static

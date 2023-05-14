@@ -35,11 +35,13 @@ void DriverScreenView::UpdateDriverScreen(){
 			handleKeyEvent(0);
 		}
 	}
-	if(osMessageQueueGetCount(shifterQueueHandle) > 0){
-		if(osMessageQueueGet(shifterQueueHandle, &adcGear_q, 0, 0) == osOK){
-			updateGear(adcGear_q);
-		}
-	}
+//	if(osMessageQueueGetCount(shifterQueueHandle) > 0){
+//		if(osMessageQueueGet(shifterQueueHandle, &adcGear_q, 0, 0) == osOK){
+//			updateGear(adcGear_q);
+//		}
+//	}
+
+	updateGear(driverScreenData_q->gear);
 	updateRPM(driverScreenData_q->rpm);
 	updateLeftDataField1(driverScreenData_q->leftDataField1);
 	updateLeftDataField2(driverScreenData_q->leftDataField2);

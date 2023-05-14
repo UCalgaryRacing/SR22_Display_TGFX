@@ -47,7 +47,6 @@ typedef struct{
 	uint16_t rpm;
 	float leftDataField1;
 	uint8_t leftDataField2;
-	float leftDataField3;
 	float rightDataField1;
 	int16_t rightDataField2;
 	uint16_t rightDataField3;

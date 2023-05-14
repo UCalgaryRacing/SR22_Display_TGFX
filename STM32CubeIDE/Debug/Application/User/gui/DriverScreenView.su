@@ -5,11 +5,11 @@ C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/
 ../../TouchGFX/gui/include/gui/driverscreen_screen/DriverScreenView.hpp:11:13:virtual DriverScreenView::~DriverScreenView()	8	static
 C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenView.cpp:17:1:DriverScreenView::DriverScreenView()	8	static
 C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenView.cpp:22:6:virtual void DriverScreenView::setupScreen()	0	static
-C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenView.cpp:59:6:virtual void DriverScreenView::updateGear(uint8_t)	8	static
-C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenView.cpp:68:6:virtual void DriverScreenView::updateRPM(uint16_t)	8	static
-C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenView.cpp:73:6:virtual void DriverScreenView::updateLeftDataField1(float)	16	static
-C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenView.cpp:78:6:virtual void DriverScreenView::updateLeftDataField2(uint8_t)	8	static
-C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenView.cpp:83:6:virtual void DriverScreenView::updateRightDataField1(float)	16	static
-C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenView.cpp:88:6:virtual void DriverScreenView::updateRightDataField2(int16_t)	8	static
-C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenView.cpp:93:6:virtual void DriverScreenView::updateBatteryLow(bool)	0	static
-C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenView.cpp:98:6:virtual void DriverScreenView::updateCoolantHigh(bool)	0	static
+C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenView.cpp:61:6:virtual void DriverScreenView::updateGear(uint8_t)	8	static
+C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenView.cpp:70:6:virtual void DriverScreenView::updateRPM(uint16_t)	8	static
+C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenView.cpp:75:6:virtual void DriverScreenView::updateLeftDataField1(float)	16	static
+C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenView.cpp:80:6:virtual void DriverScreenView::updateLeftDataField2(uint8_t)	8	static
+C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenView.cpp:85:6:virtual void DriverScreenView::updateRightDataField1(float)	16	static
+C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenView.cpp:90:6:virtual void DriverScreenView::updateRightDataField2(int16_t)	8	static
+C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenView.cpp:95:6:virtual void DriverScreenView::updateBatteryLow(bool)	0	static
+C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/gui/src/driverscreen_screen/DriverScreenView.cpp:100:6:virtual void DriverScreenView::updateCoolantHigh(bool)	0	static

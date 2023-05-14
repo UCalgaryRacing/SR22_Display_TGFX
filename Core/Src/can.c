@@ -101,7 +101,7 @@ uint16_t egt2;
 // EMU5 0x604
 uint8_t gear;
 int8_t ecuTemp;
-uint16_t batteryVoltageECU;
+float batteryVoltageECU;
 uint16_t errFlag;
 uint8_t flags1;
 uint8_t ethanolContent;
@@ -252,20 +252,31 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan){
 
 void SendDriverScreenData(void){
 	if(neutralSwitch){
-		driverScreenData_q->gear = gear;
-	}else{
 		driverScreenData_q->gear = 0;
+		SetRPMNeutral();
+	}else{
+		driverScreenData_q->gear = gear;
 	}
-//	driverScreenData_q->gear = gear;
+
 	driverScreenData_q->rpm = rpm;
 	driverScreenData_q->leftDataField1 = oilPressure;
 	driverScreenData_q->leftDataField2 = oilTemp;
-	driverScreenData_q->leftDataField3 = fuelPressure;
 	driverScreenData_q->rightDataField1 = batteryVoltageECU;
 	driverScreenData_q->rightDataField2 = coolantTemp;
 	driverScreenData_q->rightDataField3 = vspd;
 	driverScreenData_q->batteryLow = (batteryVoltageECU < BATTERY_LOW_VOLTAGE);
 	driverScreenData_q->coolantHigh = (coolantTemp > COOLANT_HIGH_TEMPERATURE);
+
+	if(driverScreenData_q->batteryLow){
+		HAL_GPIO_WritePin(GPIOB, BATERY_LOW_LIGHT_Pin, 1);
+	}else{
+		HAL_GPIO_WritePin(GPIOB, BATERY_LOW_LIGHT_Pin, 0);
+	}
+	if(driverScreenData_q->coolantHigh){
+		HAL_GPIO_WritePin(OVERHEAT_LIGHT_GPIO_Port, OVERHEAT_LIGHT_Pin, 1);
+	}else{
+		HAL_GPIO_WritePin(OVERHEAT_LIGHT_GPIO_Port, OVERHEAT_LIGHT_Pin, 0);
+	}
 }
 
 void ParseCANData(canData_t *canData){
@@ -339,9 +350,6 @@ void ParseCANData(canData_t *canData){
 			iat = (int8_t)canData->data[3];
 			map = (int16_t)CombineSigned(canData->data[4], canData->data[5], 1);
 			injpw = CombineUnsigned(canData->data[6], canData->data[7], 0.016129);
-//			if(osMessageQueueGetSpace(rpmTaskHandle) > 0){
-//				osMessageQueuePut(rpmTaskHandle, &rpm, 0, 0);
-//			}
 			break;
 		case 0x601:
 			ai1 = CombineUnsigned(canData->data[0], canData->data[1], ecuAnalogScale);
