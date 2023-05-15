@@ -23,25 +23,23 @@ TextArea.hpp:60:18:virtual touchgfx::Rect touchgfx::TextArea::getSolidRect() con
 TextArea.hpp:89:18:virtual void touchgfx::TextArea::setAlpha(uint8_t)	1
 TextArea.hpp:127:18:virtual void touchgfx::TextArea::setXBaselineY(int16_t, int16_t)	1
 TextArea.hpp:403:41:virtual const UnicodeChar* touchgfx::TextArea::getWildcard2() const	1
+TextAreaWithWildcard.hpp:49:36:virtual touchgfx::TextArea::BoundingArea touchgfx::TextAreaWithWildcardBase::calculateBoundingArea() const	1
 TextAreaWithWildcard.hpp:84:41:virtual const UnicodeChar* touchgfx::TextAreaWithOneWildcard::getWildcard1() const	1
-SuspensionScreenViewBase.hpp:26:18:virtual void SuspensionScreenViewBase::UpdateSuspensionScreen()	1
+SuspensionScreenViewBase.hpp:25:18:virtual void SuspensionScreenViewBase::UpdateSuspensionScreen()	1
 View.hpp:36:7:touchgfx::View<SuspensionScreenPresenter>::~View()	1
-SuspensionScreenViewBase.cpp:73:1:SuspensionScreenViewBase::~SuspensionScreenViewBase()	1
-SuspensionScreenViewBase.cpp:78:6:virtual void SuspensionScreenViewBase::setupScreen()	1
+SuspensionScreenViewBase.cpp:92:1:SuspensionScreenViewBase::~SuspensionScreenViewBase()	1
+SuspensionScreenViewBase.cpp:97:6:virtual void SuspensionScreenViewBase::setupScreen()	1
 TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	1
 TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	1
 TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	1
 View.hpp:36:7:virtual touchgfx::View<SuspensionScreenPresenter>::~View()	1
-SuspensionScreenViewBase.cpp:73:1:virtual SuspensionScreenViewBase::~SuspensionScreenViewBase()	1
+SuspensionScreenViewBase.cpp:92:1:virtual SuspensionScreenViewBase::~SuspensionScreenViewBase()	1
 Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
 TextAreaWithWildcard.hpp:43:18:virtual void touchgfx::TextAreaWithWildcardBase::invalidateContent() const	1
-SuspensionScreenViewBase.cpp:95:6:virtual void SuspensionScreenViewBase::handleTickEvent()	2
+SuspensionScreenViewBase.cpp:114:6:virtual void SuspensionScreenViewBase::handleTickEvent()	2
 TextArea.hpp:111:18:virtual void touchgfx::TextArea::setBaselineY(int16_t)	1
-SuspensionScreenViewBase.cpp:83:6:virtual void SuspensionScreenViewBase::handleKeyEvent(uint8_t)	2
-TextAreaWithWildcard.hpp:49:36:virtual touchgfx::TextArea::BoundingArea touchgfx::TextAreaWithWildcardBase::calculateBoundingArea() const	1
-Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	1
+SuspensionScreenViewBase.cpp:102:6:virtual void SuspensionScreenViewBase::handleKeyEvent(uint8_t)	2
 Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	1
-Widget.hpp:36:7:touchgfx::Widget::Widget()	1
 Box.hpp:33:5:touchgfx::Box::Box()	1
 TextAreaWithWildcard.hpp:65:5:touchgfx::TextAreaWithOneWildcard::TextAreaWithOneWildcard()	1
-SuspensionScreenViewBase.cpp:9:1:SuspensionScreenViewBase::SuspensionScreenViewBase()	11
+SuspensionScreenViewBase.cpp:8:1:SuspensionScreenViewBase::SuspensionScreenViewBase()	17

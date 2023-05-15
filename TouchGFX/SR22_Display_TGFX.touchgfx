@@ -659,6 +659,51 @@
           },
           {
             "Type": "TextArea",
+            "Name": "tbLatitude",
+            "X": 10,
+            "Y": 130,
+            "Width": 130,
+            "Height": 20,
+            "TextId": "__SingleUse_KN3V",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_0TD6",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbAltitude",
+            "X": 10,
+            "Y": 170,
+            "Width": 130,
+            "Height": 20,
+            "TextId": "__SingleUse_GE1Z",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_L85E",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbLongitude",
+            "X": 10,
+            "Y": 150,
+            "Width": 130,
+            "Height": 20,
+            "TextId": "__SingleUse_V04P",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_PMLM",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
             "Name": "tbFRPot",
             "X": 10,
             "Y": 10,
@@ -746,17 +791,6 @@
               "UseBuffer": true,
               "BufferSize": 10
             }
-          },
-          {
-            "Type": "ToggleButton",
-            "Name": "toggleButtonTTPMS",
-            "X": 322,
-            "Y": 25,
-            "Width": 110,
-            "Height": 50,
-            "Pressed": "__generated\\alternate_theme_images_widgets_togglebutton_medium_rounded_off_light.png",
-            "Released": "__generated\\alternate_theme_images_widgets_togglebutton_medium_rounded_on_normal.png",
-            "Preset": "alternate_theme\\presets\\togglebutton\\medium\\rounded.json"
           }
         ],
         "Interactions": [

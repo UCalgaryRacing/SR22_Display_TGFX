@@ -1,5 +1,5 @@
 Application/User/generated/SuspensionScreenViewBase.o: \
- C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/generated/gui_generated/src/suspensionscreen_screen/SuspensionScreenViewBase.cpp \
+ D:/GitHub/SR22_Display_TGFX/TouchGFX/generated/gui_generated/src/suspensionscreen_screen/SuspensionScreenViewBase.cpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/suspensionscreen_screen/SuspensionScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
@@ -92,12 +92,8 @@ Application/User/generated/SuspensionScreenViewBase.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
- ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp \
- ../../TouchGFX/generated/images/include/images/BitmapDatabase.hpp
+ ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp
 ../../TouchGFX/generated/gui_generated/include/gui_generated/suspensionscreen_screen/SuspensionScreenViewBase.hpp:
 ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:
@@ -192,9 +188,5 @@ Application/User/generated/SuspensionScreenViewBase.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
 ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:
-../../TouchGFX/generated/images/include/images/BitmapDatabase.hpp:

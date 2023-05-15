@@ -28,6 +28,7 @@ char altitude[20];
 double lat;
 double longi;
 double alt;
+
 /* USER CODE END 0 */
 
 UART_HandleTypeDef huart1;

@@ -1,6 +1,6 @@
 Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	1
 DriverScreenView.cpp:27:6:virtual void DriverScreenView::tearDownScreen()	1
-DriverScreenView.cpp:32:6:virtual void DriverScreenView::UpdateDriverScreen()	5
+DriverScreenView.cpp:32:6:virtual void DriverScreenView::UpdateDriverScreen()	6
 DriverScreenView.hpp:11:13:DriverScreenView::~DriverScreenView()	1
 DriverScreenView.hpp:11:13:virtual DriverScreenView::~DriverScreenView()	1
 DriverScreenView.cpp:17:1:DriverScreenView::DriverScreenView()	1

@@ -49,8 +49,6 @@
 "./Application/User/generated/Texts.o"
 "./Application/User/generated/TypedTextDatabase.o"
 "./Application/User/generated/UnmappedDataFont.o"
-"./Application/User/generated/image_alternate_theme_images_widgets_togglebutton_medium_rounded_off_light.o"
-"./Application/User/generated/image_alternate_theme_images_widgets_togglebutton_medium_rounded_on_normal.o"
 "./Application/User/gui/DriverScreenPresenter.o"
 "./Application/User/gui/DriverScreenView.o"
 "./Application/User/gui/FrontendApplication.o"

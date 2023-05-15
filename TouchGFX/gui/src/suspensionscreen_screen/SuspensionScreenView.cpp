@@ -13,6 +13,10 @@ extern "C"{
 		extern double frontBreak;
 		extern double rearBreak;
 
+		extern double lat;
+		extern double longi;
+		extern double alt;
+
 //		driverScreenData_t *driverScreenData_r;
 		uint8_t z = 0;
 
@@ -48,10 +52,17 @@ void SuspensionScreenView::UpdateSuspensionScreen(){
 	Unicode::snprintfFloat(tbFrontBreakBuffer, TBFRONTBREAK_SIZE, "%03.3f", frontBreak);
 	Unicode::snprintfFloat(tbRearBreakBuffer, TBREARBREAK_SIZE, "%03.3f", rearBreak);
 
+	Unicode::snprintfFloat(tbLatitudeBuffer, TBLATITUDE_SIZE, "%03.6f", lat);
+	Unicode::snprintfFloat(tbLongitudeBuffer, TBLONGITUDE_SIZE, "%03.6f", longi);
+	Unicode::snprintfFloat(tbAltitudeBuffer, TBALTITUDE_SIZE, "%03.6f", alt);
+
 	tbFRPot.invalidate();
 	tbFLPot.invalidate();
 	tbRRPot.invalidate();
 	tbRLPot.invalidate();
 	tbFrontBreak.invalidate();
 	tbRearBreak.invalidate();
+	tbLatitude.invalidate();
+	tbLongitude.invalidate();
+	tbAltitude.invalidate();
 }

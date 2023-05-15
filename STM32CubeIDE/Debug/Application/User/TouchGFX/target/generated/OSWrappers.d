@@ -1,5 +1,5 @@
 Application/User/TouchGFX/target/generated/OSWrappers.o: \
- C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/target/generated/OSWrappers.cpp \
+ D:/GitHub/SR22_Display_TGFX/TouchGFX/target/generated/OSWrappers.cpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/platform/core/MCUInstrumentation.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \

@@ -68,17 +68,35 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_PMLM" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0.00</Translation>
+      </Text>
+      <Text Id="__SingleUse_V04P" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Longitude: &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_L85E" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0.00</Translation>
+      </Text>
+      <Text Id="__SingleUse_GE1Z" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Altitude: &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_0TD6" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0.00</Translation>
+      </Text>
+      <Text Id="__SingleUse_KN3V" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Latitude: &lt;value&gt;</Translation>
+      </Text>
       <Text Id="__SingleUse_RVY2" Alignment="Left" TypographyId="Small">
         <Translation Language="GB">0.00</Translation>
       </Text>
       <Text Id="__SingleUse_ISS6" Alignment="Left" TypographyId="Small">
-        <Translation Language="GB">Rear Break: &lt;value&gt;V</Translation>
+        <Translation Language="GB">Rear Brake: &lt;value&gt;V</Translation>
       </Text>
       <Text Id="__SingleUse_4UX5" Alignment="Left" TypographyId="Small">
         <Translation Language="GB">0.00</Translation>
       </Text>
       <Text Id="__SingleUse_VRMK" Alignment="Left" TypographyId="Small">
-        <Translation Language="GB">Front Break: &lt;value&gt;V</Translation>
+        <Translation Language="GB">Front Brake: &lt;value&gt;V</Translation>
       </Text>
       <Text Id="__SingleUse_9L25" Alignment="Left" TypographyId="Small">
         <Translation Language="GB">0.00</Translation>

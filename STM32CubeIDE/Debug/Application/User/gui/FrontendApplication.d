@@ -1,5 +1,5 @@
 Application/User/gui/FrontendApplication.o: \
- C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/gui/src/common/FrontendApplication.cpp \
+ D:/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/common/FrontendApplication.cpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp \

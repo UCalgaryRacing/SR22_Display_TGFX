@@ -24,6 +24,9 @@
 CAN_FilterTypeDef canfilter;
 CAN_RxHeaderTypeDef RxHeader;
 CAN_TxHeaderTypeDef TxHeader;
+CAN_TxHeaderTypeDef TxHeaderGPSLat;
+CAN_TxHeaderTypeDef TxHeaderGPSLong;
+CAN_TxHeaderTypeDef TxHeaderGPSAlt;
 uint8_t RxData[8];
 CAN_FilterTypeDef filterConfig;
 
@@ -170,6 +173,21 @@ void MX_CAN1_Init(void)
     TxHeader.RTR = CAN_RTR_DATA;
     TxHeader.IDE = CAN_ID_STD;
     TxHeader.DLC = 4;
+
+    TxHeaderGPSLat.StdId = 0x700;
+    TxHeaderGPSLat.RTR = CAN_RTR_DATA;
+    TxHeaderGPSLat.IDE = CAN_ID_STD;
+    TxHeaderGPSLat.DLC = 6;
+
+    TxHeaderGPSLong.StdId = 0x701;
+    TxHeaderGPSLong.RTR = CAN_RTR_DATA;
+	TxHeaderGPSLong.IDE = CAN_ID_STD;
+	TxHeaderGPSLong.DLC = 6;
+
+	TxHeaderGPSAlt.StdId = 0x702;
+	TxHeaderGPSAlt.RTR = CAN_RTR_DATA;
+	TxHeaderGPSAlt.IDE = CAN_ID_STD;
+	TxHeaderGPSAlt.DLC = 6;
   /* USER CODE END CAN1_Init 2 */
 
 }
