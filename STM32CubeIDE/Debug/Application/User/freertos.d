@@ -1,5 +1,5 @@
 Application/User/freertos.o: \
- D:/GitHub/SR22_Display_TGFX/Core/Src/freertos.c \
+ C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/freertos.c \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../Core/Inc/FreeRTOSConfig.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
@@ -58,7 +58,8 @@ Application/User/freertos.o: \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
  ../../Core/Inc/can.h ../../Core/Inc/gpio.h ../../Core/Inc/spi.h \
- ../../Core/Inc/gpio.h ../../Core/Inc/adc.h ../../Core/Inc/usart.h
+ ../../Core/Inc/gpio.h ../../Core/Inc/adc.h ../../Core/Inc/usart.h \
+ ../../Core/Inc/can.h
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../../Core/Inc/FreeRTOSConfig.h:
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
@@ -124,3 +125,4 @@ Application/User/freertos.o: \
 ../../Core/Inc/gpio.h:
 ../../Core/Inc/adc.h:
 ../../Core/Inc/usart.h:
+../../Core/Inc/can.h:

@@ -1,2 +1,2 @@
-D:/GitHub/SR22_Display_TGFX/TouchGFX/generated/images/src/SVGDatabase.cpp:577:27:const touchgfx::VGObject* SVGDatabase::getInstance()	0	static
-D:/GitHub/SR22_Display_TGFX/TouchGFX/generated/images/src/SVGDatabase.cpp:582:10:uint16_t SVGDatabase::getInstanceSize()	0	static
+C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/generated/images/src/SVGDatabase.cpp:577:27:const touchgfx::VGObject* SVGDatabase::getInstance()	0	static
+C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/generated/images/src/SVGDatabase.cpp:582:10:uint16_t SVGDatabase::getInstanceSize()	0	static

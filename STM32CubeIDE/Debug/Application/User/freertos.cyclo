@@ -1,7 +1,7 @@
-freertos.c:215:6:StartDefaultTask	1
-freertos.c:233:6:StartRPMTask	1
-freertos.c:252:6:StartEGTTask	1
-freertos.c:278:6:StartShifterTask	7
-freertos.c:319:6:StartGPSTask	1
-freertos.c:131:6:vApplicationIdleHook	1
-freertos.c:151:6:MX_FREERTOS_Init	1
+freertos.c:216:6:StartDefaultTask	1
+freertos.c:234:6:StartRPMTask	1
+freertos.c:253:6:StartEGTTask	1
+freertos.c:279:6:StartShifterTask	7
+freertos.c:320:6:StartGPSTask	1
+freertos.c:132:6:vApplicationIdleHook	1
+freertos.c:152:6:MX_FREERTOS_Init	1

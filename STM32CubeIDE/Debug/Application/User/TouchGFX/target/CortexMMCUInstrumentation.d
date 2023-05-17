@@ -1,5 +1,5 @@
 Application/User/TouchGFX/target/CortexMMCUInstrumentation.o: \
- D:/GitHub/SR22_Display_TGFX/TouchGFX/target/CortexMMCUInstrumentation.cpp \
+ C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/target/CortexMMCUInstrumentation.cpp \
  ../../TouchGFX/target/CortexMMCUInstrumentation.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/platform/core/MCUInstrumentation.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \

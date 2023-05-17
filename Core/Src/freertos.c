@@ -51,6 +51,7 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
+uint32_t TxMailbox;
 extern uint16_t rpm;
 extern CAN_TxHeaderTypeDef TxHeader;
 extern uint16_t egt3;
@@ -252,7 +253,7 @@ void StartRPMTask(void *argument)
 void StartEGTTask(void *argument)
 {
   /* USER CODE BEGIN StartEGTTask */
-	uint32_t TxMailbox;
+
 	uint8_t data[8] = { 0, 0, 0, 0, 0, 0, 0, 0 };
   /* Infinite loop */
 	for(;;){

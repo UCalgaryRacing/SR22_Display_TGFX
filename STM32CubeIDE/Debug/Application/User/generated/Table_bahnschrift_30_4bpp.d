@@ -1,5 +1,5 @@
 Application/User/generated/Table_bahnschrift_30_4bpp.o: \
- D:/GitHub/SR22_Display_TGFX/TouchGFX/generated/fonts/src/Table_bahnschrift_30_4bpp.cpp \
+ C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/generated/fonts/src/Table_bahnschrift_30_4bpp.cpp \
  ../../TouchGFX/generated/fonts/include/fonts/GeneratedFont.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/ConstFont.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp \

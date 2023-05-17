@@ -277,6 +277,8 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
 			lat = atof(latitude);
 			longi = atof(longitude);
 			alt = atof(altitude);
+
+			SendGPSData(lat, longi, alt);
 			gpsData[0] = '\0';
 		}
 		HAL_UART_Receive_DMA(&huart6, gpsData, UARTBUFFERLENGTH);

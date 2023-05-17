@@ -27,8 +27,15 @@ CAN_TxHeaderTypeDef TxHeader;
 CAN_TxHeaderTypeDef TxHeaderGPSLat;
 CAN_TxHeaderTypeDef TxHeaderGPSLong;
 CAN_TxHeaderTypeDef TxHeaderGPSAlt;
+
+uint8_t latitudeData[4];
+uint8_t longitudeData[4];
+uint8_t altitudeData[4];
+
 uint8_t RxData[8];
 CAN_FilterTypeDef filterConfig;
+
+extern uint32_t TxMailbox;
 
 extern osMessageQueueId_t canQueueHandle;
 extern osMessageQueueId_t driverDataQueueHandle;
@@ -402,6 +409,28 @@ void ParseCANData(canData_t *canData){
 		default:
 			break;
 	}
+}
+
+void SendGPSData(double lat, double longi, double alt){
+	int32_t latitude = lat * 11930464;
+	int32_t longitude = longi * 11930464;
+	int32_t altitude = alt * 11930464;
+
+	for(int i = 3; i >= 0; i--){
+		latitudeData[i] = latitude << ((8 * i) + 8);
+	}
+
+	for(int i = 3; i >= 0; i--){
+		longitudeData[i] = longitude << ((8 * i) + 8);
+	}
+
+	for(int i = 3; i >= 0; i--){
+		altitudeData[i] = altitude << ((8 * i) + 8);
+	}
+
+	HAL_CAN_AddTxMessage(&hcan1, &TxHeaderGPSLat, latitudeData, &TxMailbox);
+	HAL_CAN_AddTxMessage(&hcan1, &TxHeaderGPSLong, longitudeData, &TxMailbox);
+	HAL_CAN_AddTxMessage(&hcan1, &TxHeaderGPSAlt, altitudeData, &TxMailbox);
 }
 
 float CombineUnsigned(uint8_t data1, uint8_t data2, double scale){

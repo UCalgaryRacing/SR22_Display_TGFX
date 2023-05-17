@@ -1,4 +1,5 @@
-Application/User/usart.o: D:/GitHub/SR22_Display_TGFX/Core/Src/usart.c \
+Application/User/usart.o: \
+ C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/usart.c \
  ../../Core/Inc/usart.h ../../Core/Inc/main.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h \
  ../../Core/Inc/stm32f7xx_hal_conf.h \
@@ -44,7 +45,7 @@ Application/User/usart.o: D:/GitHub/SR22_Display_TGFX/Core/Src/usart.c \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
  ../../STM32CubeIDE/Application/User/inc/rpm.h ../../Core/Inc/main.h \
- ../../Core/Inc/ltdc.h ../../Core/Inc/tim.h
+ ../../Core/Inc/ltdc.h ../../Core/Inc/tim.h ../../Core/Inc/can.h
 ../../Core/Inc/usart.h:
 ../../Core/Inc/main.h:
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:
@@ -94,3 +95,4 @@ Application/User/usart.o: D:/GitHub/SR22_Display_TGFX/Core/Src/usart.c \
 ../../Core/Inc/main.h:
 ../../Core/Inc/ltdc.h:
 ../../Core/Inc/tim.h:
+../../Core/Inc/can.h:
