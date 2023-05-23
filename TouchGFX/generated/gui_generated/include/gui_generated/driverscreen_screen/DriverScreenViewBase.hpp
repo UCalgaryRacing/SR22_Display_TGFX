@@ -48,8 +48,6 @@ protected:
     touchgfx::TextAreaWithOneWildcard tbLeftDataFieldData1;
     touchgfx::TextAreaWithOneWildcard tbLeftDataFieldTitle1;
     touchgfx::TextAreaWithOneWildcard tbGear;
-    touchgfx::SVGImage iconBatteryLow;
-    touchgfx::SVGImage iconCoolantHigh;
     touchgfx::SVGImage imageSRLogo;
     touchgfx::TextAreaWithOneWildcard tbRPM;
 

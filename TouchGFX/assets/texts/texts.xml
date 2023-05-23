@@ -68,6 +68,12 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_8QO6" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">GPS: &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_CUH4" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">TTPMS Toggle</Translation>
+      </Text>
       <Text Id="__SingleUse_PMLM" Alignment="Left" TypographyId="Small">
         <Translation Language="GB">0.00</Translation>
       </Text>

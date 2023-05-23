@@ -57,6 +57,7 @@ extern CAN_TxHeaderTypeDef TxHeader;
 extern uint16_t egt3;
 extern uint16_t egt4;
 extern uint8_t gpsData[30];
+extern uint8_t neutralSwitch;
 /* USER CODE END Variables */
 /* Definitions for defaultTask */
 osThreadId_t defaultTaskHandle;
@@ -237,7 +238,11 @@ void StartRPMTask(void *argument)
 
   /* Infinite loop */
 	for(;;){
-		SetRPMLights(rpm);
+		if(neutralSwitch){
+			SetRPMNeutral();
+		}else{
+			SetRPMLights(rpm);
+		}
 		osDelay(100);
 	}
   /* USER CODE END StartRPMTask */
@@ -303,8 +308,6 @@ void StartShifterTask(void *argument)
 		}else{
 			shiftPosition = 0;
 		}
-
-
 		osDelay(100);
 	}
   /* USER CODE END StartShifterTask */
@@ -320,7 +323,8 @@ void StartShifterTask(void *argument)
 void StartGPSTask(void *argument)
 {
   /* USER CODE BEGIN StartGPSTask */
-//	char start[] = "log bestpos ontime 1";
+	char start[] = "log bestpos ontime 0.1";
+	HAL_UART_Transmit (&huart6, start, sizeof (start), 10);
 	HAL_UART_Receive_DMA(&huart6, gpsData, UARTBUFFERLENGTH);
   /* Infinite loop */
 	for(;;){

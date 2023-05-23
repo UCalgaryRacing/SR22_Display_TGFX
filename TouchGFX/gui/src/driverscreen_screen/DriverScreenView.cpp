@@ -47,14 +47,6 @@ void DriverScreenView::UpdateDriverScreen(){
 	updateLeftDataField2(driverScreenData_q->leftDataField2);
 	updateRightDataField1(driverScreenData_q->rightDataField1);
 	updateRightDataField2(driverScreenData_q->rightDataField2);
-	if(batteryState != driverScreenData_q->batteryLow){
-		updateBatteryLow(driverScreenData_q->batteryLow);
-		batteryState = driverScreenData_q->batteryLow;
-	}
-	if(coolantState != driverScreenData_q->coolantHigh){
-		updateCoolantHigh(driverScreenData_q->coolantHigh);
-		coolantState = driverScreenData_q->coolantHigh;
-	}
 }
 
 
@@ -92,13 +84,4 @@ void DriverScreenView::updateRightDataField2(int16_t value){
 	tbRightDataFieldData2.invalidate();
 }
 
-void DriverScreenView::updateBatteryLow(bool state){
-	iconBatteryLow.setVisible(state);
-	iconBatteryLow.invalidate();
-}
-
-void DriverScreenView::updateCoolantHigh(bool state){
-	iconCoolantHigh.setVisible(state);
-	iconCoolantHigh.invalidate();
-}
 

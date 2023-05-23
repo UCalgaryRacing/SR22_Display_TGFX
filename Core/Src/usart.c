@@ -256,7 +256,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
 	if(huart->Instance == USART6){
 		char tempMsg[UARTBUFFERLENGTH];
 		sprintf(tempMsg, strtok((char)gpsData, "#"));
-		if(memcmp("BESTPOSA", tempMsg, 8) == 0){
+		if(memcmp("BESTPOS", tempMsg, 7) == 0){
 			sprintf(gpsData, tempMsg);
 			char *token = strtok(gpsData, ",");
 			int index = 0;

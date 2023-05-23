@@ -27,6 +27,7 @@ CAN_TxHeaderTypeDef TxHeader;
 CAN_TxHeaderTypeDef TxHeaderGPSLat;
 CAN_TxHeaderTypeDef TxHeaderGPSLong;
 CAN_TxHeaderTypeDef TxHeaderGPSAlt;
+CAN_TxHeaderTypeDef TxHeaderTTPMS;
 
 uint8_t latitudeData[4];
 uint8_t longitudeData[4];
@@ -184,17 +185,22 @@ void MX_CAN1_Init(void)
     TxHeaderGPSLat.StdId = 0x700;
     TxHeaderGPSLat.RTR = CAN_RTR_DATA;
     TxHeaderGPSLat.IDE = CAN_ID_STD;
-    TxHeaderGPSLat.DLC = 6;
+    TxHeaderGPSLat.DLC = 4;
 
     TxHeaderGPSLong.StdId = 0x701;
     TxHeaderGPSLong.RTR = CAN_RTR_DATA;
 	TxHeaderGPSLong.IDE = CAN_ID_STD;
-	TxHeaderGPSLong.DLC = 6;
+	TxHeaderGPSLong.DLC = 4;
 
 	TxHeaderGPSAlt.StdId = 0x702;
 	TxHeaderGPSAlt.RTR = CAN_RTR_DATA;
 	TxHeaderGPSAlt.IDE = CAN_ID_STD;
-	TxHeaderGPSAlt.DLC = 6;
+	TxHeaderGPSAlt.DLC = 4;
+
+	TxHeaderTTPMS.StdId = 0x969;
+	TxHeaderTTPMS.RTR = CAN_RTR_DATA;
+	TxHeaderTTPMS.IDE = CAN_ID_STD;
+	TxHeaderTTPMS.DLC = 1;
   /* USER CODE END CAN1_Init 2 */
 
 }
@@ -278,7 +284,7 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan){
 void SendDriverScreenData(void){
 	if(neutralSwitch){
 		driverScreenData_q->gear = 0;
-		SetRPMNeutral();
+//		SetRPMNeutral();
 	}else{
 		driverScreenData_q->gear = gear;
 	}
@@ -431,6 +437,17 @@ void SendGPSData(double lat, double longi, double alt){
 	HAL_CAN_AddTxMessage(&hcan1, &TxHeaderGPSLat, latitudeData, &TxMailbox);
 	HAL_CAN_AddTxMessage(&hcan1, &TxHeaderGPSLong, longitudeData, &TxMailbox);
 	HAL_CAN_AddTxMessage(&hcan1, &TxHeaderGPSAlt, altitudeData, &TxMailbox);
+}
+
+void ToggleTTPMS(uint8_t state){
+	uint8_t ttpmsData;
+	if(state){
+		ttpmsData = 0x01;
+		HAL_CAN_AddTxMessage(&hcan1, &TxHeaderGPSAlt, &ttpmsData, &TxMailbox);
+	}else{
+		ttpmsData = 0x00;
+		HAL_CAN_AddTxMessage(&hcan1, &TxHeaderGPSAlt, &ttpmsData, &TxMailbox);
+	}
 }
 
 float CombineUnsigned(uint8_t data1, uint8_t data2, double scale){

@@ -20,9 +20,6 @@ public:
     virtual void updateLeftDataField2(uint8_t value);
     virtual void updateRightDataField1(float value);
     virtual void updateRightDataField2(int16_t value);
-    virtual void updateBatteryLow(bool state);
-    virtual void updateCoolantHigh(bool state);
-
 protected:
 };
 

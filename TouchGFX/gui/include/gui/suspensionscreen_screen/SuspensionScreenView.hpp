@@ -12,6 +12,8 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
     virtual void UpdateSuspensionScreen();
+
+    virtual void ToggleTTPMS();
 protected:
 };
 
