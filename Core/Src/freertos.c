@@ -323,8 +323,8 @@ void StartShifterTask(void *argument)
 void StartGPSTask(void *argument)
 {
   /* USER CODE BEGIN StartGPSTask */
-	char start[] = "log bestpos ontime 0.1";
-	HAL_UART_Transmit (&huart6, start, sizeof (start), 10);
+//	char start[] = "log bestpos ontime 1";
+//	HAL_UART_Transmit (&huart6, start, sizeof (start), 10);
 	HAL_UART_Receive_DMA(&huart6, gpsData, UARTBUFFERLENGTH);
   /* Infinite loop */
 	for(;;){
