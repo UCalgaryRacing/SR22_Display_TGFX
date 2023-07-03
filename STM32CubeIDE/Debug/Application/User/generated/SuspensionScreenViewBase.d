@@ -1,5 +1,5 @@
 Application/User/generated/SuspensionScreenViewBase.o: \
- C:/Users/steve/Documents/SR22_Display_TGFX/TouchGFX/generated/gui_generated/src/suspensionscreen_screen/SuspensionScreenViewBase.cpp \
+ D:/GitHub/SR22_Display_TGFX/TouchGFX/generated/gui_generated/src/suspensionscreen_screen/SuspensionScreenViewBase.cpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/suspensionscreen_screen/SuspensionScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \

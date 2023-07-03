@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/freertos.c:217:6:StartDefaultTask	8	static
 C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/freertos.c:235:6:StartRPMTask	8	static
 C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/freertos.c:258:6:StartEGTTask	16	static
@@ -5,3 +6,13 @@ C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/freertos.c:284:6:StartShifte
 C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/freertos.c:323:6:StartGPSTask	8	static
 C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/freertos.c:133:6:vApplicationIdleHook	0	static
 C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/freertos.c:153:6:MX_FREERTOS_Init	8	static
+=======
+D:/GitHub/SR22_Display_TGFX/Core/Src/freertos.c:228:6:StartDefaultTask	8	static
+D:/GitHub/SR22_Display_TGFX/Core/Src/freertos.c:246:6:StartRPMTask	8	static
+D:/GitHub/SR22_Display_TGFX/Core/Src/freertos.c:269:6:StartEGTTask	16	static
+D:/GitHub/SR22_Display_TGFX/Core/Src/freertos.c:295:6:StartShifterTask	32	static
+D:/GitHub/SR22_Display_TGFX/Core/Src/freertos.c:334:6:StartGPSTask	32	static
+D:/GitHub/SR22_Display_TGFX/Core/Src/freertos.c:355:6:StartDebounce	24	static
+D:/GitHub/SR22_Display_TGFX/Core/Src/freertos.c:141:6:vApplicationIdleHook	0	static
+D:/GitHub/SR22_Display_TGFX/Core/Src/freertos.c:161:6:MX_FREERTOS_Init	8	static
+>>>>>>> Stashed changes

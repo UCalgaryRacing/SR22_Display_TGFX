@@ -101,6 +101,13 @@ const osThreadAttr_t gpsTask_attributes = {
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
+/* Definitions for debounceTask */
+osThreadId_t debounceTaskHandle;
+const osThreadAttr_t debounceTask_attributes = {
+  .name = "debounceTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
 /* Definitions for buttonQueue */
 osMessageQueueId_t buttonQueueHandle;
 const osMessageQueueAttr_t buttonQueue_attributes = {
@@ -123,6 +130,7 @@ void StartRPMTask(void *argument);
 void StartEGTTask(void *argument);
 void StartShifterTask(void *argument);
 void StartGPSTask(void *argument);
+void StartDebounce(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -196,6 +204,9 @@ void MX_FREERTOS_Init(void) {
 
   /* creation of gpsTask */
   gpsTaskHandle = osThreadNew(StartGPSTask, NULL, &gpsTask_attributes);
+
+  /* creation of debounceTask */
+  debounceTaskHandle = osThreadNew(StartDebounce, NULL, &debounceTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -332,6 +343,34 @@ void StartGPSTask(void *argument)
 		osDelay(100);
 	}
   /* USER CODE END StartGPSTask */
+}
+
+/* USER CODE BEGIN Header_StartDebounce */
+/**
+* @brief Function implementing the debounceTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartDebounce */
+void StartDebounce(void *argument)
+{
+  /* USER CODE BEGIN StartDebounce */
+	uint8_t count = 0;
+	uint8_t state = 0;
+  /* Infinite loop */
+	for(;;){
+		state = HAL_GPIO_ReadPin(CHANGE_SCREEN_BUTTON_GPIO_Port, CHANGE_SCREEN_BUTTON_Pin);
+		if(state == 0){
+			count ++;
+		}else{
+			count = 0;
+		}
+		if(count == 5){
+			osMessageQueuePut(buttonQueueHandle, &state, 0, 0);
+		}
+		osDelay(5);
+  }
+  /* USER CODE END StartDebounce */
 }
 
 /* Private application code --------------------------------------------------*/
