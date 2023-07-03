@@ -30,6 +30,7 @@
 #include "gpio.h"
 #include "spi.h"
 #include "adc.h"
+#include "usart.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -50,10 +51,13 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
+uint32_t TxMailbox;
 extern uint16_t rpm;
 extern CAN_TxHeaderTypeDef TxHeader;
 extern uint16_t egt3;
 extern uint16_t egt4;
+extern uint8_t gpsData[30];
+extern uint8_t neutralSwitch;
 /* USER CODE END Variables */
 /* Definitions for defaultTask */
 osThreadId_t defaultTaskHandle;
@@ -68,13 +72,6 @@ const osThreadAttr_t TouchGFXTask_attributes = {
   .name = "TouchGFXTask",
   .stack_size = 8192 * 4,
   .priority = (osPriority_t) osPriorityNormal,
-};
-/* Definitions for buttonTask */
-osThreadId_t buttonTaskHandle;
-const osThreadAttr_t buttonTask_attributes = {
-  .name = "buttonTask",
-  .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityLow,
 };
 /* Definitions for rpmTask */
 osThreadId_t rpmTaskHandle;
@@ -97,6 +94,20 @@ const osThreadAttr_t shifterTask_attributes = {
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
+/* Definitions for gpsTask */
+osThreadId_t gpsTaskHandle;
+const osThreadAttr_t gpsTask_attributes = {
+  .name = "gpsTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
+/* Definitions for debounceTask */
+osThreadId_t debounceTaskHandle;
+const osThreadAttr_t debounceTask_attributes = {
+  .name = "debounceTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
 /* Definitions for buttonQueue */
 osMessageQueueId_t buttonQueueHandle;
 const osMessageQueueAttr_t buttonQueue_attributes = {
@@ -115,10 +126,11 @@ extern portBASE_TYPE IdleTaskHook(void* p);
 
 void StartDefaultTask(void *argument);
 extern void TouchGFX_Task(void *argument);
-void StartButtonTask(void *argument);
 void StartRPMTask(void *argument);
 void StartEGTTask(void *argument);
 void StartShifterTask(void *argument);
+void StartGPSTask(void *argument);
+void StartDebounce(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -181,9 +193,6 @@ void MX_FREERTOS_Init(void) {
   /* creation of TouchGFXTask */
   TouchGFXTaskHandle = osThreadNew(TouchGFX_Task, NULL, &TouchGFXTask_attributes);
 
-  /* creation of buttonTask */
-  buttonTaskHandle = osThreadNew(StartButtonTask, NULL, &buttonTask_attributes);
-
   /* creation of rpmTask */
   rpmTaskHandle = osThreadNew(StartRPMTask, NULL, &rpmTask_attributes);
 
@@ -192,6 +201,12 @@ void MX_FREERTOS_Init(void) {
 
   /* creation of shifterTask */
   shifterTaskHandle = osThreadNew(StartShifterTask, NULL, &shifterTask_attributes);
+
+  /* creation of gpsTask */
+  gpsTaskHandle = osThreadNew(StartGPSTask, NULL, &gpsTask_attributes);
+
+  /* creation of debounceTask */
+  debounceTaskHandle = osThreadNew(StartDebounce, NULL, &debounceTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -221,24 +236,6 @@ void StartDefaultTask(void *argument)
   /* USER CODE END StartDefaultTask */
 }
 
-/* USER CODE BEGIN Header_StartButtonTask */
-/**
-* @brief Function implementing the buttonTask thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_StartButtonTask */
-void StartButtonTask(void *argument)
-{
-  /* USER CODE BEGIN StartButtonTask */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(100);
-  }
-  /* USER CODE END StartButtonTask */
-}
-
 /* USER CODE BEGIN Header_StartRPMTask */
 /**
 * @brief Function implementing the rpmTask thread.
@@ -252,7 +249,11 @@ void StartRPMTask(void *argument)
 
   /* Infinite loop */
 	for(;;){
-		SetRPMLights(rpm);
+		if(neutralSwitch){
+			SetRPMNeutral();
+		}else{
+			SetRPMLights(rpm);
+		}
 		osDelay(100);
 	}
   /* USER CODE END StartRPMTask */
@@ -268,7 +269,7 @@ void StartRPMTask(void *argument)
 void StartEGTTask(void *argument)
 {
   /* USER CODE BEGIN StartEGTTask */
-	uint32_t TxMailbox;
+
 	uint8_t data[8] = { 0, 0, 0, 0, 0, 0, 0, 0 };
   /* Infinite loop */
 	for(;;){
@@ -318,11 +319,58 @@ void StartShifterTask(void *argument)
 		}else{
 			shiftPosition = 0;
 		}
-
-
 		osDelay(100);
 	}
   /* USER CODE END StartShifterTask */
+}
+
+/* USER CODE BEGIN Header_StartGPSTask */
+/**
+* @brief Function implementing the gpsTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartGPSTask */
+void StartGPSTask(void *argument)
+{
+  /* USER CODE BEGIN StartGPSTask */
+//	char start[] = "log bestpos ontime 1";
+//	HAL_UART_Transmit (&huart6, start, sizeof (start), 10);
+	HAL_UART_Receive_DMA(&huart6, gpsData, UARTBUFFERLENGTH);
+  /* Infinite loop */
+	for(;;){
+
+		osDelay(100);
+	}
+  /* USER CODE END StartGPSTask */
+}
+
+/* USER CODE BEGIN Header_StartDebounce */
+/**
+* @brief Function implementing the debounceTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartDebounce */
+void StartDebounce(void *argument)
+{
+  /* USER CODE BEGIN StartDebounce */
+	uint8_t count = 0;
+	uint8_t state = 0;
+  /* Infinite loop */
+	for(;;){
+		state = HAL_GPIO_ReadPin(CHANGE_SCREEN_BUTTON_GPIO_Port, CHANGE_SCREEN_BUTTON_Pin);
+		if(state == 0){
+			count ++;
+		}else{
+			count = 0;
+		}
+		if(count == 5){
+			osMessageQueuePut(buttonQueueHandle, &state, 0, 0);
+		}
+		osDelay(5);
+  }
+  /* USER CODE END StartDebounce */
 }
 
 /* Private application code --------------------------------------------------*/

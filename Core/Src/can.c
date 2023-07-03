@@ -24,8 +24,19 @@
 CAN_FilterTypeDef canfilter;
 CAN_RxHeaderTypeDef RxHeader;
 CAN_TxHeaderTypeDef TxHeader;
+CAN_TxHeaderTypeDef TxHeaderGPSLat;
+CAN_TxHeaderTypeDef TxHeaderGPSLong;
+CAN_TxHeaderTypeDef TxHeaderGPSAlt;
+CAN_TxHeaderTypeDef TxHeaderTTPMS;
+
+uint8_t latitudeData[4];
+uint8_t longitudeData[4];
+uint8_t altitudeData[4];
+
 uint8_t RxData[8];
 CAN_FilterTypeDef filterConfig;
+
+extern uint32_t TxMailbox;
 
 extern osMessageQueueId_t canQueueHandle;
 extern osMessageQueueId_t driverDataQueueHandle;
@@ -43,7 +54,8 @@ uint8_t outputLoad;
 uint8_t deviceInformation;
 
 uint8_t coolSwitch;
-uint8_t maxCoolSwitch;
+uint8_t neutralSwitch;
+//uint8_t maxCoolSwitch;
 uint8_t fuelPump;
 uint8_t waterPump;
 float powerOutputVoltage;
@@ -100,7 +112,7 @@ uint16_t egt2;
 // EMU5 0x604
 uint8_t gear;
 int8_t ecuTemp;
-uint16_t batteryVoltageECU;
+float batteryVoltageECU;
 uint16_t errFlag;
 uint8_t flags1;
 uint8_t ethanolContent;
@@ -169,6 +181,26 @@ void MX_CAN1_Init(void)
     TxHeader.RTR = CAN_RTR_DATA;
     TxHeader.IDE = CAN_ID_STD;
     TxHeader.DLC = 4;
+
+    TxHeaderGPSLat.StdId = 0x700;
+    TxHeaderGPSLat.RTR = CAN_RTR_DATA;
+    TxHeaderGPSLat.IDE = CAN_ID_STD;
+    TxHeaderGPSLat.DLC = 4;
+
+    TxHeaderGPSLong.StdId = 0x701;
+    TxHeaderGPSLong.RTR = CAN_RTR_DATA;
+	TxHeaderGPSLong.IDE = CAN_ID_STD;
+	TxHeaderGPSLong.DLC = 4;
+
+	TxHeaderGPSAlt.StdId = 0x702;
+	TxHeaderGPSAlt.RTR = CAN_RTR_DATA;
+	TxHeaderGPSAlt.IDE = CAN_ID_STD;
+	TxHeaderGPSAlt.DLC = 4;
+
+	TxHeaderTTPMS.StdId = 0x969;
+	TxHeaderTTPMS.RTR = CAN_RTR_DATA;
+	TxHeaderTTPMS.IDE = CAN_ID_STD;
+	TxHeaderTTPMS.DLC = 1;
   /* USER CODE END CAN1_Init 2 */
 
 }
@@ -250,16 +282,32 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan){
 }
 
 void SendDriverScreenData(void){
-	driverScreenData_q->gear = gear;
+	if(neutralSwitch){
+		driverScreenData_q->gear = 0;
+//		SetRPMNeutral();
+	}else{
+		driverScreenData_q->gear = gear;
+	}
+
 	driverScreenData_q->rpm = rpm;
 	driverScreenData_q->leftDataField1 = oilPressure;
 	driverScreenData_q->leftDataField2 = oilTemp;
-	driverScreenData_q->leftDataField3 = fuelPressure;
 	driverScreenData_q->rightDataField1 = batteryVoltageECU;
 	driverScreenData_q->rightDataField2 = coolantTemp;
 	driverScreenData_q->rightDataField3 = vspd;
-	driverScreenData_q->batteryLow = (inputVoltage < BATTERY_LOW_VOLTAGE);
+	driverScreenData_q->batteryLow = (batteryVoltageECU < BATTERY_LOW_VOLTAGE);
 	driverScreenData_q->coolantHigh = (coolantTemp > COOLANT_HIGH_TEMPERATURE);
+
+	if(driverScreenData_q->batteryLow){
+		HAL_GPIO_WritePin(GPIOB, BATERY_LOW_LIGHT_Pin, 1);
+	}else{
+		HAL_GPIO_WritePin(GPIOB, BATERY_LOW_LIGHT_Pin, 0);
+	}
+	if(driverScreenData_q->coolantHigh){
+		HAL_GPIO_WritePin(OVERHEAT_LIGHT_GPIO_Port, OVERHEAT_LIGHT_Pin, 1);
+	}else{
+		HAL_GPIO_WritePin(OVERHEAT_LIGHT_GPIO_Port, OVERHEAT_LIGHT_Pin, 0);
+	}
 }
 
 void ParseCANData(canData_t *canData){
@@ -275,7 +323,7 @@ void ParseCANData(canData_t *canData){
 			break;
 		case 0x420:
 			coolSwitch = canData->data[0];
-			maxCoolSwitch = canData->data[1];
+			neutralSwitch = canData->data[1];
 			fuelPump = canData->data[2];
 			waterPump = canData->data[3];
 			powerOutputVoltage = canData->data[4]  * 0.1216;
@@ -333,9 +381,6 @@ void ParseCANData(canData_t *canData){
 			iat = (int8_t)canData->data[3];
 			map = (int16_t)CombineSigned(canData->data[4], canData->data[5], 1);
 			injpw = CombineUnsigned(canData->data[6], canData->data[7], 0.016129);
-//			if(osMessageQueueGetSpace(rpmTaskHandle) > 0){
-//				osMessageQueuePut(rpmTaskHandle, &rpm, 0, 0);
-//			}
 			break;
 		case 0x601:
 			ai1 = CombineUnsigned(canData->data[0], canData->data[1], ecuAnalogScale);
@@ -369,6 +414,39 @@ void ParseCANData(canData_t *canData){
 			break;
 		default:
 			break;
+	}
+}
+
+void SendGPSData(double lat, double longi, double alt){
+	int32_t latitude = lat * 11930464;
+	int32_t longitude = longi * 11930464;
+	int32_t altitude = alt * 11930464;
+
+	for(int i = 3; i >= 0; i--){
+		latitudeData[i] = latitude << ((8 * i) + 8);
+	}
+
+	for(int i = 3; i >= 0; i--){
+		longitudeData[i] = longitude << ((8 * i) + 8);
+	}
+
+	for(int i = 3; i >= 0; i--){
+		altitudeData[i] = altitude << ((8 * i) + 8);
+	}
+
+	HAL_CAN_AddTxMessage(&hcan1, &TxHeaderGPSLat, latitudeData, &TxMailbox);
+	HAL_CAN_AddTxMessage(&hcan1, &TxHeaderGPSLong, longitudeData, &TxMailbox);
+	HAL_CAN_AddTxMessage(&hcan1, &TxHeaderGPSAlt, altitudeData, &TxMailbox);
+}
+
+void ToggleTTPMS(uint8_t state){
+	uint8_t ttpmsData;
+	if(state){
+		ttpmsData = 0x01;
+		HAL_CAN_AddTxMessage(&hcan1, &TxHeaderGPSAlt, &ttpmsData, &TxMailbox);
+	}else{
+		ttpmsData = 0x00;
+		HAL_CAN_AddTxMessage(&hcan1, &TxHeaderGPSAlt, &ttpmsData, &TxMailbox);
 	}
 }
 

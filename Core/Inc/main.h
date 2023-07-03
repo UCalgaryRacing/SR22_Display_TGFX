@@ -36,6 +36,8 @@ extern "C" {
 #include <rpm.h>
 #include <string.h>
 #include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -61,18 +63,18 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define VSYNC_FREQ_Pin GPIO_PIN_4
-#define VSYNC_FREQ_GPIO_Port GPIOB
+#define BATERY_LOW_LIGHT_Pin GPIO_PIN_4
+#define BATERY_LOW_LIGHT_GPIO_Port GPIOB
 #define THERMOCOUPLE2_Pin GPIO_PIN_15
 #define THERMOCOUPLE2_GPIO_Port GPIOA
 #define LCD_BL_CTRL_Pin GPIO_PIN_3
 #define LCD_BL_CTRL_GPIO_Port GPIOK
 #define LCD_DISP_Pin GPIO_PIN_12
 #define LCD_DISP_GPIO_Port GPIOI
-#define FRAME_RATE_Pin GPIO_PIN_7
-#define FRAME_RATE_GPIO_Port GPIOC
-#define RENDER_TIME_Pin GPIO_PIN_6
-#define RENDER_TIME_GPIO_Port GPIOC
+#define OVERHEAT_LIGHT_Pin GPIO_PIN_7
+#define OVERHEAT_LIGHT_GPIO_Port GPIOG
+#define CHANGE_SCREEN_BUTTON_Pin GPIO_PIN_6
+#define CHANGE_SCREEN_BUTTON_GPIO_Port GPIOG
 #define THERMOCOUPLE1_Pin GPIO_PIN_15
 #define THERMOCOUPLE1_GPIO_Port GPIOB
 

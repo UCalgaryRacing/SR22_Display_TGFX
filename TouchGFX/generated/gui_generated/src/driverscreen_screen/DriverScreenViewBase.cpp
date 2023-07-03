@@ -28,7 +28,7 @@ DriverScreenViewBase::DriverScreenViewBase() :
     tbRightDataFieldData3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_6GAE));
     add(tbRightDataFieldData3);
 
-    tbRightDataFieldData2.setPosition(420, 155, 50, 37);
+    tbRightDataFieldData2.setPosition(420, 75, 50, 37);
     tbRightDataFieldData2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     tbRightDataFieldData2.setLinespacing(0);
     Unicode::snprintf(tbRightDataFieldData2Buffer, TBRIGHTDATAFIELDDATA2_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_8X86).getText());
@@ -36,7 +36,7 @@ DriverScreenViewBase::DriverScreenViewBase() :
     tbRightDataFieldData2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_SNGL));
     add(tbRightDataFieldData2);
 
-    tbRightDataFieldTitle2.setPosition(370, 140, 100, 15);
+    tbRightDataFieldTitle2.setPosition(370, 60, 100, 15);
     tbRightDataFieldTitle2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     tbRightDataFieldTitle2.setLinespacing(2);
     Unicode::snprintf(tbRightDataFieldTitle2Buffer, TBRIGHTDATAFIELDTITLE2_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_D87B).getText());
@@ -44,7 +44,7 @@ DriverScreenViewBase::DriverScreenViewBase() :
     tbRightDataFieldTitle2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_C0Q3));
     add(tbRightDataFieldTitle2);
 
-    tbRightDataFieldData1.setPosition(390, 90, 80, 30);
+    tbRightDataFieldData1.setPosition(390, 25, 80, 30);
     tbRightDataFieldData1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     tbRightDataFieldData1.setLinespacing(0);
     Unicode::snprintf(tbRightDataFieldData1Buffer, TBRIGHTDATAFIELDDATA1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_HHZ7).getText());
@@ -52,7 +52,7 @@ DriverScreenViewBase::DriverScreenViewBase() :
     tbRightDataFieldData1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_7UI3));
     add(tbRightDataFieldData1);
 
-    tbRightDataFieldTitle1.setPosition(370, 80, 100, 18);
+    tbRightDataFieldTitle1.setPosition(370, 10, 100, 18);
     tbRightDataFieldTitle1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     tbRightDataFieldTitle1.setLinespacing(2);
     Unicode::snprintf(tbRightDataFieldTitle1Buffer, TBRIGHTDATAFIELDTITLE1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_EHLI).getText());
@@ -60,7 +60,7 @@ DriverScreenViewBase::DriverScreenViewBase() :
     tbRightDataFieldTitle1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_4UEX));
     add(tbRightDataFieldTitle1);
 
-    tbLeftDataFieldData2.setPosition(10, 155, 80, 37);
+    tbLeftDataFieldData2.setPosition(10, 75, 80, 37);
     tbLeftDataFieldData2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     tbLeftDataFieldData2.setLinespacing(0);
     Unicode::snprintf(tbLeftDataFieldData2Buffer, TBLEFTDATAFIELDDATA2_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_1YET).getText());
@@ -68,7 +68,7 @@ DriverScreenViewBase::DriverScreenViewBase() :
     tbLeftDataFieldData2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_YSFT));
     add(tbLeftDataFieldData2);
 
-    tbLeftDataFieldTitle2.setXY(10, 140);
+    tbLeftDataFieldTitle2.setXY(10, 60);
     tbLeftDataFieldTitle2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     tbLeftDataFieldTitle2.setLinespacing(2);
     Unicode::snprintf(tbLeftDataFieldTitle2Buffer, TBLEFTDATAFIELDTITLE2_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_E4NJ).getText());
@@ -77,7 +77,7 @@ DriverScreenViewBase::DriverScreenViewBase() :
     tbLeftDataFieldTitle2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_JPBU));
     add(tbLeftDataFieldTitle2);
 
-    tbLeftDataFieldData1.setPosition(10, 95, 80, 37);
+    tbLeftDataFieldData1.setPosition(10, 25, 80, 37);
     tbLeftDataFieldData1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     tbLeftDataFieldData1.setLinespacing(0);
     Unicode::snprintf(tbLeftDataFieldData1Buffer, TBLEFTDATAFIELDDATA1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_V86A).getText());
@@ -85,7 +85,7 @@ DriverScreenViewBase::DriverScreenViewBase() :
     tbLeftDataFieldData1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_2BPK));
     add(tbLeftDataFieldData1);
 
-    tbLeftDataFieldTitle1.setPosition(10, 80, 100, 21);
+    tbLeftDataFieldTitle1.setPosition(10, 10, 100, 21);
     tbLeftDataFieldTitle1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     tbLeftDataFieldTitle1.setLinespacing(2);
     Unicode::snprintf(tbLeftDataFieldTitle1Buffer, TBLEFTDATAFIELDTITLE1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_8NEG).getText());
@@ -100,22 +100,6 @@ DriverScreenViewBase::DriverScreenViewBase() :
     tbGear.setWildcard(tbGearBuffer);
     tbGear.setTypedText(touchgfx::TypedText(T___SINGLEUSE_3P2N));
     add(tbGear);
-
-    iconBatteryLow.setSVG(SVG_BATTERYLOW_ID);
-    iconBatteryLow.setPosition(10, 15, 50, 30);
-    iconBatteryLow.setScale(0.08f, 0.07f);
-    iconBatteryLow.setImagePosition(0, 0);
-    iconBatteryLow.setRotationCenter(23.0f, 12.5f);
-    iconBatteryLow.setRotation(0);
-    add(iconBatteryLow);
-
-    iconCoolantHigh.setSVG(SVG_COOLANT_ID);
-    iconCoolantHigh.setPosition(415, 10, 50, 50);
-    iconCoolantHigh.setScale(0.08f, 0.09f);
-    iconCoolantHigh.setImagePosition(0, 0);
-    iconCoolantHigh.setRotationCenter(27, 30);
-    iconCoolantHigh.setRotation(0);
-    add(iconCoolantHigh);
 
     imageSRLogo.setSVG(SVG_SCHULICH_RACING_LOGO_ID);
     imageSRLogo.setPosition(160, 220, 160, 40);

@@ -47,7 +47,6 @@ typedef struct{
 	uint16_t rpm;
 	float leftDataField1;
 	uint8_t leftDataField2;
-	float leftDataField3;
 	float rightDataField1;
 	int16_t rightDataField2;
 	uint16_t rightDataField3;
@@ -61,6 +60,7 @@ void MX_CAN1_Init(void);
 /* USER CODE BEGIN Prototypes */
 void SendDriverScreenData(void);
 void ParseCANData(canData_t *canData);
+void SendGPSData(double lat, double longi, double alt);
 float CombineUnsigned(uint8_t data1, uint8_t data2, double scale);
 float CombineSigned(uint8_t data1, uint8_t data2, double scale);
 /* USER CODE END Prototypes */

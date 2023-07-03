@@ -27,6 +27,7 @@ void SetLED (int ledNum, int red, int green, int blue);
 void SetBrightness (int brightness);
 void WS2812Send (void);
 void SetRPMLights(uint16_t rpm);
+void SetRPMNeutral(void);
 void BlinkAllLED(void);
 /* USER CODE END Prototypes */
 

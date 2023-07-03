@@ -36,7 +36,7 @@
             "Type": "TextArea",
             "Name": "tbRightDataFieldData2",
             "X": 420,
-            "Y": 155,
+            "Y": 75,
             "Width": 50,
             "Height": 37,
             "TextId": "__SingleUse_SNGL",
@@ -51,7 +51,7 @@
             "Type": "TextArea",
             "Name": "tbRightDataFieldTitle2",
             "X": 370,
-            "Y": 140,
+            "Y": 60,
             "Width": 100,
             "Height": 15,
             "TextId": "__SingleUse_C0Q3",
@@ -67,7 +67,7 @@
             "Type": "TextArea",
             "Name": "tbRightDataFieldData1",
             "X": 390,
-            "Y": 90,
+            "Y": 25,
             "Width": 80,
             "Height": 30,
             "TextId": "__SingleUse_7UI3",
@@ -82,7 +82,7 @@
             "Type": "TextArea",
             "Name": "tbRightDataFieldTitle1",
             "X": 370,
-            "Y": 80,
+            "Y": 10,
             "Width": 100,
             "Height": 18,
             "TextId": "__SingleUse_4UEX",
@@ -98,7 +98,7 @@
             "Type": "TextArea",
             "Name": "tbLeftDataFieldData2",
             "X": 10,
-            "Y": 155,
+            "Y": 75,
             "Width": 80,
             "Height": 37,
             "TextId": "__SingleUse_YSFT",
@@ -113,7 +113,7 @@
             "Type": "TextArea",
             "Name": "tbLeftDataFieldTitle2",
             "X": 10,
-            "Y": 140,
+            "Y": 60,
             "Width": 57,
             "Height": 21,
             "TextId": "__SingleUse_JPBU",
@@ -130,7 +130,7 @@
             "Type": "TextArea",
             "Name": "tbLeftDataFieldData1",
             "X": 10,
-            "Y": 95,
+            "Y": 25,
             "Width": 80,
             "Height": 37,
             "TextId": "__SingleUse_2BPK",
@@ -145,7 +145,7 @@
             "Type": "TextArea",
             "Name": "tbLeftDataFieldTitle1",
             "X": 10,
-            "Y": 80,
+            "Y": 10,
             "Width": 100,
             "Height": 21,
             "TextId": "__SingleUse_3UGH",
@@ -171,34 +171,6 @@
               "UseBuffer": true,
               "BufferSize": 10
             }
-          },
-          {
-            "Type": "SvgImage",
-            "Name": "iconBatteryLow",
-            "X": 10,
-            "Y": 15,
-            "Width": 50,
-            "Height": 30,
-            "Image": "BatteryLow.svg",
-            "FitImageToSize": true,
-            "ImageHorizontalScale": 0.08,
-            "ImageVerticalScale": 0.07,
-            "RotationCenterX": 23.0,
-            "RotationCenterY": 12.5
-          },
-          {
-            "Type": "SvgImage",
-            "Name": "iconCoolantHigh",
-            "X": 415,
-            "Y": 10,
-            "Width": 50,
-            "Height": 50,
-            "Image": "Coolant.svg",
-            "FitImageToSize": true,
-            "ImageHorizontalScale": 0.08,
-            "ImageVerticalScale": 0.09,
-            "RotationCenterX": 27.0,
-            "RotationCenterY": 30.0
           },
           {
             "Type": "SvgImage",
@@ -655,6 +627,51 @@
           },
           {
             "Type": "TextArea",
+            "Name": "tbLatitude",
+            "X": 10,
+            "Y": 130,
+            "Width": 130,
+            "Height": 20,
+            "TextId": "__SingleUse_KN3V",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_0TD6",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbAltitude",
+            "X": 10,
+            "Y": 170,
+            "Width": 130,
+            "Height": 20,
+            "TextId": "__SingleUse_GE1Z",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_L85E",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbLongitude",
+            "X": 10,
+            "Y": 150,
+            "Width": 130,
+            "Height": 20,
+            "TextId": "__SingleUse_V04P",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_PMLM",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
             "Name": "tbFRPot",
             "X": 10,
             "Y": 10,
@@ -742,6 +759,42 @@
               "UseBuffer": true,
               "BufferSize": 10
             }
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "buttonTTPMSToggle",
+            "X": 310,
+            "Y": 212,
+            "Width": 170,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_togglebutton_large_round_text_on_light.png",
+            "Released": "__generated\\alternate_theme_images_widgets_togglebutton_large_round_text_on_light.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbTTPMSLabel",
+            "X": 349,
+            "Y": 193,
+            "Width": 93,
+            "Height": 19,
+            "TextId": "__SingleUse_CUH4",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbGPSMessage",
+            "X": 175,
+            "Y": 10,
+            "Width": 35,
+            "Height": 19,
+            "TextId": "__SingleUse_8QO6",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 258
+            }
           }
         ],
         "Interactions": [
@@ -765,6 +818,17 @@
             "Action": {
               "Type": "ActionCustom",
               "FunctionName": "UpdateSuspensionScreen"
+            }
+          },
+          {
+            "InteractionName": "TTPMS",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonTTPMSToggle"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "ToggleTTPMS"
             }
           }
         ]

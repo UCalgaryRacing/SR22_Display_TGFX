@@ -2,10 +2,12 @@
 
 #include "main.h"
 #include "can.h"
+#include "usart.h"
 extern "C"{
 	extern osMessageQueueId_t buttonQueueHandle;
 	extern osMessageQueueId_t shifterQueueHandle;
 	extern driverScreenData_t *driverScreenData_q;
+	extern uint8_t gpsData[UARTBUFFERLENGTH];
 	uint8_t x = 0;
 	uint8_t adcGear_q = 0;
 }
@@ -35,22 +37,16 @@ void DriverScreenView::UpdateDriverScreen(){
 	}
 	if(osMessageQueueGetCount(shifterQueueHandle) > 0){
 		if(osMessageQueueGet(shifterQueueHandle, &adcGear_q, 0, 0) == osOK){
-			updateGear(adcGear_q);
+//			updateGear(adcGear_q);
 		}
 	}
+
+	updateGear(driverScreenData_q->gear);
 	updateRPM(driverScreenData_q->rpm);
 	updateLeftDataField1(driverScreenData_q->leftDataField1);
 	updateLeftDataField2(driverScreenData_q->leftDataField2);
 	updateRightDataField1(driverScreenData_q->rightDataField1);
 	updateRightDataField2(driverScreenData_q->rightDataField2);
-	if(batteryState != driverScreenData_q->batteryLow){
-		updateBatteryLow(driverScreenData_q->batteryLow);
-		batteryState = driverScreenData_q->batteryLow;
-	}
-	if(coolantState != driverScreenData_q->coolantHigh){
-		updateCoolantHigh(driverScreenData_q->coolantHigh);
-		coolantState = driverScreenData_q->coolantHigh;
-	}
 }
 
 
@@ -88,13 +84,4 @@ void DriverScreenView::updateRightDataField2(int16_t value){
 	tbRightDataFieldData2.invalidate();
 }
 
-void DriverScreenView::updateBatteryLow(bool state){
-	iconBatteryLow.setVisible(state);
-	iconBatteryLow.invalidate();
-}
-
-void DriverScreenView::updateCoolantHigh(bool state){
-	iconCoolantHigh.setVisible(state);
-	iconCoolantHigh.invalidate();
-}
 

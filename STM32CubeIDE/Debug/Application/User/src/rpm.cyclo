@@ -2,5 +2,6 @@ rpm.c:55:6:HAL_TIM_PWM_PulseFinishedCallback	1
 rpm.c:59:6:SetLED	1
 rpm.c:66:6:SetBrightness	1
 rpm.c:82:6:WS2812Send	3
-rpm.c:133:6:BlinkAllLED	4
+rpm.c:133:6:SetRPMNeutral	2
+rpm.c:140:6:BlinkAllLED	4
 rpm.c:111:6:SetRPMLights	6

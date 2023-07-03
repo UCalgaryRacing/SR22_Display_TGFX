@@ -34,14 +34,14 @@ uint8_t lightsOn = 0;
 uint8_t flash = 0b1;
 uint16_t pwmData[(24*MAX_LED) + 50];
 uint16_t rpmRanges[16] = {
-    4000, 4625,
-	5250, 5875,
-	6500, 7125,
-	7750, 8375,
-	9000, 9625,
-	10250, 10875,
-	11500, 12125,
-	12750, 13375
+    6000, 6440,
+	6880, 7320,
+	7760, 8200,
+	8640, 9080,
+	9520, 9960,
+	10400, 10840,
+	11280, 11720,
+	12160, 12600
 };
 
 // 5 green, 6 red, five blue
@@ -126,6 +126,13 @@ void SetRPMLights(uint16_t rpm){
 				SetLED(i, 0, 0, 0);
 			}
 		}
+	}
+	WS2812Send();
+}
+
+void SetRPMNeutral(void){
+	for(int i = 0; i < MAX_LED; i++){
+		SetLED(i, 255, 255, 0);
 	}
 	WS2812Send();
 }

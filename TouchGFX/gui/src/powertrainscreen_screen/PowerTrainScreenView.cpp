@@ -80,7 +80,7 @@ void PowerTrainScreenView::UpdatePowerTrainScreen(){
 	Unicode::snprintfFloat(tbOilTempBuffer, TBOILTEMP_SIZE, "%03.2f", oilTemp);
 	Unicode::snprintfFloat(tbOilPresBuffer, TBOILPRES_SIZE, "%03.2f", oilPressure);
 	Unicode::snprintfFloat(tbFuelPresBuffer, TBFUELPRES_SIZE, "%03.2f", fuelPressure);
-	Unicode::snprintf(tbFuelTempBuffer, TBFUELTEMP_SIZE, "%d", coolantTemp);
+	Unicode::snprintf(tbFuelTempBuffer, TBFUELTEMP_SIZE, "%d", ai1);
 
 	Unicode::snprintfFloat(tbIGNANGBuffer, TBIGNANG_SIZE, "%03.2f", ignitionAngle);
 	Unicode::snprintfFloat(tbDwellBuffer, TBDWELL_SIZE, "%03.2f", dwell);

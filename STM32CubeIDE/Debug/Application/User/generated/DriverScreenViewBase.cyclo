@@ -27,22 +27,21 @@ TextAreaWithWildcard.hpp:49:36:virtual touchgfx::TextArea::BoundingArea touchgfx
 TextAreaWithWildcard.hpp:84:41:virtual const UnicodeChar* touchgfx::TextAreaWithOneWildcard::getWildcard1() const	1
 DriverScreenViewBase.hpp:26:18:virtual void DriverScreenViewBase::UpdateDriverScreen()	1
 View.hpp:36:7:touchgfx::View<DriverScreenPresenter>::~View()	1
-DriverScreenViewBase.cpp:142:6:virtual void DriverScreenViewBase::setupScreen()	1
+DriverScreenViewBase.cpp:126:6:virtual void DriverScreenViewBase::setupScreen()	1
 TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	1
 TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	1
 TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	1
 View.hpp:36:7:virtual touchgfx::View<DriverScreenPresenter>::~View()	1
-DriverScreenViewBase.cpp:137:1:DriverScreenViewBase::~DriverScreenViewBase()	1
-DriverScreenViewBase.cpp:137:1:virtual DriverScreenViewBase::~DriverScreenViewBase()	1
+DriverScreenViewBase.cpp:121:1:DriverScreenViewBase::~DriverScreenViewBase()	1
+DriverScreenViewBase.cpp:121:1:virtual DriverScreenViewBase::~DriverScreenViewBase()	1
 Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
 TextAreaWithWildcard.hpp:43:18:virtual void touchgfx::TextAreaWithWildcardBase::invalidateContent() const	1
-DriverScreenViewBase.cpp:159:6:virtual void DriverScreenViewBase::handleTickEvent()	2
+DriverScreenViewBase.cpp:143:6:virtual void DriverScreenViewBase::handleTickEvent()	2
 TextArea.hpp:111:18:virtual void touchgfx::TextArea::setBaselineY(int16_t)	1
-DriverScreenViewBase.cpp:147:6:virtual void DriverScreenViewBase::handleKeyEvent(uint8_t)	2
+DriverScreenViewBase.cpp:131:6:virtual void DriverScreenViewBase::handleKeyEvent(uint8_t)	2
 Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	1
 Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	1
 Widget.hpp:36:7:touchgfx::Widget::Widget()	1
 Box.hpp:33:5:touchgfx::Box::Box()	1
 TextAreaWithWildcard.hpp:65:5:touchgfx::TextAreaWithOneWildcard::TextAreaWithOneWildcard()	1
-SVGImage.hpp:43:5:touchgfx::SVGImage::SVGImage()	1
 DriverScreenViewBase.cpp:10:1:DriverScreenViewBase::DriverScreenViewBase()	21
