@@ -56,7 +56,7 @@ extern uint16_t rpm;
 extern CAN_TxHeaderTypeDef TxHeader;
 extern uint16_t egt3;
 extern uint16_t egt4;
-extern uint8_t gpsData[30];
+extern uint8_t gpsData[UARTBUFFERLENGTH];
 extern uint8_t neutralSwitch;
 /* USER CODE END Variables */
 /* Definitions for defaultTask */
@@ -334,12 +334,15 @@ void StartShifterTask(void *argument)
 void StartGPSTask(void *argument)
 {
   /* USER CODE BEGIN StartGPSTask */
-//	char start[] = "log bestpos ontime 1";
-//	HAL_UART_Transmit (&huart6, start, sizeof (start), 10);
-	HAL_UART_Receive_DMA(&huart6, gpsData, UARTBUFFERLENGTH);
+	char start[] = "log bestpos ontime 0.1\r\n";
+	HAL_UART_Transmit (&huart6, start, sizeof (start), 10);
+//	HAL_UART_Receive_DMA(&huart6, gpsData, UARTBUFFERLENGTH);
+	HAL_UARTEx_ReceiveToIdle_IT(&huart6, gpsData, UARTBUFFERLENGTH);
   /* Infinite loop */
 	for(;;){
-
+		// make queue for uart data
+		// make function for parsing uart data
+		// make function for line intersect function
 		osDelay(100);
 	}
   /* USER CODE END StartGPSTask */
