@@ -52,6 +52,7 @@
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
 uint32_t TxMailbox;
+gpsData_t *gpsData_r;
 extern uint16_t rpm;
 extern CAN_TxHeaderTypeDef TxHeader;
 extern uint16_t egt3;
@@ -118,6 +119,11 @@ osMessageQueueId_t shifterQueueHandle;
 const osMessageQueueAttr_t shifterQueue_attributes = {
   .name = "shifterQueue"
 };
+/* Definitions for gpsQueue */
+osMessageQueueId_t gpsQueueHandle;
+const osMessageQueueAttr_t gpsQueue_attributes = {
+  .name = "gpsQueue"
+};
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -181,6 +187,9 @@ void MX_FREERTOS_Init(void) {
 
   /* creation of shifterQueue */
   shifterQueueHandle = osMessageQueueNew (8, sizeof(uint8_t), &shifterQueue_attributes);
+
+  /* creation of gpsQueue */
+  gpsQueueHandle = osMessageQueueNew (16, sizeof(gpsData_t), &gpsQueue_attributes);
 
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
@@ -341,9 +350,14 @@ void StartGPSTask(void *argument)
   /* Infinite loop */
 	for(;;){
 		// make queue for uart data
+		if(osMessageQueueGetCount(gpsQueueHandle) > 0){
+			if(osMessageQueueGet(gpsQueueHandle, &gpsData_r, 0, 0) == osOK){
+
+			}
+		}
 		// make function for parsing uart data
 		// make function for line intersect function
-		osDelay(100);
+		osDelay(10);
 	}
   /* USER CODE END StartGPSTask */
 }

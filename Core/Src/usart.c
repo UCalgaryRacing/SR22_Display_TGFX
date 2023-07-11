@@ -29,6 +29,9 @@ double lat = 0;
 double longi;
 double alt;
 
+extern osMessageQueueId_t gpsQueueHandle;
+gpsData_t *gpsData_q;
+
 /* USER CODE END 0 */
 
 UART_HandleTypeDef huart1;
@@ -231,7 +234,51 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 
 /* USER CODE BEGIN 1 */
 void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size){
+	gpsData[Size] = '\0';
+	char tempMsg[UARTBUFFERLENGTH];
+	sprintf(tempMsg, strtok(gpsData, "#"));
+	if(memcmp("BESTPOS", tempMsg, 7) == 0){
+		sprintf(gpsData, tempMsg);
+		char *token = strtok(gpsData, ",");
+		int index = 0;
+		while(token != NULL){
+			token = strtok(NULL, ",");
+			if(index == 10){
+				strncpy(latitude, token, 20);
+			}
+			if(index == 11){
+				strncpy(longitude, token, 20);
+			}
+			if(index == 12){
+				strncpy(altitude, token, 20);
+				break;
+			}
+			index ++;
+		}
+//			lat = atof(latitude);
+		lat ++;
+		longi = atof(longitude);
+		alt = atof(altitude);
+
+		SendGPSData(lat, longi, alt);
+		gpsData[0] = '\0';
+	}
+	gpsData[0] = '\0';
 	lat++;
+	HAL_UART_Receive_DMA(&huart6, gpsData, UARTBUFFERLENGTH);
+
+
+
+
+
+
+
+
+	if(osMessageQueueGetSpace(gpsQueueHandle) > 0){
+		strncpy(gpsData_q->data, (char *)gpsData, Size + 1);
+		gpsData_q->length = Size + 1;
+		osMessageQueuePut(gpsQueueHandle, &gpsData_q, 0, 0);
+	}
 	HAL_UARTEx_ReceiveToIdle_IT(&huart6, gpsData, UARTBUFFERLENGTH);
 }
 
@@ -239,37 +286,6 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
 	if(huart->Instance == USART6){
 		longi++;
 		HAL_UARTEx_ReceiveToIdle_IT(&huart6, gpsData, UARTBUFFERLENGTH);
-//		char tempMsg[UARTBUFFERLENGTH];
-//		sprintf(tempMsg, strtok((char)gpsData, "#"));
-//		if(memcmp("BESTPOS", tempMsg, 7) == 0){
-//			sprintf(gpsData, tempMsg);
-//			char *token = strtok(gpsData, ",");
-//			int index = 0;
-//			while(token != NULL){
-//				token = strtok(NULL, ",");
-//				if(index == 10){
-//					strncpy(latitude, token, 20);
-//				}
-//				if(index == 11){
-//					strncpy(longitude, token, 20);
-//				}
-//				if(index == 12){
-//					strncpy(altitude, token, 20);
-//					break;
-//				}
-//				index ++;
-//			}
-////			lat = atof(latitude);
-//			lat ++;
-//			longi = atof(longitude);
-//			alt = atof(altitude);
-//
-//			SendGPSData(lat, longi, alt);
-//			gpsData[0] = '\0';
-//		}
-//		gpsData[0] = '\0';
-//		lat++;
-//		HAL_UART_Receive_DMA(&huart6, gpsData, UARTBUFFERLENGTH);
 	}
 }
 /* USER CODE END 1 */

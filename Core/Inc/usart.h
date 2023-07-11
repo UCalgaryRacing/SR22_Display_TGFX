@@ -37,14 +37,17 @@ extern UART_HandleTypeDef huart1;
 extern UART_HandleTypeDef huart6;
 
 /* USER CODE BEGIN Private defines */
-#define UARTBUFFERLENGTH 256
+#define UARTBUFFERLENGTH 255
 /* USER CODE END Private defines */
 
 void MX_USART1_UART_Init(void);
 void MX_USART6_UART_Init(void);
 
 /* USER CODE BEGIN Prototypes */
-
+typedef struct{
+	uint8_t length;
+	uint8_t data[UARTBUFFERLENGTH];
+}gpsData_t;
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus
