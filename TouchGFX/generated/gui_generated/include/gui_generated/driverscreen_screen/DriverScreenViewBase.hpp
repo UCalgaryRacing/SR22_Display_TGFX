@@ -50,6 +50,7 @@ protected:
     touchgfx::TextAreaWithOneWildcard tbGear;
     touchgfx::SVGImage imageSRLogo;
     touchgfx::TextAreaWithOneWildcard tbRPM;
+    touchgfx::TextAreaWithTwoWildcards tbLapTimer;
 
     /*
      * Wildcard Buffers
@@ -76,6 +77,10 @@ protected:
     touchgfx::Unicode::UnicodeChar tbGearBuffer[TBGEAR_SIZE];
     static const uint16_t TBRPM_SIZE = 10;
     touchgfx::Unicode::UnicodeChar tbRPMBuffer[TBRPM_SIZE];
+    static const uint16_t TBLAPTIMERBUFFER1_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar tbLapTimerBuffer1[TBLAPTIMERBUFFER1_SIZE];
+    static const uint16_t TBLAPTIMERBUFFER2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tbLapTimerBuffer2[TBLAPTIMERBUFFER2_SIZE];
 
 private:
 

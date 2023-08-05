@@ -22,12 +22,9 @@
 
 /* USER CODE BEGIN 0 */
 uint8_t gpsData[UARTBUFFERLENGTH];
-char latitude[20];
-char longitude[20];
-char altitude[20];
-double lat = 0;
-double longi;
-double alt;
+double latitude = 0;
+double longitude = 0;
+double altitude = 0;
 
 extern osMessageQueueId_t gpsQueueHandle;
 gpsData_t *gpsData_q;
@@ -243,49 +240,51 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size){
 		int index = 0;
 		while(token != NULL){
 			token = strtok(NULL, ",");
-			if(index == 10){
-				strncpy(latitude, token, 20);
+			switch(index){
+				case 3:
+					// time status
+					break;
+				case 8:
+					//separate by ; and get sol stat
+					break;
+				case 9:
+					// pos type
+					break;
+				case 10:
+					latitude = atof(token);
+					break;
+				case 11:
+					longitude = atof(token);
+					break;
+				case 12:
+					altitude = atof(token);
+					break;
+				case 15:
+					// latitude stddev
+					break;
+				case 16:
+					// longitude stddev
+					break;
+				case 17:
+					// altitude stddev
+					break;
+				case 18:
+					// base station id
+					break;
 			}
-			if(index == 11){
-				strncpy(longitude, token, 20);
-			}
-			if(index == 12){
-				strncpy(altitude, token, 20);
+			if(index == 18){
 				break;
 			}
-			index ++;
 		}
-//			lat = atof(latitude);
-		lat ++;
-		longi = atof(longitude);
-		alt = atof(altitude);
-
-		SendGPSData(lat, longi, alt);
+		if(osMessageQueueGetSpace(gpsQueueHandle) > 0){
+			gpsData_q->latitude = latitude;
+			gpsData_q->longitude = longitude;
+			gpsData_q->altitude = altitude;
+			osMessageQueuePut(gpsQueueHandle, &gpsData_q, 0, 0);
+		}
+		SendGPSData(latitude, longitude, altitude);
 		gpsData[0] = '\0';
 	}
-	gpsData[0] = '\0';
-	lat++;
-	HAL_UART_Receive_DMA(&huart6, gpsData, UARTBUFFERLENGTH);
-
-
-
-
-
-
-
-
-	if(osMessageQueueGetSpace(gpsQueueHandle) > 0){
-		strncpy(gpsData_q->data, (char *)gpsData, Size + 1);
-		gpsData_q->length = Size + 1;
-		osMessageQueuePut(gpsQueueHandle, &gpsData_q, 0, 0);
-	}
 	HAL_UARTEx_ReceiveToIdle_IT(&huart6, gpsData, UARTBUFFERLENGTH);
-}
-
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
-	if(huart->Instance == USART6){
-		longi++;
-		HAL_UARTEx_ReceiveToIdle_IT(&huart6, gpsData, UARTBUFFERLENGTH);
-	}
 }
 /* USER CODE END 1 */

@@ -16,6 +16,7 @@ public:
 
     virtual void updateGear(uint8_t value);
     virtual void updateRPM(uint16_t value);
+    virtual void updateLapTimer(uint32_t timeMilliSeconds);
     virtual void updateLeftDataField1(float value);
     virtual void updateLeftDataField2(uint8_t value);
     virtual void updateRightDataField1(float value);

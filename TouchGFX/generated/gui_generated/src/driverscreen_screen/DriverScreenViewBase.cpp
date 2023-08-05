@@ -102,7 +102,7 @@ DriverScreenViewBase::DriverScreenViewBase() :
     add(tbGear);
 
     imageSRLogo.setSVG(SVG_SCHULICH_RACING_LOGO_ID);
-    imageSRLogo.setPosition(160, 220, 160, 40);
+    imageSRLogo.setPosition(160, 238, 160, 40);
     imageSRLogo.setScale(0.33f, 0.41f);
     imageSRLogo.setImagePosition(0, 0);
     imageSRLogo.setRotationCenter(80, 20);
@@ -116,6 +116,16 @@ DriverScreenViewBase::DriverScreenViewBase() :
     tbRPM.setWildcard(tbRPMBuffer);
     tbRPM.setTypedText(touchgfx::TypedText(T___SINGLEUSE_O779));
     add(tbRPM);
+
+    tbLapTimer.setPosition(175, 198, 130, 40);
+    tbLapTimer.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    tbLapTimer.setLinespacing(0);
+    touchgfx::Unicode::snprintf(tbLapTimerBuffer1, TBLAPTIMERBUFFER1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_QVM8).getText());
+    tbLapTimer.setWildcard1(tbLapTimerBuffer1);
+    touchgfx::Unicode::snprintf(tbLapTimerBuffer2, TBLAPTIMERBUFFER2_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_3GYF).getText());
+    tbLapTimer.setWildcard2(tbLapTimerBuffer2);
+    tbLapTimer.setTypedText(touchgfx::TypedText(T___SINGLEUSE_JF0O));
+    add(tbLapTimer);
 }
 
 DriverScreenViewBase::~DriverScreenViewBase()

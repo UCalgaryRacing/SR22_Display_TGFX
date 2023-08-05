@@ -1,8 +1,9 @@
-freertos.c:237:6:StartDefaultTask	1
-freertos.c:255:6:StartRPMTask	2
-freertos.c:278:6:StartEGTTask	1
-freertos.c:304:6:StartShifterTask	7
-freertos.c:343:6:StartGPSTask	3
-freertos.c:372:6:StartDebounce	3
-freertos.c:147:6:vApplicationIdleHook	1
-freertos.c:167:6:MX_FREERTOS_Init	1
+freertos.c:422:6:lapTimerCallback	1
+freertos.c:253:6:StartDefaultTask	1
+freertos.c:271:6:StartRPMTask	2
+freertos.c:294:6:StartEGTTask	1
+freertos.c:320:6:StartShifterTask	7
+freertos.c:359:6:StartGPSTask	3
+freertos.c:400:6:StartDebounce	3
+freertos.c:159:6:vApplicationIdleHook	1
+freertos.c:179:6:MX_FREERTOS_Init	1

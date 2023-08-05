@@ -5,12 +5,15 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../Application/User/src/gps.c \
 ../Application/User/src/rpm.c 
 
 C_DEPS += \
+./Application/User/src/gps.d \
 ./Application/User/src/rpm.d 
 
 OBJS += \
+./Application/User/src/gps.o \
 ./Application/User/src/rpm.o 
 
 
@@ -21,7 +24,7 @@ Application/User/src/%.o Application/User/src/%.su Application/User/src/%.cyclo:
 clean: clean-Application-2f-User-2f-src
 
 clean-Application-2f-User-2f-src:
-	-$(RM) ./Application/User/src/rpm.cyclo ./Application/User/src/rpm.d ./Application/User/src/rpm.o ./Application/User/src/rpm.su
+	-$(RM) ./Application/User/src/gps.cyclo ./Application/User/src/gps.d ./Application/User/src/gps.o ./Application/User/src/gps.su ./Application/User/src/rpm.cyclo ./Application/User/src/rpm.d ./Application/User/src/rpm.o ./Application/User/src/rpm.su
 
 .PHONY: clean-Application-2f-User-2f-src
 

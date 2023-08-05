@@ -176,7 +176,7 @@
             "Type": "SvgImage",
             "Name": "imageSRLogo",
             "X": 160,
-            "Y": 220,
+            "Y": 238,
             "Width": 160,
             "Height": 40,
             "Image": "Schulich Racing Logo.svg",
@@ -196,6 +196,26 @@
             "TextRotation": "0",
             "Wildcard1": {
               "TextId": "__SingleUse_GPKS",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbLapTimer",
+            "X": 175,
+            "Y": 198,
+            "Width": 130,
+            "Height": 40,
+            "TextId": "__SingleUse_JF0O",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_QVM8",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Wildcard2": {
+              "TextId": "__SingleUse_3GYF",
               "UseBuffer": true,
               "BufferSize": 10
             }

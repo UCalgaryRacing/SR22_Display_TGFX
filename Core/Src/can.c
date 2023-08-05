@@ -28,6 +28,7 @@ CAN_TxHeaderTypeDef TxHeaderGPSLat;
 CAN_TxHeaderTypeDef TxHeaderGPSLong;
 CAN_TxHeaderTypeDef TxHeaderGPSAlt;
 CAN_TxHeaderTypeDef TxHeaderTTPMS;
+CAN_TxHeaderTypeDef TxHeaderLapTimer;
 
 uint8_t latitudeData[4];
 uint8_t longitudeData[4];
@@ -201,6 +202,11 @@ void MX_CAN1_Init(void)
 	TxHeaderTTPMS.RTR = CAN_RTR_DATA;
 	TxHeaderTTPMS.IDE = CAN_ID_STD;
 	TxHeaderTTPMS.DLC = 1;
+
+	TxHeaderLapTimer.StdId = 0x299;
+	TxHeaderLapTimer.RTR = CAN_RTR_DATA;
+	TxHeaderLapTimer.IDE = CAN_ID_STD;
+	TxHeaderLapTimer.DLC = 4;
   /* USER CODE END CAN1_Init 2 */
 
 }
@@ -437,6 +443,10 @@ void SendGPSData(double lat, double longi, double alt){
 	HAL_CAN_AddTxMessage(&hcan1, &TxHeaderGPSLat, latitudeData, &TxMailbox);
 	HAL_CAN_AddTxMessage(&hcan1, &TxHeaderGPSLong, longitudeData, &TxMailbox);
 	HAL_CAN_AddTxMessage(&hcan1, &TxHeaderGPSAlt, altitudeData, &TxMailbox);
+}
+
+void SendLapTime(uint32_t timeMilliSeconds){
+	HAL_CAN_AddTxMessage(&hcan1, &TxHeaderLapTimer, timeMilliSeconds, &TxMailbox);
 }
 
 void ToggleTTPMS(uint8_t state){

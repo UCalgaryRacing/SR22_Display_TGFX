@@ -31,6 +31,7 @@
 #include "spi.h"
 #include "adc.h"
 #include "usart.h"
+#include "gps.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -52,6 +53,7 @@
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
 uint32_t TxMailbox;
+uint32_t lapTimeMilliSeconds;
 gpsData_t *gpsData_r;
 extern uint16_t rpm;
 extern CAN_TxHeaderTypeDef TxHeader;
@@ -59,6 +61,10 @@ extern uint16_t egt3;
 extern uint16_t egt4;
 extern uint8_t gpsData[UARTBUFFERLENGTH];
 extern uint8_t neutralSwitch;
+
+
+
+bool lap = false;
 /* USER CODE END Variables */
 /* Definitions for defaultTask */
 osThreadId_t defaultTaskHandle;
@@ -100,7 +106,7 @@ osThreadId_t gpsTaskHandle;
 const osThreadAttr_t gpsTask_attributes = {
   .name = "gpsTask",
   .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityLow,
+  .priority = (osPriority_t) osPriorityNormal,
 };
 /* Definitions for debounceTask */
 osThreadId_t debounceTaskHandle;
@@ -124,6 +130,11 @@ osMessageQueueId_t gpsQueueHandle;
 const osMessageQueueAttr_t gpsQueue_attributes = {
   .name = "gpsQueue"
 };
+/* Definitions for lapTimer */
+osTimerId_t lapTimerHandle;
+const osTimerAttr_t lapTimer_attributes = {
+  .name = "lapTimer"
+};
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -137,6 +148,7 @@ void StartEGTTask(void *argument);
 void StartShifterTask(void *argument);
 void StartGPSTask(void *argument);
 void StartDebounce(void *argument);
+void lapTimerCallback(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -176,6 +188,10 @@ void MX_FREERTOS_Init(void) {
   /* USER CODE BEGIN RTOS_SEMAPHORES */
   /* add semaphores, ... */
   /* USER CODE END RTOS_SEMAPHORES */
+
+  /* Create the timer(s) */
+  /* creation of lapTimer */
+  lapTimerHandle = osTimerNew(lapTimerCallback, osTimerPeriodic, NULL, &lapTimer_attributes);
 
   /* USER CODE BEGIN RTOS_TIMERS */
   /* start timers, add new ones, ... */
@@ -345,19 +361,32 @@ void StartGPSTask(void *argument)
   /* USER CODE BEGIN StartGPSTask */
 	char start[] = "log bestpos ontime 0.1\r\n";
 	HAL_UART_Transmit (&huart6, start, sizeof (start), 10);
-//	HAL_UART_Receive_DMA(&huart6, gpsData, UARTBUFFERLENGTH);
 	HAL_UARTEx_ReceiveToIdle_IT(&huart6, gpsData, UARTBUFFERLENGTH);
+//	bool lap = false;
+	Point currentPoint = { 140, 130 };
+	Point lastPoint = { 140, 150 };
+	Point startLine1 = { 150, 150 };
+	Point startLine2 = { 150, 160 };
+	osTimerStart(lapTimerHandle, 1);
   /* Infinite loop */
 	for(;;){
 		// make queue for uart data
 		if(osMessageQueueGetCount(gpsQueueHandle) > 0){
 			if(osMessageQueueGet(gpsQueueHandle, &gpsData_r, 0, 0) == osOK){
-
+				currentPoint.x = gpsData_r->latitude;
+				currentPoint.y = gpsData_r->longitude;
+				lap = DoIntersect(startLine1, startLine2, currentPoint, lastPoint);
+				lastPoint = currentPoint;
 			}
+		}
+		if(lap){
+			SendLapTime(lapTimeMilliSeconds);
+			lapTimeMilliSeconds = 0;
+			lap = false;
 		}
 		// make function for parsing uart data
 		// make function for line intersect function
-		osDelay(10);
+		osDelay(1);
 	}
   /* USER CODE END StartGPSTask */
 }
@@ -388,6 +417,14 @@ void StartDebounce(void *argument)
 		osDelay(5);
   }
   /* USER CODE END StartDebounce */
+}
+
+/* lapTimerCallback function */
+void lapTimerCallback(void *argument)
+{
+  /* USER CODE BEGIN lapTimerCallback */
+	lapTimeMilliSeconds ++;
+  /* USER CODE END lapTimerCallback */
 }
 
 /* Private application code --------------------------------------------------*/

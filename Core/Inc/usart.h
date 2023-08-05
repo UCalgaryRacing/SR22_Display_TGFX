@@ -45,9 +45,14 @@ void MX_USART6_UART_Init(void);
 
 /* USER CODE BEGIN Prototypes */
 typedef struct{
-	uint8_t length;
-	uint8_t data[UARTBUFFERLENGTH];
+	double latitude;
+	double longitude;
+	double altitude;
 }gpsData_t;
+
+extern double latitude;
+extern double longitude;
+extern double altitude;
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus

@@ -25,23 +25,28 @@ TextArea.hpp:127:18:virtual void touchgfx::TextArea::setXBaselineY(int16_t, int1
 TextArea.hpp:403:41:virtual const UnicodeChar* touchgfx::TextArea::getWildcard2() const	1
 TextAreaWithWildcard.hpp:49:36:virtual touchgfx::TextArea::BoundingArea touchgfx::TextAreaWithWildcardBase::calculateBoundingArea() const	1
 TextAreaWithWildcard.hpp:84:41:virtual const UnicodeChar* touchgfx::TextAreaWithOneWildcard::getWildcard1() const	1
+TextAreaWithWildcard.hpp:147:41:virtual const UnicodeChar* touchgfx::TextAreaWithTwoWildcards::getWildcard1() const	1
+TextAreaWithWildcard.hpp:166:41:virtual const UnicodeChar* touchgfx::TextAreaWithTwoWildcards::getWildcard2() const	1
 DriverScreenViewBase.hpp:26:18:virtual void DriverScreenViewBase::UpdateDriverScreen()	1
 View.hpp:36:7:touchgfx::View<DriverScreenPresenter>::~View()	1
-DriverScreenViewBase.cpp:126:6:virtual void DriverScreenViewBase::setupScreen()	1
+DriverScreenViewBase.cpp:136:6:virtual void DriverScreenViewBase::setupScreen()	1
+TextAreaWithWildcard.hpp:125:7:touchgfx::TextAreaWithTwoWildcards::~TextAreaWithTwoWildcards()	1
 TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	1
 TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	1
 TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	1
+TextAreaWithWildcard.hpp:125:7:virtual touchgfx::TextAreaWithTwoWildcards::~TextAreaWithTwoWildcards()	1
 View.hpp:36:7:virtual touchgfx::View<DriverScreenPresenter>::~View()	1
-DriverScreenViewBase.cpp:121:1:DriverScreenViewBase::~DriverScreenViewBase()	1
-DriverScreenViewBase.cpp:121:1:virtual DriverScreenViewBase::~DriverScreenViewBase()	1
+DriverScreenViewBase.cpp:131:1:DriverScreenViewBase::~DriverScreenViewBase()	1
+DriverScreenViewBase.cpp:131:1:virtual DriverScreenViewBase::~DriverScreenViewBase()	1
 Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
 TextAreaWithWildcard.hpp:43:18:virtual void touchgfx::TextAreaWithWildcardBase::invalidateContent() const	1
-DriverScreenViewBase.cpp:143:6:virtual void DriverScreenViewBase::handleTickEvent()	2
+DriverScreenViewBase.cpp:153:6:virtual void DriverScreenViewBase::handleTickEvent()	2
 TextArea.hpp:111:18:virtual void touchgfx::TextArea::setBaselineY(int16_t)	1
-DriverScreenViewBase.cpp:131:6:virtual void DriverScreenViewBase::handleKeyEvent(uint8_t)	2
+DriverScreenViewBase.cpp:141:6:virtual void DriverScreenViewBase::handleKeyEvent(uint8_t)	2
 Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	1
 Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	1
 Widget.hpp:36:7:touchgfx::Widget::Widget()	1
 Box.hpp:33:5:touchgfx::Box::Box()	1
+TextArea.hpp:43:5:touchgfx::TextArea::TextArea()	1
 TextAreaWithWildcard.hpp:65:5:touchgfx::TextAreaWithOneWildcard::TextAreaWithOneWildcard()	1
-DriverScreenViewBase.cpp:10:1:DriverScreenViewBase::DriverScreenViewBase()	21
+DriverScreenViewBase.cpp:10:1:DriverScreenViewBase::DriverScreenViewBase()	25

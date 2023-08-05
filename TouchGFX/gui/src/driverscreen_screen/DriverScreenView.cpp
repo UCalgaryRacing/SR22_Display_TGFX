@@ -8,11 +8,13 @@ extern "C"{
 	extern osMessageQueueId_t shifterQueueHandle;
 	extern driverScreenData_t *driverScreenData_q;
 	extern uint8_t gpsData[UARTBUFFERLENGTH];
+	extern uint32_t lapTimeMilliSeconds;
 	uint8_t x = 0;
 	uint8_t adcGear_q = 0;
 }
 bool batteryState = false;
 bool coolantState = false;
+double thing = 0;
 
 DriverScreenView::DriverScreenView()
 {
@@ -43,6 +45,7 @@ void DriverScreenView::UpdateDriverScreen(){
 
 	updateGear(driverScreenData_q->gear);
 	updateRPM(driverScreenData_q->rpm);
+	updateLapTimer(lapTimeMilliSeconds);
 	updateLeftDataField1(driverScreenData_q->leftDataField1);
 	updateLeftDataField2(driverScreenData_q->leftDataField2);
 	updateRightDataField1(driverScreenData_q->rightDataField1);
@@ -57,6 +60,14 @@ void DriverScreenView::updateGear(uint8_t value){
 		Unicode::snprintf(tbGearBuffer, TBGEAR_SIZE, "%d", value);
 	}
 	tbGear.invalidate();
+}
+
+void DriverScreenView::updateLapTimer(uint32_t timeMilliSeconds){
+	uint32_t minutes = timeMilliSeconds / 60000;
+	float seconds = (float)(timeMilliSeconds % 60000) / 1000;
+	Unicode::snprintf(tbLapTimerBuffer1, TBLAPTIMERBUFFER1_SIZE, "%d", minutes);
+	Unicode::snprintfFloat(tbLapTimerBuffer2, TBLAPTIMERBUFFER2_SIZE, "%.3f", seconds);
+	tbLapTimer.invalidate();
 }
 
 void DriverScreenView::updateRPM(uint16_t value){

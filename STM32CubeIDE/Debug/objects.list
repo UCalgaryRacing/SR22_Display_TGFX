@@ -58,6 +58,7 @@
 "./Application/User/gui/PowerTrainScreenView.o"
 "./Application/User/gui/SuspensionScreenPresenter.o"
 "./Application/User/gui/SuspensionScreenView.o"
+"./Application/User/src/gps.o"
 "./Application/User/src/rpm.o"
 "./Drivers/BSP/Components/ft5336.o"
 "./Drivers/BSP/STM32F7508-Discovery/stm32f7508_discovery.o"

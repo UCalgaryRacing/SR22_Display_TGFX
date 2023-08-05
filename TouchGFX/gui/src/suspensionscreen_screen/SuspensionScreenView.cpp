@@ -14,9 +14,7 @@ extern "C"{
 		extern double frontBreak;
 		extern double rearBreak;
 
-		extern double lat;
-		extern double longi;
-		extern double alt;
+
 		extern uint8_t gpsData[UARTBUFFERLENGTH];
 
 //		driverScreenData_t *driverScreenData_r;
@@ -54,9 +52,9 @@ void SuspensionScreenView::UpdateSuspensionScreen(){
 	Unicode::snprintfFloat(tbFrontBreakBuffer, TBFRONTBREAK_SIZE, "%03.3f", frontBreak);
 	Unicode::snprintfFloat(tbRearBreakBuffer, TBREARBREAK_SIZE, "%03.3f", rearBreak);
 
-	Unicode::snprintfFloat(tbLatitudeBuffer, TBLATITUDE_SIZE, "%03.6f", lat);
-	Unicode::snprintfFloat(tbLongitudeBuffer, TBLONGITUDE_SIZE, "%03.6f", longi);
-	Unicode::snprintfFloat(tbAltitudeBuffer, TBALTITUDE_SIZE, "%03.6f", alt);
+	Unicode::snprintfFloat(tbLatitudeBuffer, TBLATITUDE_SIZE, "%03.6f", latitude);
+	Unicode::snprintfFloat(tbLongitudeBuffer, TBLONGITUDE_SIZE, "%03.6f", longitude);
+	Unicode::snprintfFloat(tbAltitudeBuffer, TBALTITUDE_SIZE, "%03.6f", altitude);
 
 	tbGPSMessage.setWideTextAction(touchgfx::WIDE_TEXT_WORDWRAP);
 	Unicode::strncpy(tbGPSMessageBuffer, (char *)gpsData, TBGPSMESSAGE_SIZE);

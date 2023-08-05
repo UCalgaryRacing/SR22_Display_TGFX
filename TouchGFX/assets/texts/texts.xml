@@ -68,6 +68,15 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_3GYF" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">00.000</Translation>
+      </Text>
+      <Text Id="__SingleUse_QVM8" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">00</Translation>
+      </Text>
+      <Text Id="__SingleUse_JF0O" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;:&lt;value&gt;</Translation>
+      </Text>
       <Text Id="__SingleUse_8QO6" Alignment="Left" TypographyId="Small">
         <Translation Language="GB">GPS: &lt;value&gt;</Translation>
       </Text>
