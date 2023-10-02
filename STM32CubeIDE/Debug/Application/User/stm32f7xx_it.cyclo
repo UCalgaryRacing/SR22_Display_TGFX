@@ -9,8 +9,8 @@ stm32f7xx_it.c:187:6:CAN1_TX_IRQHandler	1
 stm32f7xx_it.c:201:6:CAN1_RX0_IRQHandler	1
 stm32f7xx_it.c:215:6:TIM2_IRQHandler	1
 stm32f7xx_it.c:229:6:EXTI15_10_IRQHandler	1
-stm32f7xx_it.c:244:6:TIM6_DAC_IRQHandler	1
-stm32f7xx_it.c:258:6:DMA2_Stream1_IRQHandler	1
-stm32f7xx_it.c:272:6:USART6_IRQHandler	1
-stm32f7xx_it.c:286:6:LTDC_IRQHandler	1
-stm32f7xx_it.c:300:6:DMA2D_IRQHandler	1
+stm32f7xx_it.c:245:6:TIM6_DAC_IRQHandler	1
+stm32f7xx_it.c:259:6:DMA2_Stream1_IRQHandler	1
+stm32f7xx_it.c:273:6:USART6_IRQHandler	1
+stm32f7xx_it.c:287:6:LTDC_IRQHandler	1
+stm32f7xx_it.c:301:6:DMA2D_IRQHandler	1

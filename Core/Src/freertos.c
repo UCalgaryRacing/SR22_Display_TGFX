@@ -64,13 +64,16 @@ extern uint8_t neutralSwitch;
 
 
 
+
+
 bool lap = false;
+
 /* USER CODE END Variables */
 /* Definitions for defaultTask */
 osThreadId_t defaultTaskHandle;
 const osThreadAttr_t defaultTask_attributes = {
   .name = "defaultTask",
-  .stack_size = 128 * 4,
+  .stack_size = 256 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
 /* Definitions for TouchGFXTask */
@@ -84,35 +87,35 @@ const osThreadAttr_t TouchGFXTask_attributes = {
 osThreadId_t rpmTaskHandle;
 const osThreadAttr_t rpmTask_attributes = {
   .name = "rpmTask",
-  .stack_size = 128 * 4,
+  .stack_size = 256 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
 /* Definitions for egtTask */
 osThreadId_t egtTaskHandle;
 const osThreadAttr_t egtTask_attributes = {
   .name = "egtTask",
-  .stack_size = 128 * 4,
+  .stack_size = 256 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
 /* Definitions for shifterTask */
 osThreadId_t shifterTaskHandle;
 const osThreadAttr_t shifterTask_attributes = {
   .name = "shifterTask",
-  .stack_size = 128 * 4,
+  .stack_size = 256 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
 /* Definitions for gpsTask */
 osThreadId_t gpsTaskHandle;
 const osThreadAttr_t gpsTask_attributes = {
   .name = "gpsTask",
-  .stack_size = 128 * 4,
+  .stack_size = 256 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
 /* Definitions for debounceTask */
 osThreadId_t debounceTaskHandle;
 const osThreadAttr_t debounceTask_attributes = {
   .name = "debounceTask",
-  .stack_size = 128 * 4,
+  .stack_size = 256 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
 /* Definitions for buttonQueue */
@@ -124,11 +127,6 @@ const osMessageQueueAttr_t buttonQueue_attributes = {
 osMessageQueueId_t shifterQueueHandle;
 const osMessageQueueAttr_t shifterQueue_attributes = {
   .name = "shifterQueue"
-};
-/* Definitions for gpsQueue */
-osMessageQueueId_t gpsQueueHandle;
-const osMessageQueueAttr_t gpsQueue_attributes = {
-  .name = "gpsQueue"
 };
 /* Definitions for lapTimer */
 osTimerId_t lapTimerHandle;
@@ -203,9 +201,6 @@ void MX_FREERTOS_Init(void) {
 
   /* creation of shifterQueue */
   shifterQueueHandle = osMessageQueueNew (8, sizeof(uint8_t), &shifterQueue_attributes);
-
-  /* creation of gpsQueue */
-  gpsQueueHandle = osMessageQueueNew (16, sizeof(gpsData_t), &gpsQueue_attributes);
 
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
@@ -359,7 +354,7 @@ void StartShifterTask(void *argument)
 void StartGPSTask(void *argument)
 {
   /* USER CODE BEGIN StartGPSTask */
-	char start[] = "log bestpos ontime 0.1\r\n";
+	char start[] = "log bestposa ontime 0.1\r\n";
 	HAL_UART_Transmit (&huart6, start, sizeof (start), 10);
 	HAL_UARTEx_ReceiveToIdle_IT(&huart6, gpsData, UARTBUFFERLENGTH);
 //	bool lap = false;
@@ -370,14 +365,13 @@ void StartGPSTask(void *argument)
 	osTimerStart(lapTimerHandle, 1);
   /* Infinite loop */
 	for(;;){
-		// make queue for uart data
-		if(osMessageQueueGetCount(gpsQueueHandle) > 0){
-			if(osMessageQueueGet(gpsQueueHandle, &gpsData_r, 0, 0) == osOK){
-				currentPoint.x = gpsData_r->latitude;
-				currentPoint.y = gpsData_r->longitude;
-				lap = DoIntersect(startLine1, startLine2, currentPoint, lastPoint);
-				lastPoint = currentPoint;
-			}
+		if(gpsRecieved){
+			currentPoint.x = latitude;
+			currentPoint.y = longitude;
+			lap = DoIntersect(startLine1, startLine2, currentPoint, lastPoint);
+			lastPoint = currentPoint;
+			transmitCount ++;
+			gpsRecieved = false;
 		}
 		if(lap){
 			SendLapTime(lapTimeMilliSeconds);

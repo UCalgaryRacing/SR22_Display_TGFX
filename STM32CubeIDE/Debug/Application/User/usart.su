@@ -1,5 +1,5 @@
-D:/GitHub/SR22_Display_TGFX/Core/Src/usart.c:39:6:MX_USART1_UART_Init	8	static
-D:/GitHub/SR22_Display_TGFX/Core/Src/usart.c:70:6:MX_USART6_UART_Init	8	static
-D:/GitHub/SR22_Display_TGFX/Core/Src/usart.c:101:6:HAL_UART_MspInit	200	static
-D:/GitHub/SR22_Display_TGFX/Core/Src/usart.c:187:6:HAL_UART_MspDeInit	8	static
-D:/GitHub/SR22_Display_TGFX/Core/Src/usart.c:233:6:HAL_UARTEx_RxEventCallback	296	static
+C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/usart.c:42:6:MX_USART1_UART_Init	8	static
+C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/usart.c:73:6:MX_USART6_UART_Init	8	static
+C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/usart.c:104:6:HAL_UART_MspInit	200	static
+C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/usart.c:190:6:HAL_UART_MspDeInit	8	static
+C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/usart.c:236:6:HAL_UARTEx_RxEventCallback	288	static

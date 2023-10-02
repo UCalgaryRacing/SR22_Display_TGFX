@@ -25,9 +25,12 @@ uint8_t gpsData[UARTBUFFERLENGTH];
 double latitude = 0;
 double longitude = 0;
 double altitude = 0;
+uint32_t transmitCount = 0;
 
 extern osMessageQueueId_t gpsQueueHandle;
-gpsData_t *gpsData_q;
+
+volatile gpsData_t *gpsData_q;
+volatile bool gpsRecieved = false;
 
 /* USER CODE END 0 */
 
@@ -234,9 +237,9 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size){
 	gpsData[Size] = '\0';
 	char tempMsg[UARTBUFFERLENGTH];
 	sprintf(tempMsg, strtok(gpsData, "#"));
-	if(memcmp("BESTPOS", tempMsg, 7) == 0){
-		sprintf(gpsData, tempMsg);
-		char *token = strtok(gpsData, ",");
+	if(memcmp("BESTPOSA", tempMsg, 8) == 0){
+//		sprintf(gpsData, tempMsg);
+		char *token = strtok(tempMsg, ",");
 		int index = 0;
 		while(token != NULL){
 			token = strtok(NULL, ",");
@@ -272,19 +275,36 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size){
 					// base station id
 					break;
 			}
+			index ++;
 			if(index == 18){
 				break;
 			}
+
 		}
-		if(osMessageQueueGetSpace(gpsQueueHandle) > 0){
-			gpsData_q->latitude = latitude;
-			gpsData_q->longitude = longitude;
-			gpsData_q->altitude = altitude;
-			osMessageQueuePut(gpsQueueHandle, &gpsData_q, 0, 0);
-		}
+		gpsRecieved = true;
+//		int thing = osMessageQueueGetSpace(gpsQueueHandle);
+//		if(thing > 0){
+//			gpsData_q->latitude = latitude;
+//			gpsData_q->longitude = longitude;
+//			gpsData_q->altitude = altitude;
+//			if(osMessageQueuePut(gpsQueueHandle, &gpsData_q, 0, 0) != osOK){
+//				transmitCount --;
+//			}else{
+//				transmitCount ++;
+//			}
+//
+//		}else{
+//			transmitCount += 100;
+//		}
+
+
+
 		SendGPSData(latitude, longitude, altitude);
 		gpsData[0] = '\0';
 	}
+
+
+//	transmitCount ++;
 	HAL_UARTEx_ReceiveToIdle_IT(&huart6, gpsData, UARTBUFFERLENGTH);
 }
 /* USER CODE END 1 */

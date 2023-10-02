@@ -34,21 +34,20 @@ uint8_t lightsOn = 0;
 uint8_t flash = 0b1;
 uint16_t pwmData[(24*MAX_LED) + 50];
 uint16_t rpmRanges[16] = {
-    6000, 6440,
-	6880, 7320,
-	7760, 8200,
-	8640, 9080,
-	9520, 9960,
-	10400, 10840,
-	11280, 11720,
-	12160, 12600
+    5000, 5800,
+    6600, 7400,
+    8200, 9000,
+    9800, 10600,
+    11400, 12200,
+    13000, 13000,
+    13000, 13000,
+    13000, 14000
 };
 
 // 5 green, 6 red, five blue
 // all blues turn on at same time at redline
 //
 
-//extern rpm;
 
 
 /* Functions */

@@ -446,7 +446,11 @@ void SendGPSData(double lat, double longi, double alt){
 }
 
 void SendLapTime(uint32_t timeMilliSeconds){
-	HAL_CAN_AddTxMessage(&hcan1, &TxHeaderLapTimer, timeMilliSeconds, &TxMailbox);
+	static uint8_t lapTime[4];
+	for(int i = 0; i < 4; i ++){
+		lapTime[i] = timeMilliSeconds << ((8 * i) + 8);
+	}
+	HAL_CAN_AddTxMessage(&hcan1, &TxHeaderLapTimer, lapTime, &TxMailbox);
 }
 
 void ToggleTTPMS(uint8_t state){

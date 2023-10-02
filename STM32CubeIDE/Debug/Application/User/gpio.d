@@ -1,4 +1,5 @@
-Application/User/gpio.o: D:/GitHub/SR22_Display_TGFX/Core/Src/gpio.c \
+Application/User/gpio.o: \
+ C:/Users/steve/Documents/SR22_Display_TGFX/Core/Src/gpio.c \
  ../../Core/Inc/gpio.h ../../Core/Inc/main.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h \
  ../../Core/Inc/stm32f7xx_hal_conf.h \

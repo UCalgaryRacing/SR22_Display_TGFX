@@ -6,6 +6,6 @@ can.c:319:6:ParseCANData	27
 can.c:276:6:HAL_CAN_RxFifo0MsgPendingCallback	2
 can.c:426:6:SendGPSData	1
 can.c:448:6:SendLapTime	1
-can.c:452:6:ToggleTTPMS	2
-can.c:463:7:CombineUnsigned	1
-can.c:469:7:CombineSigned	1
+can.c:456:6:ToggleTTPMS	2
+can.c:467:7:CombineUnsigned	1
+can.c:473:7:CombineSigned	1

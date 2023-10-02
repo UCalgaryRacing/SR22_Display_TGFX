@@ -53,6 +53,8 @@ typedef struct{
 extern double latitude;
 extern double longitude;
 extern double altitude;
+extern uint32_t transmitCount;
+extern volatile bool gpsRecieved;
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus

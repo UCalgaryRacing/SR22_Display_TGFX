@@ -8,7 +8,7 @@
 /* USER CODE BEGIN Header */
 /**
  ******************************************************************************
- * @file    rpm.c
+ * @file    gps.c
  * @brief   This file provides code for the configuration
  *          of the RPM instances.
  ******************************************************************************

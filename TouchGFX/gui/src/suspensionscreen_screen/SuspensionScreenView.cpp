@@ -52,13 +52,13 @@ void SuspensionScreenView::UpdateSuspensionScreen(){
 	Unicode::snprintfFloat(tbFrontBreakBuffer, TBFRONTBREAK_SIZE, "%03.3f", frontBreak);
 	Unicode::snprintfFloat(tbRearBreakBuffer, TBREARBREAK_SIZE, "%03.3f", rearBreak);
 
-	Unicode::snprintfFloat(tbLatitudeBuffer, TBLATITUDE_SIZE, "%03.6f", latitude);
-	Unicode::snprintfFloat(tbLongitudeBuffer, TBLONGITUDE_SIZE, "%03.6f", longitude);
+	Unicode::snprintfFloat(tbLatitudeBuffer, TBLATITUDE_SIZE, "%3.3f", latitude);
+	Unicode::snprintfFloat(tbLongitudeBuffer, TBLONGITUDE_SIZE, "%3.3f", longitude);
 	Unicode::snprintfFloat(tbAltitudeBuffer, TBALTITUDE_SIZE, "%03.6f", altitude);
 
-	tbGPSMessage.setWideTextAction(touchgfx::WIDE_TEXT_WORDWRAP);
-	Unicode::strncpy(tbGPSMessageBuffer, (char *)gpsData, TBGPSMESSAGE_SIZE);
-	tbGPSMessage.invalidate();
+//	tbGPSTransmitCount.setWideTextAction(touchgfx::WIDE_TEXT_WORDWRAP);
+	Unicode::snprintf(tbGPSTransmitCountBuffer, TBGPSTRANSMITCOUNT_SIZE, "%d", transmitCount);
+	tbGPSTransmitCount.invalidate();
 
 	tbFRPot.invalidate();
 	tbFLPot.invalidate();

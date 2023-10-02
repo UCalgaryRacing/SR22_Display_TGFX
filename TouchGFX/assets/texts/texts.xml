@@ -68,6 +68,15 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_ZWH3" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_COM4" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Init</Translation>
+      </Text>
+      <Text Id="__SingleUse_DEEA" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">GPS Status: &lt;value&gt;</Translation>
+      </Text>
       <Text Id="__SingleUse_3GYF" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">00.000</Translation>
       </Text>
@@ -78,7 +87,7 @@
         <Translation Language="GB">&lt;value&gt;:&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_8QO6" Alignment="Left" TypographyId="Small">
-        <Translation Language="GB">GPS: &lt;value&gt;</Translation>
+        <Translation Language="GB">GPS Transmit Count: &lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_CUH4" Alignment="Left" TypographyId="Small">
         <Translation Language="GB">TTPMS Toggle</Translation>

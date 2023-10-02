@@ -803,17 +803,33 @@
           },
           {
             "Type": "TextArea",
-            "Name": "tbGPSMessage",
+            "Name": "tbGPSTransmitCount",
             "X": 175,
             "Y": 10,
-            "Width": 35,
+            "Width": 180,
             "Height": 19,
             "TextId": "__SingleUse_8QO6",
             "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_ZWH3",
+              "UseBuffer": true,
+              "BufferSize": 12
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbGPSStatus",
+            "X": 175,
+            "Y": 32,
+            "Width": 104,
+            "Height": 19,
+            "TextId": "__SingleUse_DEEA",
+            "TextRotation": "0",
             "AutoSize": true,
             "Wildcard1": {
+              "TextId": "__SingleUse_COM4",
               "UseBuffer": true,
-              "BufferSize": 258
+              "BufferSize": 20
             }
           }
         ],

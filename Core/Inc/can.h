@@ -63,6 +63,7 @@ void ParseCANData(canData_t *canData);
 void SendGPSData(double lat, double longi, double alt);
 float CombineUnsigned(uint8_t data1, uint8_t data2, double scale);
 float CombineSigned(uint8_t data1, uint8_t data2, double scale);
+void SendLapTime(uint32_t timeMilliSeconds);
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus
