@@ -66,7 +66,7 @@ extern uint8_t neutralSwitch;
 
 
 
-bool lap = false;
+
 
 /* USER CODE END Variables */
 /* Definitions for defaultTask */
@@ -357,22 +357,38 @@ void StartGPSTask(void *argument)
 	char start[] = "log bestposa ontime 0.1\r\n";
 	HAL_UART_Transmit (&huart6, start, sizeof (start), 10);
 	HAL_UARTEx_ReceiveToIdle_IT(&huart6, gpsData, UARTBUFFERLENGTH);
-//	bool lap = false;
+	uint8_t currentSector = 3;
+	bool lap = false;
+	bool sector = false;
+
 	Point currentPoint = { 140, 130 };
 	Point lastPoint = { 140, 150 };
 	Point startLine1 = { 150, 150 };
 	Point startLine2 = { 150, 160 };
+	Point sector1EndPoint1 = { 160, 170 };
+	Point sector1EndPoint2 = { 160, 180 };
+	Point sector2EndPoint1 = { 160, 170 };
+	Point sector2EndPoint2 = { 160, 180 };
 	osTimerStart(lapTimerHandle, 1);
   /* Infinite loop */
 	for(;;){
 		if(gpsRecieved){
 			currentPoint.x = latitude;
 			currentPoint.y = longitude;
-			lap = DoIntersect(startLine1, startLine2, currentPoint, lastPoint);
+			if(currentSector == 3){
+				lap = DoIntersect(startLine1, startLine2, currentPoint, lastPoint);
+			}else if(currentSector == 2){
+				sector = DoIntersect(sector2EndPoint1, sector2EndPoint2, currentPoint, lastPoint);
+
+			}else{
+				sector = DoIntersect(sector1EndPoint1, sector1EndPoint2, currentPoint, lastPoint);
+
+			}
 			lastPoint = currentPoint;
 			transmitCount ++;
 			gpsRecieved = false;
 		}
+
 		if(lap){
 			SendLapTime(lapTimeMilliSeconds);
 			lapTimeMilliSeconds = 0;

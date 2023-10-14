@@ -44,7 +44,6 @@
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
 uint8_t counter = 0;
-extern bool lap;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
