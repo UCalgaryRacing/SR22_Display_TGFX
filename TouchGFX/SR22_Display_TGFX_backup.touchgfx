@@ -2,21 +2,847 @@
   "Application": {
     "Screens": [
       {
-        "Name": "Screen1",
-        "Components": [],
-        "Interactions": []
+        "Name": "DriverScreen",
+        "OverrideDefaultBufferSize": true,
+        "CanvasBufferSize": 10000,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "background",
+            "Width": 480,
+            "Height": 272,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbRightDataFieldData3",
+            "X": 190,
+            "Y": 161,
+            "Width": 100,
+            "Height": 37,
+            "TextId": "__SingleUse_6GAE",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_S3HT",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbRightDataFieldData2",
+            "X": 420,
+            "Y": 75,
+            "Width": 50,
+            "Height": 37,
+            "TextId": "__SingleUse_SNGL",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_8X86",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbRightDataFieldTitle2",
+            "X": 370,
+            "Y": 60,
+            "Width": 100,
+            "Height": 15,
+            "TextId": "__SingleUse_C0Q3",
+            "TextRotation": "0",
+            "LineSpacing": 2,
+            "Wildcard1": {
+              "TextId": "__SingleUse_D87B",
+              "UseBuffer": true,
+              "BufferSize": 20
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbRightDataFieldData1",
+            "X": 390,
+            "Y": 25,
+            "Width": 80,
+            "Height": 30,
+            "TextId": "__SingleUse_7UI3",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_HHZ7",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbRightDataFieldTitle1",
+            "X": 370,
+            "Y": 10,
+            "Width": 100,
+            "Height": 18,
+            "TextId": "__SingleUse_4UEX",
+            "TextRotation": "0",
+            "LineSpacing": 2,
+            "Wildcard1": {
+              "TextId": "__SingleUse_EHLI",
+              "UseBuffer": true,
+              "BufferSize": 20
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbLeftDataFieldData2",
+            "X": 10,
+            "Y": 75,
+            "Width": 80,
+            "Height": 37,
+            "TextId": "__SingleUse_YSFT",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_1YET",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbLeftDataFieldTitle2",
+            "X": 10,
+            "Y": 60,
+            "Width": 57,
+            "Height": 21,
+            "TextId": "__SingleUse_JPBU",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "LineSpacing": 2,
+            "Wildcard1": {
+              "TextId": "__SingleUse_E4NJ",
+              "UseBuffer": true,
+              "BufferSize": 20
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbLeftDataFieldData1",
+            "X": 10,
+            "Y": 25,
+            "Width": 80,
+            "Height": 37,
+            "TextId": "__SingleUse_2BPK",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_V86A",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbLeftDataFieldTitle1",
+            "X": 10,
+            "Y": 10,
+            "Width": 100,
+            "Height": 21,
+            "TextId": "__SingleUse_3UGH",
+            "TextRotation": "0",
+            "LineSpacing": 2,
+            "Wildcard1": {
+              "TextId": "__SingleUse_8NEG",
+              "UseBuffer": true,
+              "BufferSize": 20
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbGear",
+            "X": 200,
+            "Y": 10,
+            "Width": 80,
+            "Height": 150,
+            "TextId": "__SingleUse_3P2N",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_ZWYE",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "SvgImage",
+            "Name": "imageSRLogo",
+            "X": 160,
+            "Y": 220,
+            "Width": 160,
+            "Height": 40,
+            "Image": "Schulich Racing Logo.svg",
+            "FitImageToSize": true,
+            "ImageHorizontalScale": 0.33,
+            "ImageVerticalScale": 0.41,
+            "RotationCenterX": 80.0,
+            "RotationCenterY": 20.0
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbRPM",
+            "X": 190,
+            "Width": 100,
+            "Height": 37,
+            "TextId": "__SingleUse_O779",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_GPKS",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "ChangeToPowerTrain",
+            "Trigger": {
+              "Type": "TriggerPhysicalButtonClicked"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "PowerTrainScreen"
+            }
+          },
+          {
+            "InteractionName": "UpdateDriverData",
+            "Trigger": {
+              "Type": "TriggerOnEveryTick",
+              "TickCount": 2
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "UpdateDriverScreen"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "PowerTrainScreen",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "background",
+            "Width": 480,
+            "Height": 272,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbRPM",
+            "X": 10,
+            "Y": 10,
+            "Width": 85,
+            "Height": 20,
+            "TextId": "__SingleUse_O2N1",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_RUJ6",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbTPS",
+            "X": 10,
+            "Y": 30,
+            "Width": 85,
+            "Height": 20,
+            "TextId": "__SingleUse_B9QI",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_XFUA",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbIAT",
+            "X": 10,
+            "Y": 50,
+            "Width": 78,
+            "Height": 20,
+            "TextId": "__SingleUse_BY52",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_Z9O1",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbMAP",
+            "X": 10,
+            "Y": 70,
+            "Width": 90,
+            "Height": 20,
+            "TextId": "__SingleUse_UDSF",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_SMC0",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbINJPW",
+            "X": 10,
+            "Y": 90,
+            "Width": 140,
+            "Height": 20,
+            "TextId": "__SingleUse_BXVC",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_5ELO",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbVSPD",
+            "X": 10,
+            "Y": 110,
+            "Width": 120,
+            "Height": 20,
+            "TextId": "__SingleUse_0OCE",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_GKOR",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbBaro",
+            "X": 10,
+            "Y": 130,
+            "Width": 100,
+            "Height": 20,
+            "TextId": "__SingleUse_GDWZ",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_0S8I",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbOilTemp",
+            "X": 10,
+            "Y": 150,
+            "Width": 130,
+            "Height": 20,
+            "TextId": "__SingleUse_V8PO",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_BDOZ",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbOilPres",
+            "X": 10,
+            "Y": 170,
+            "Width": 130,
+            "Height": 20,
+            "TextId": "__SingleUse_60H9",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_USE6",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbFuelPres",
+            "X": 10,
+            "Y": 190,
+            "Width": 150,
+            "Height": 20,
+            "TextId": "__SingleUse_MRBL",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_6JUK",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbFuelTemp",
+            "X": 10,
+            "Y": 210,
+            "Width": 140,
+            "Height": 20,
+            "TextId": "__SingleUse_YB8O",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_ZNAS",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbIGNANG",
+            "X": 160,
+            "Y": 10,
+            "Width": 130,
+            "Height": 20,
+            "TextId": "__SingleUse_YNQ7",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_Z7MX",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbDwell",
+            "X": 160,
+            "Y": 30,
+            "Width": 110,
+            "Height": 20,
+            "TextId": "__SingleUse_ANIQ",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_CO7Y",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbLambda",
+            "X": 160,
+            "Y": 50,
+            "Width": 130,
+            "Height": 20,
+            "TextId": "__SingleUse_90MI",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_QXLL",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbLambCorr",
+            "X": 160,
+            "Y": 70,
+            "Width": 140,
+            "Height": 20,
+            "TextId": "__SingleUse_OEZA",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_E9AS",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbEGT1",
+            "X": 160,
+            "Y": 90,
+            "Width": 100,
+            "Height": 20,
+            "TextId": "__SingleUse_ZYKH",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_BHGP",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbEGT2",
+            "X": 160,
+            "Y": 110,
+            "Width": 100,
+            "Height": 20,
+            "TextId": "__SingleUse_6JGL",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_M2FN",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbEGT3",
+            "X": 160,
+            "Y": 130,
+            "Width": 100,
+            "Height": 20,
+            "TextId": "__SingleUse_XYPD",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_XAXJ",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbEGT4",
+            "X": 160,
+            "Y": 150,
+            "Width": 100,
+            "Height": 20,
+            "TextId": "__SingleUse_4HX2",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_PXRL",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbGear",
+            "X": 160,
+            "Y": 170,
+            "Width": 130,
+            "Height": 20,
+            "TextId": "__SingleUse_EOKT",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_ADHJ",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbECUTemp",
+            "X": 160,
+            "Y": 190,
+            "Width": 130,
+            "Height": 20,
+            "TextId": "__SingleUse_DKP8",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_A1CB",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbBatt",
+            "X": 160,
+            "Y": 210,
+            "Width": 130,
+            "Height": 20,
+            "TextId": "__SingleUse_BFSU",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_HMSA",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbCoolantTemp",
+            "X": 340,
+            "Y": 10,
+            "Width": 100,
+            "Height": 20,
+            "TextId": "__SingleUse_H324",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_U1C7",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "ChangeToSuspensionScreen",
+            "Trigger": {
+              "Type": "TriggerPhysicalButtonClicked"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "SuspensionScreen"
+            }
+          },
+          {
+            "InteractionName": "UpdatePowerTrainData",
+            "Trigger": {
+              "Type": "TriggerOnEveryTick",
+              "TickCount": 2
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "UpdatePowerTrainScreen"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "SuspensionScreen",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 480,
+            "Height": 272,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbLatitude",
+            "X": 10,
+            "Y": 130,
+            "Width": 130,
+            "Height": 20,
+            "TextId": "__SingleUse_KN3V",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_0TD6",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbAltitude",
+            "X": 10,
+            "Y": 170,
+            "Width": 130,
+            "Height": 20,
+            "TextId": "__SingleUse_GE1Z",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_L85E",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbLongitude",
+            "X": 10,
+            "Y": 150,
+            "Width": 130,
+            "Height": 20,
+            "TextId": "__SingleUse_V04P",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_PMLM",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbFRPot",
+            "X": 10,
+            "Y": 10,
+            "Width": 100,
+            "Height": 20,
+            "TextId": "__SingleUse_0MFD",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_V98E",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbFLPot",
+            "X": 10,
+            "Y": 30,
+            "Width": 100,
+            "Height": 20,
+            "TextId": "__SingleUse_JTG5",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_WOKV",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbRRPot",
+            "X": 10,
+            "Y": 50,
+            "Width": 100,
+            "Height": 20,
+            "TextId": "__SingleUse_W6BR",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_8PMI",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbRLPot",
+            "X": 10,
+            "Y": 70,
+            "Width": 100,
+            "Height": 20,
+            "TextId": "__SingleUse_25DS",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_9L25",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbFrontBreak",
+            "X": 10,
+            "Y": 90,
+            "Width": 130,
+            "Height": 20,
+            "TextId": "__SingleUse_VRMK",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_4UX5",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbRearBreak",
+            "X": 10,
+            "Y": 110,
+            "Width": 130,
+            "Height": 20,
+            "TextId": "__SingleUse_ISS6",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_RVY2",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "buttonTTPMSToggle",
+            "X": 310,
+            "Y": 212,
+            "Width": 170,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_togglebutton_large_round_text_on_light.png",
+            "Released": "__generated\\alternate_theme_images_widgets_togglebutton_large_round_text_on_light.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbTTPMSLabel",
+            "X": 349,
+            "Y": 193,
+            "Width": 93,
+            "Height": 19,
+            "TextId": "__SingleUse_CUH4",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tbGPSMessage",
+            "X": 175,
+            "Y": 10,
+            "Width": 35,
+            "Height": 19,
+            "TextId": "__SingleUse_8QO6",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 258
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "ChangeToDriverScreen",
+            "Trigger": {
+              "Type": "TriggerPhysicalButtonClicked"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "DriverScreen"
+            }
+          },
+          {
+            "InteractionName": "UpdateSuspensionData",
+            "Trigger": {
+              "Type": "TriggerOnEveryTick",
+              "TickCount": 2
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "UpdateSuspensionScreen"
+            }
+          },
+          {
+            "InteractionName": "TTPMS",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonTTPMSToggle"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "ToggleTTPMS"
+            }
+          }
+        ]
       }
     ],
     "CustomContainerDefinitions": [],
-    "Name": "STM32F7508-DK",
+    "Name": "SR22_Display_TGFX",
     "Resolution": {
       "Width": 480,
       "Height": 272
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "Screen1",
+    "StartupScreenName": "DriverScreen",
     "SelectedStartupLanguage": "GB",
-    "Skin": "Blue",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",
     "AvailableColorDepths": [
@@ -44,7 +870,7 @@
     },
     "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
     "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
-    "PostGenerateTargetCommand": "touchgfx update_project --project-file=../STM32F7508-DK.ioc --platform=m7",
+    "PostGenerateTargetCommand": "touchgfx update_project",
     "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
     "RunSimulatorCommand": "build\\bin\\simulator.exe",
     "CompileTargetCommand": "make -f ../gcc/Makefile -j8",
@@ -54,7 +880,17 @@
     "PortraitSkinX": 0,
     "PortraitSkinY": 0,
     "DisplayOrientation": "Landscape",
-    "Family": "STM32F7"
+    "Family": "STM32F7",
+    "SubFamily": "STM32F7x0 Value line",
+    "Toolchain": "STM32CubeIDE",
+    "Platform": "m7",
+    "ProjectFile": "../STM32F7508-DK.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": [],
+    "AdditionalFeatures": [
+      "Vector"
+    ]
   },
-  "Version": "4.21.0"
+  "Version": "4.21.3",
+  "CreatedBy": "4.21.3"
 }

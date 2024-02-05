@@ -1,5 +1,5 @@
 Application/User/generated/Texts.o: \
- D:/GitHub/SR22_Display_TGFX/TouchGFX/generated/texts/src/Texts.cpp \
+ C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/TouchGFX/generated/texts/src/Texts.cpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextProvider.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Unicode.hpp \
@@ -25,6 +25,11 @@ Application/User/generated/Texts.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/UIEventListener.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextureMapTypes.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorFontRenderer.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorRenderer.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Matrix3x3.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VGData.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/DebugPrinter.hpp \
  ../../TouchGFX/generated/texts/include/texts/TypedTextDatabase.hpp
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextProvider.hpp:
@@ -52,5 +57,10 @@ Application/User/generated/Texts.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/UIEventListener.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextureMapTypes.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorFontRenderer.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorRenderer.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Matrix3x3.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VGData.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/DebugPrinter.hpp:
 ../../TouchGFX/generated/texts/include/texts/TypedTextDatabase.hpp:

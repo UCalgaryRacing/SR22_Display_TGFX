@@ -1,5 +1,5 @@
 Application/User/generated/PowerTrainScreenViewBase.o: \
- D:/GitHub/SR22_Display_TGFX/TouchGFX/generated/gui_generated/src/powertrainscreen_screen/PowerTrainScreenViewBase.cpp \
+ C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/TouchGFX/generated/gui_generated/src/powertrainscreen_screen/PowerTrainScreenViewBase.cpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/powertrainscreen_screen/PowerTrainScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
@@ -22,6 +22,11 @@ Application/User/generated/PowerTrainScreenViewBase.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Unicode.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextProvider.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextureMapTypes.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorFontRenderer.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorRenderer.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Matrix3x3.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VGData.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/DebugPrinter.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp \
@@ -36,7 +41,6 @@ Application/User/generated/PowerTrainScreenViewBase.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/FrameBufferAllocator.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
  ../../TouchGFX/gui/include/gui/model/Model.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
  ../../TouchGFX/gui/include/gui/powertrainscreen_screen/PowerTrainScreenPresenter.hpp \
@@ -116,6 +120,11 @@ Application/User/generated/PowerTrainScreenViewBase.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Unicode.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextProvider.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextureMapTypes.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorFontRenderer.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorRenderer.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Matrix3x3.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VGData.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/DebugPrinter.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:
@@ -130,7 +139,6 @@ Application/User/generated/PowerTrainScreenViewBase.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/FrameBufferAllocator.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:
 ../../TouchGFX/gui/include/gui/model/Model.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 ../../TouchGFX/gui/include/gui/powertrainscreen_screen/PowerTrainScreenPresenter.hpp:

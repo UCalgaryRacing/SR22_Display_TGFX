@@ -1,4 +1,4 @@
-main.c:155:6:SystemClock_Config	4
-main.c:78:5:main	3
-main.c:294:6:HAL_TIM_PeriodElapsedCallback	2
-main.c:311:6:Error_Handler	1
+C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/Core/Src/main.c:155:6:SystemClock_Config	4
+C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/Core/Src/main.c:78:5:main	3
+C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/Core/Src/main.c:294:6:HAL_TIM_PeriodElapsedCallback	2
+C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/Core/Src/main.c:311:6:Error_Handler	1

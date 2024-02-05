@@ -1,5 +1,5 @@
 Application/User/gui/SuspensionScreenView.o: \
- D:/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/suspensionscreen_screen/SuspensionScreenView.cpp \
+ C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/TouchGFX/gui/src/suspensionscreen_screen/SuspensionScreenView.cpp \
  ../../TouchGFX/gui/include/gui/suspensionscreen_screen/SuspensionScreenView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/suspensionscreen_screen/SuspensionScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
@@ -23,6 +23,11 @@ Application/User/gui/SuspensionScreenView.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Unicode.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextProvider.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextureMapTypes.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorFontRenderer.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorRenderer.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Matrix3x3.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VGData.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/DebugPrinter.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp \
@@ -37,7 +42,6 @@ Application/User/gui/SuspensionScreenView.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/FrameBufferAllocator.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
  ../../TouchGFX/gui/include/gui/model/Model.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
  ../../TouchGFX/gui/include/gui/suspensionscreen_screen/SuspensionScreenPresenter.hpp \
@@ -120,6 +124,11 @@ Application/User/gui/SuspensionScreenView.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Unicode.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextProvider.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextureMapTypes.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorFontRenderer.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorRenderer.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Matrix3x3.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VGData.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/DebugPrinter.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:
@@ -134,7 +143,6 @@ Application/User/gui/SuspensionScreenView.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/FrameBufferAllocator.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:
 ../../TouchGFX/gui/include/gui/model/Model.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 ../../TouchGFX/gui/include/gui/suspensionscreen_screen/SuspensionScreenPresenter.hpp:

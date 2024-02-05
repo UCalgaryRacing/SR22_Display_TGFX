@@ -106,7 +106,7 @@ DriverScreenViewBase::DriverScreenViewBase() :
     imageSRLogo.setScale(0.33f, 0.41f);
     imageSRLogo.setImagePosition(0, 0);
     imageSRLogo.setRotationCenter(80, 20);
-    imageSRLogo.setRotation(0);
+    imageSRLogo.setRotation(0.0f);
     add(imageSRLogo);
 
     tbRPM.setPosition(190, 0, 100, 37);

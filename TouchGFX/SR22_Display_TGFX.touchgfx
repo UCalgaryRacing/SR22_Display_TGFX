@@ -114,8 +114,8 @@
             "Name": "tbLeftDataFieldTitle2",
             "X": 10,
             "Y": 60,
-            "Width": 57,
-            "Height": 21,
+            "Width": 58,
+            "Height": 18,
             "TextId": "__SingleUse_JPBU",
             "TextRotation": "0",
             "AutoSize": true,
@@ -891,6 +891,6 @@
       "Vector"
     ]
   },
-  "Version": "4.21.3",
+  "Version": "4.23.0",
   "CreatedBy": "4.21.3"
 }

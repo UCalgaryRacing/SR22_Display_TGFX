@@ -1,5 +1,5 @@
-tim.c:107:6:MX_TIM2_Init	4
-tim.c:147:6:HAL_TIM_Base_MspInit	4
-tim.c:197:6:HAL_TIM_MspPostInit	2
-tim.c:32:6:MX_TIM1_Init	7
-tim.c:225:6:HAL_TIM_Base_MspDeInit	3
+C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/Core/Src/tim.c:107:6:MX_TIM2_Init	4
+C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/Core/Src/tim.c:147:6:HAL_TIM_Base_MspInit	4
+C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/Core/Src/tim.c:197:6:HAL_TIM_MspPostInit	2
+C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/Core/Src/tim.c:32:6:MX_TIM1_Init	7
+C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/Core/Src/tim.c:225:6:HAL_TIM_Base_MspDeInit	3

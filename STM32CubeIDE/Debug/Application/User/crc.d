@@ -1,4 +1,5 @@
-Application/User/crc.o: D:/GitHub/SR22_Display_TGFX/Core/Src/crc.c \
+Application/User/crc.o: \
+ C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/Core/Src/crc.c \
  ../../Core/Inc/crc.h ../../Core/Inc/main.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h \
  ../../Core/Inc/stm32f7xx_hal_conf.h \

@@ -1,5 +1,5 @@
 Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
- D:/GitHub/SR22_Display_TGFX/TouchGFX/target/generated/TouchGFXGeneratedHAL.cpp \
+ C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/TouchGFX/target/generated/TouchGFXGeneratedHAL.cpp \
  ../../TouchGFX/target/generated/TouchGFXGeneratedHAL.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/platform/core/MCUInstrumentation.hpp \
@@ -24,6 +24,11 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Unicode.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextProvider.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextureMapTypes.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorFontRenderer.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorRenderer.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Matrix3x3.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VGData.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/DebugPrinter.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/OSWrappers.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendHeap.hpp \
@@ -37,7 +42,6 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Application.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp \
@@ -101,8 +105,6 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Matrix3x3.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VGData.hpp \
  ../../TouchGFX/gui/include/gui/powertrainscreen_screen/PowerTrainScreenView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/powertrainscreen_screen/PowerTrainScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/powertrainscreen_screen/PowerTrainScreenPresenter.hpp \
@@ -114,7 +116,6 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/GPIO.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRVectorRenderer.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorRenderer.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterLinearGradient.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp \
@@ -126,13 +127,16 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Outline.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Cell.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CanvasWidget.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterARGB8888.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterARGB8888.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterARGB8888LinearGradient.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565LinearGradient.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB888.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB888.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB888LinearGradient.hpp
 ../../TouchGFX/target/generated/TouchGFXGeneratedHAL.hpp:
@@ -159,6 +163,11 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Unicode.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextProvider.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextureMapTypes.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorFontRenderer.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorRenderer.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Matrix3x3.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VGData.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/DebugPrinter.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/OSWrappers.hpp:
 ../../TouchGFX/gui/include/gui/common/FrontendHeap.hpp:
@@ -172,7 +181,6 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Application.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:
 ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:
@@ -238,8 +246,6 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/Matrix3x3.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VGData.hpp:
 ../../TouchGFX/gui/include/gui/powertrainscreen_screen/PowerTrainScreenView.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/powertrainscreen_screen/PowerTrainScreenViewBase.hpp:
 ../../TouchGFX/gui/include/gui/powertrainscreen_screen/PowerTrainScreenPresenter.hpp:
@@ -251,7 +257,6 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/GPIO.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRVectorRenderer.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorRenderer.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterLinearGradient.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp:
@@ -263,12 +268,15 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Outline.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Cell.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CanvasWidget.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterARGB8888.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterARGB8888.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterARGB8888LinearGradient.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565LinearGradient.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB888.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB888.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB888LinearGradient.hpp:

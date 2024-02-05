@@ -1,6 +1,6 @@
-D:/GitHub/SR22_Display_TGFX/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:120:43:const touchgfx::TypedText::TypedTextData* TypedTextDatabase::getInstance(touchgfx::LanguageId)	0	static
-D:/GitHub/SR22_Display_TGFX/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:125:10:uint16_t TypedTextDatabase::getInstanceSize()	0	static
-D:/GitHub/SR22_Display_TGFX/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:130:24:const touchgfx::Font** TypedTextDatabase::getFonts()	0	static
-D:/GitHub/SR22_Display_TGFX/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:135:23:const touchgfx::Font* TypedTextDatabase::setFont(touchgfx::FontId, const touchgfx::Font*)	0	static
-D:/GitHub/SR22_Display_TGFX/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:142:6:void TypedTextDatabase::resetFont(touchgfx::FontId)	8	static
-D:/GitHub/SR22_Display_TGFX/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:157:1:cpp)	8	static
+C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:120:43:const touchgfx::TypedText::TypedTextData* TypedTextDatabase::getInstance(touchgfx::LanguageId)	0	static
+C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:125:10:uint16_t TypedTextDatabase::getInstanceSize()	0	static
+C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:130:24:const touchgfx::Font** TypedTextDatabase::getFonts()	0	static
+C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:135:23:const touchgfx::Font* TypedTextDatabase::setFont(touchgfx::FontId, const touchgfx::Font*)	0	static
+C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:142:6:void TypedTextDatabase::resetFont(touchgfx::FontId)	8	static
+C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:157:1:cpp)	8	static

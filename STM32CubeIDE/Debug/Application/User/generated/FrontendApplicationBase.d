@@ -1,5 +1,5 @@
 Application/User/generated/FrontendApplicationBase.o: \
- D:/GitHub/SR22_Display_TGFX/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp \
+ C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp \
@@ -20,6 +20,11 @@ Application/User/generated/FrontendApplicationBase.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Unicode.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextProvider.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextureMapTypes.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorFontRenderer.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorRenderer.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Matrix3x3.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VGData.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/DebugPrinter.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp \
@@ -34,7 +39,6 @@ Application/User/generated/FrontendApplicationBase.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/FrameBufferAllocator.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
  ../../TouchGFX/gui/include/gui/model/Model.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendHeap.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendHeapBase.hpp \
@@ -99,8 +103,6 @@ Application/User/generated/FrontendApplicationBase.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Matrix3x3.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VGData.hpp \
  ../../TouchGFX/gui/include/gui/powertrainscreen_screen/PowerTrainScreenView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/powertrainscreen_screen/PowerTrainScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/powertrainscreen_screen/PowerTrainScreenPresenter.hpp \
@@ -133,6 +135,11 @@ Application/User/generated/FrontendApplicationBase.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Unicode.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextProvider.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextureMapTypes.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorFontRenderer.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorRenderer.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Matrix3x3.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VGData.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/DebugPrinter.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:
@@ -147,7 +154,6 @@ Application/User/generated/FrontendApplicationBase.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/FrameBufferAllocator.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:
 ../../TouchGFX/gui/include/gui/model/Model.hpp:
 ../../TouchGFX/gui/include/gui/common/FrontendHeap.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendHeapBase.hpp:
@@ -214,8 +220,6 @@ Application/User/generated/FrontendApplicationBase.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/Matrix3x3.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VGData.hpp:
 ../../TouchGFX/gui/include/gui/powertrainscreen_screen/PowerTrainScreenView.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/powertrainscreen_screen/PowerTrainScreenViewBase.hpp:
 ../../TouchGFX/gui/include/gui/powertrainscreen_screen/PowerTrainScreenPresenter.hpp:

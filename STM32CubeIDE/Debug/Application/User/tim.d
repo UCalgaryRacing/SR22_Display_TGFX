@@ -1,4 +1,5 @@
-Application/User/tim.o: D:/GitHub/SR22_Display_TGFX/Core/Src/tim.c \
+Application/User/tim.o: \
+ C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/Core/Src/tim.c \
  ../../Core/Inc/tim.h ../../Core/Inc/main.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h \
  ../../Core/Inc/stm32f7xx_hal_conf.h \

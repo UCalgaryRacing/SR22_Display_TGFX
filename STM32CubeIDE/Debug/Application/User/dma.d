@@ -1,4 +1,5 @@
-Application/User/dma.o: D:/GitHub/SR22_Display_TGFX/Core/Src/dma.c \
+Application/User/dma.o: \
+ C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/Core/Src/dma.c \
  ../../Core/Inc/dma.h ../../Core/Inc/main.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h \
  ../../Core/Inc/stm32f7xx_hal_conf.h \

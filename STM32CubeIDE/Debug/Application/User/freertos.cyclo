@@ -1,18 +1,8 @@
-<<<<<<< Updated upstream
-freertos.c:217:6:StartDefaultTask	1
-freertos.c:235:6:StartRPMTask	2
-freertos.c:258:6:StartEGTTask	1
-freertos.c:284:6:StartShifterTask	7
-freertos.c:323:6:StartGPSTask	1
-freertos.c:133:6:vApplicationIdleHook	1
-freertos.c:153:6:MX_FREERTOS_Init	1
-=======
-freertos.c:228:6:StartDefaultTask	1
-freertos.c:246:6:StartRPMTask	2
-freertos.c:269:6:StartEGTTask	1
-freertos.c:295:6:StartShifterTask	7
-freertos.c:334:6:StartGPSTask	2
-freertos.c:355:6:StartDebounce	3
-freertos.c:141:6:vApplicationIdleHook	1
-freertos.c:161:6:MX_FREERTOS_Init	1
->>>>>>> Stashed changes
+C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/Core/Src/freertos.c:228:6:StartDefaultTask	1
+C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/Core/Src/freertos.c:246:6:StartRPMTask	2
+C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/Core/Src/freertos.c:269:6:StartEGTTask	1
+C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/Core/Src/freertos.c:295:6:StartShifterTask	7
+C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/Core/Src/freertos.c:334:6:StartGPSTask	1
+C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/Core/Src/freertos.c:355:6:StartDebounce	3
+C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/Core/Src/freertos.c:141:6:vApplicationIdleHook	1
+C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/Core/Src/freertos.c:161:6:MX_FREERTOS_Init	1

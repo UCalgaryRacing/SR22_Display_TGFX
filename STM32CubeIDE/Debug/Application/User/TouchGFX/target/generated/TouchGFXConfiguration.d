@@ -1,11 +1,11 @@
 Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
- D:/GitHub/SR22_Display_TGFX/TouchGFX/target/generated/TouchGFXConfiguration.cpp \
+ C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/TouchGFX/target/generated/TouchGFXConfiguration.cpp \
  ../../TouchGFX/generated/texts/include/texts/TypedTextDatabase.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Config.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Unicode.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Config.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
  ../../TouchGFX/generated/fonts/include/fonts/ApplicationFontProvider.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/FontManager.hpp \
@@ -28,10 +28,14 @@ Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextProvider.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextureMapTypes.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorFontRenderer.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorRenderer.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Matrix3x3.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VGData.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/DebugPrinter.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp \
@@ -102,8 +106,6 @@ Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Matrix3x3.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VGData.hpp \
  ../../TouchGFX/gui/include/gui/powertrainscreen_screen/PowerTrainScreenView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/powertrainscreen_screen/PowerTrainScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/powertrainscreen_screen/PowerTrainScreenPresenter.hpp \
@@ -122,11 +124,11 @@ Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../../TouchGFX/target/generated/TouchGFXGeneratedHAL.hpp \
  ../../TouchGFX/target/STM32TouchController.hpp
 ../../TouchGFX/generated/texts/include/texts/TypedTextDatabase.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Config.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Unicode.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Config.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
 ../../TouchGFX/generated/fonts/include/fonts/ApplicationFontProvider.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/FontManager.hpp:
@@ -149,10 +151,14 @@ Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextProvider.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextureMapTypes.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorFontRenderer.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorRenderer.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Matrix3x3.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VGData.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/DebugPrinter.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:
 ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:
@@ -225,8 +231,6 @@ Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/Matrix3x3.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VGData.hpp:
 ../../TouchGFX/gui/include/gui/powertrainscreen_screen/PowerTrainScreenView.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/powertrainscreen_screen/PowerTrainScreenViewBase.hpp:
 ../../TouchGFX/gui/include/gui/powertrainscreen_screen/PowerTrainScreenPresenter.hpp:

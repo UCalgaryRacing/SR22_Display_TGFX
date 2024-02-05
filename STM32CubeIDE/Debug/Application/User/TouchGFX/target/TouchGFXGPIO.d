@@ -1,5 +1,5 @@
 Application/User/TouchGFX/target/TouchGFXGPIO.o: \
- D:/GitHub/SR22_Display_TGFX/TouchGFX/target/TouchGFXGPIO.cpp \
+ C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/TouchGFX/target/TouchGFXGPIO.cpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/GPIO.hpp \
  ../../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h \
  ../../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f750xx.h \

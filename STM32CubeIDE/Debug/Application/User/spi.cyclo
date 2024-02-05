@@ -1,4 +1,4 @@
-spi.c:31:6:MX_SPI2_Init	2
-spi.c:65:6:HAL_SPI_MspInit	3
-spi.c:122:6:HAL_SPI_MspDeInit	2
-spi.c:150:8:ReadTemp	1
+C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/Core/Src/spi.c:31:6:MX_SPI2_Init	2
+C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/Core/Src/spi.c:65:6:HAL_SPI_MspInit	3
+C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/Core/Src/spi.c:122:6:HAL_SPI_MspDeInit	2
+C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/Core/Src/spi.c:150:8:ReadTemp	1

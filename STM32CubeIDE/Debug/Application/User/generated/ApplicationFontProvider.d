@@ -1,5 +1,5 @@
 Application/User/generated/ApplicationFontProvider.o: \
- D:/GitHub/SR22_Display_TGFX/TouchGFX/generated/fonts/src/ApplicationFontProvider.cpp \
+ C:/Users/Steven/Documents/GitHub/SR22_Display_TGFX/TouchGFX/generated/fonts/src/ApplicationFontProvider.cpp \
  ../../TouchGFX/generated/fonts/include/fonts/ApplicationFontProvider.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/FontManager.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp \
